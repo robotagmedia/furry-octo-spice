@@ -9,6 +9,7 @@
 <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" /><![endif]-->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
 <link rel="stylesheet/less" type="text/css" href="css/style.less">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,13 +26,8 @@
 <body>
 <header>
   <nav class="navbar navbar-default" role="navigation"> 
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header text-center">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="#"><img src="img/logo-bar.jpg" /></a> </div>
-    
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="navbar-header text-center"> <a class="navbar-brand" href="#"><img src="img/logo-bar.jpg" /></a> </div>
+    <div class="navbar-collapse">
       <ul class="nav navbar-nav text-center">
         <li class="active"><a href="#"><img src="img/home-icon.jpg" /></a></li>
         <li><a href="#"><img src="img/about-icon.jpg" /></a></li>
@@ -40,34 +36,123 @@
         <li><a href="#">JP</a></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse --> 
   </nav>
 </header>
+<!-- Content -->
 <div class="main-content">
   <div class="container-fluid">
-    <div class="row relative"> <img class="img-responsive" src="img/fuji-home.jpg" />
+  <!-- Top image -->
+    <div class="row relative" id="home-top-image">
       <div class="logo-top"><img src="img/logo-white.png" /></div>
       <div class="absolute-center-parent">
         <h1 class="absolute-center">We Bring the Best Travel Prices<br />
           and Content to the World</h1>
       </div>
     </div>
-    <div class="row">
-    <a class="active-tab" href="#"><div class="col-lg-6 text-center"><img class="pad30" src="img/travel-jp-logo.jpg" /></div></a>
-    <a class="tab" href="#"><div class="col-lg-6 text-center"><img class="pad30" src="img/hotel-jp-logo.jpg" /></div></a>
+    <!-- Travel & Hotel -->
+    <div class="row domestic-travel"> <a class="active-tab" href="#" rel="travel-jp">
+      <div class="col-lg-6 col-md-6 text-center"><img class="pad30" src="img/travel-jp-logo.png" /></div>
+      </a> <a class="tab" href="#" rel="hotel-jp">
+      <div class="col-lg-6 col-md-6 text-center"><img class="pad30" src="img/hotel-jp-logo.png" /></div>
+      </a> </div>
+    <div class="domestic-travel-wrapper">
+    <!-- Tab  1 -->
+      <div class="row" id="travel-jp">
+        <div class="col-md-12">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h3>Find the best deals on travel packages in Japan</h3>
+            <div class="col-md-4 col-md-offset-2 col-sm-6 text-right"> <a class="btn btn-lg btn-default turquoise-btn">Visit Travel.jp</a> </div>
+            <div class="col-md-4 col-sm-6 text-left"> <a class="btn btn-lg btn-default light-blue-btn">Visit app</a> </div>
+            <div class="col-md-12">
+              <div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 text-right"><img src="img/travel-jp-tabiness.png" /></div>
+              <div class="col-md-5 col-sm-6 text-left">
+                <p>Travel.jp + Tabiness: Japan-Related Travel<br />
+                  Information from experienced Travel experts.</p>
+              </div>
+            </div>
+            <div class="col-md-12"> <a class="btn btn-lg btn-default turquoise-btn">Visit Tabiness</a> </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tab  2 -->
+      <div id="hotel-jp" class="row" style="display:none;">
+        <div class="col-md-12">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <h3>Leading Global Hotel-booking Site </h3>
+            <p>Empowering users to find the best hotel anywhere<br />
+              in the world with price comparison.</p>
+            <div class="col-md-12"> <a class="btn btn-lg btn-default turquoise-btn">Visit Hotel.jp</a> </div>
+          </div>
+          <div class="col-md-3 col-md-offset-3 col-sm-6 text-right"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
+          <div class="col-md-3 col-sm-6 text-left"> <a class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
+        </div>
+      </div>
     </div>
-    <div class="row">
-    <img class="img-responsive" src="img/domestic-travel.jpg" />
+    <!-- Map 1 / Japan -->
+    <div class="row relative map"> <img class="img-responsive" src="img/global-initiative-map.jpg" />
+      <div class="blue-ribbon">
+        <h3>Japan</h3>
+      </div>
     </div>
-    <div class="row relative">
-    <img class="img-responsive" src="img/global-initiative-map.jpg" />
-    <div class="blue-ribbon"><h3>Japan</h3></div>
+    <!-- Investments -->
+    <div class="row relative investment"> <a class="active-tab" rel="the-list" href="#">
+      <div class="col-lg-4 col-md-4 text-center"><img class="pad30" src="img/the-list-logo.png" /></div>
+      </a> <a class="tab" rel="flocations" href="#">
+      <div class="col-lg-4 col-md-4 text-center"><img class="pad30" src="img/flocations-logo.png" /></div>
+      </a> <a class="tab" rel="telunjuk" href="#">
+      <div class="col-lg-4 col-md-4 text-center"><img class="pad30" src="img/telunjuk-logo.png" /></div>
+      </a> </div>
+    <div class="investment-wrapper">
+    <!-- Tab 1 -->
+      <div id="the-list" class="row text-center">
+        <div class="col-md-12">
+          <h3>A curated shortlist of the<br />
+            best hotels in each city</h3>
+        </div>
+        <div class="col-md-12"> <a class="btn btn-lg btn-default light-blue-btn">Visit The List</a> </div>
+      </div>
+      <!-- Tab  2 -->
+      <div id="flocations" class="row text-center" style="display:none">
+        <div class="col-md-12">
+          <h3>We became a shareholder of Singapore based<br />
+            travel meta search start-up “Flocations”.</h3>
+        </div>
+        <div class="col-md-3 col-md-offset-3 col-sm-6 text-right"> <a class="btn btn-lg btn-default turquoise-btn">Visit Flocations</a> </div>
+        <div class="col-md-3 col-sm-6 text-left"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
+      </div>
+      <!-- Tab  3 -->
+      <div id="telunjuk" class="row text-center" style="display:none">
+        <div class="col-md-12">
+          <h3>Meta search shopping portal.<br />
+            With previous shopping ...</h3>
+        </div>
+        <div class="col-md-3 col-md-offset-3 col-sm-6 text-right"> <a class="btn btn-lg btn-default turquoise-btn">Visit Telunjuk</a> </div>
+        <div class="col-md-3 col-sm-6 text-left"> <a class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
+      </div>
     </div>
-    <div class="row">
-    <a class="active-tab" href="#"><div class="col-lg-4 text-center"><img class="pad30" src="img/the-list-logo.png" /></div></a>
-    <a class="tab" href="#"><div class="col-lg-4 text-center"><img class="pad30" src="img/flocations-logo.png" /></div></a>
-    <a class="tab" href="#"><div class="col-lg-4 text-center"><img class="pad30" src="img/telunjuk-logo.png" /></div></a>
+    <!-- Map 2 / World -->
+    <div class="row relative map"> <img class="img-responsive" src="img/collaboration-map.png" />
+      <div class="blue-ribbon">
+        <h3>Collaborations</h3>
+      </div>
     </div>
+    <!-- Statistics -->
+    <div class="row statistics text-center">
+    <div class="col-md-12">
+    <h1 class="yellow">Nearly 100 Million Sessions</h1>
+    <h3 class="white">Venture Republic’s body of services listed above pull an <br />
+astounding 98 million sessions average each month!</h3>
+<div class="col-md-7 col-centered">
+<img class="img-responsive" src="img/graph.png" />
+</div>
+<div class="col-md-7 col-centered text-center">
+<div class="col-md-4"><img src="img/travel-jp-logo-transparent.png" /></div>
+<div class="col-md-4"><img src="img/tabiness-jp-logo-transparent.png" /></div>
+<div class="col-md-4"><img src="img/hotel-jp-logo-transparent.png" /></div>
+</div>
+    </div>
+    </div>
+    
   </div>
 </div>
 <footer> </footer>
