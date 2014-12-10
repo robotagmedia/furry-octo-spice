@@ -5,21 +5,34 @@
 @dark-blue : #0072b5;
 @blue : #2383bb;
 @light-blue : #3497da;
+@menu-blue : #076d91;
 @turquoise : #6dc6de;
 @text-color : #464646;
 @yellow : #f2d13b;
+@grey : #c1c1c1;
+@dark-grey : #707070;
 @none: none;
 @rosario-rg:'rosarioregular';
 @aller-bd:'allerbold';
 @aller-regular:'allerregular';
 @varela : 'Varela', sans-serif;
-
+.transparent (@color,@alpha){
+  @rgba: rgba(red(@color),green(@color),blue(@color),@alpha);
+  @argb: argb(@rgba);
+  background-color: @color;
+  background-color: @rgba;
+  filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argb}, endColorstr=@{argb})";
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argb}, endColorstr=@{argb})";
+}
 /* GENERAL */
 body { font-family:@rosario-rg; color:@text-color }
 /* Titles */
 h1 {font-family:@aller-bd; font-size:40px; color:@white; line-height:53px; letter-spacing: 1px;}
 h3 { font-size:25px; line-height:45px; letter-spacing: 1px;}
 p {font-size:18px; font-family:@rosario-rg; line-height:30px}
+ul, ul li {list-style-type:none; padding:0;}
+a {text-decoration:none; color:@dark-grey}
+a:hover, a:focus {text-decoration:none; color:@white}
 .yellow {color: @yellow }
 .white {color: @white }
 /* */
@@ -29,18 +42,19 @@ p {font-size:18px; font-family:@rosario-rg; line-height:30px}
 }
 .relative {position:relative;}
 .img-responsive {width:100%;}
-.pad30 {padding:30px;}
-.height-100 {height:100px;}
+.pad2 {padding: 2%; height:73px;}
+.pad10 {padding: 4% 10%; height:73px;}
 .col-centered {
     display:inline-block;
     float:none;
     margin-right:-4px;
 }
 /* BTN */
-.btn-default { font-size:19px; color:@white; border:@none; border-radius:3px; margin:20px 0px; z-index:999; letter-spacing:1px;}
+.btn-default { font-size:19px; color:@white; border:@none; border-radius:3px; margin:20px 0px; z-index:999; letter-spacing:1px; white-space: nowrap;}
 .turquoise-btn { background-color:@turquoise}
 .light-blue-btn { background-color:@light-blue}
 .btn-lg { width:200px; }
+.yellow-btn {  background-color:@yellow; color:@dark; padding:6px 25px}
 /* */
 /* */
 /* HEADER / NAV */
@@ -56,47 +70,94 @@ header {
 	}
 	.navbar-nav
 	{ 
-		li { 
+		li { height:50px; float:right; padding-right:2px;
 	 		a { padding:12.5px 10px; background:@none !important; font-family:@rosario-rg; }
 		}
+		li:last-child { width:50px;}
+		
+		margin: 0px;
 	}
 	.navbar-collapse {
+		border:none;
 	padding:0px;
 	}
 	.navbar-brand {
- 	padding:12.5px 10px;
- 	margin-left:0px;
+	margin: 9.5px 10px;
+	background-image:url(../img/logo-bar.jpg); background-size:cover;
+	width:23px;
+	height:31px;
 	}
 }
+.grey-navbar-header {background-color:@grey !important}
+.navbar-brand-hover {background-image:url(../img/logo-bar-grey.jpg) !important;}
 /* */
+/* Popout Menu */
+.popout-menu { 
+	width:269px;
+	position:absolute;
+	left:50px;
+	top:0;
+	color:@white;
+	background-color:@dark;
+	padding-bottom:25px;
+	ul li { padding: 10px;}
+	.popout-menu-title { color:@menu-blue; font-size:21px;}
+	}
+.grey-logo {
+	img {width: 170px;}
+	
+li {padding-top:0px !important; background-color:@grey !important; height:50px;}
+}
 
 /* Homepage */
 #home-top-image {background-image:url(../img/fuji-home.jpg); background-size:cover;}
 .absolute-center-parent { position:absolute; top:50%; width: 100%;text-align: center; height:150px; margin-top:-75px;}
-a.tab:hover div, a.active-tab div {background-image:url(../img/light-grey-bg-rectangle.jpg); background-size:cover; border-bottom:solid 3px @dark-blue; height:100px;}
-a.tab div {background-image:url(../img/grey-bg-rectangle.jpg); background-size:cover; border-bottom:solid 1px @dark-blue; height:100px;}
+a.tab:hover div, a.active-tab div {background-image:url(../img/light-grey-bg-rectangle.jpg); background-size:cover; border-bottom:solid 3px @dark-blue; padding-bottom: 0px; }
+a.tab div {background-image:url(../img/grey-bg-rectangle.jpg); background-size:cover; border-bottom:solid 1px @dark-blue; padding-bottom: 2px;}
 .blue-ribbon {background-color:@blue; position:absolute; bottom:10%; color:@white; padding: 1% 2%; width:19.2%; text-align:right;}
 .blue-ribbon h3 { margin: 15px 10px; font-family:@varela}
-#travel-jp { background-image:url(../img/domestic-travel.jpg); background-size:cover; min-height:362px;}
-#hotel-jp { background-image:url(../img/hotel-jp-bg.jpg); background-size:cover; min-height:362px;}
+
+#travel-jp { background-image:url(../img/domestic-travel.jpg); background-size:cover; min-height:362px; padding-top:30px; padding-bottom:30px;}
+#hotel-jp { background-image:url(../img/hotel-jp-bg.jpg); background-size:cover; min-height:362px; padding-top:30px; padding-bottom:30px;}
 #the-list { background-image:url(../img/travel-jp-banner.jpg); background-size:cover; min-height:362px;}
 #flocations { background-image:url(../img/flocations-banner.jpg); background-size:cover; min-height:362px;}
 #telunjuk { background-image:url(../img/telunjuk-banner.jpg); background-size:cover; min-height:362px;}
+.right-social-networks {
+	img {width:28px; margin:14px 7px 0px 5px;}
+	position:absolute; top:0; right:0; z-index:999;
+	}
 .investment-wrapper h3 { margin-top:8%; margin-bottom:2%;}
-.domestic-travel-wrapper h3 {margin-top:50px; margin-bottom:20px}
+.domestic-travel-wrapper h3 {margin-top:20px; margin-bottom:20px;}
+.visible {z-index:500}
+.map img { margin-top: -16.6%;
+display: inline;}
+.statistics  { background-image:url(../img/graph-bg.jpg); background-size:cover; padding-top: 30px;
+padding-bottom: 50px;}
+.cta  { background-image:url(../img/tablet-slide.jpg); background-size:cover; padding-top: 30px;
+padding-bottom: 50px;}
 
-.statistics  { background-image:url(../img/graph-bg.jpg); background-size:cover;}
+.publicity {background-image:url(../img/lg-grey-bg.jpg); background-size:cover; padding-top: 30px;
+padding-bottom: 50px;}
+.ceo-mission { position:absolute; top: 8%; color:@white; .transparent(@light-blue, .8); padding:5%}
+#business-strategy {
+	position:absolute;
+	top: 61%;
+	min-height:39%;
+	.transparent(white, .9);
+
+}
 /* MEDIA QUERIES */
 
 /* Smartphones */
-@media(max-width:480px) { }
-/* Tablets */
-@media(min-width : 481px) and (max-width : 767px) {}
-/* Smartphones & Tablets */
-@media(max-width : 767px) {}
-/* Large screens */
-@media (min-width: 992px) {
+@media(max-width:480px) {
 	
 	
 	
 	}
+/* Tablets */
+@media(min-width : 481px) and (max-width : 767px) {  }
+/* Smartphones & Tablets */
+@media(max-width : 767px) { .center-on-mobile { text-align:center; } }
+/* Large screens */
+@media (min-width: 992px) {}
+
