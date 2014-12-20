@@ -95,8 +95,16 @@ a:focus {
 .turquoise-btn {
   background-color: #6dc6de;
 }
+.turquoise-btn:hover {
+  background-color: #92d4e6;
+  color: #ffffff;
+}
 .light-blue-btn {
   background-color: #3497da;
+}
+.light-blue-btn:hover {
+  background-color: #67b1e3;
+  color: #ffffff;
 }
 .btn-lg {
   width: 200px;
@@ -106,10 +114,17 @@ a:focus {
   color: #252525;
   padding: 6px 25px;
 }
+.yellow-btn:hover {
+  background-color: #f5dd6c;
+}
 .blue-btn {
   background-color: #2885cc;
   color: #ffffff;
   padding: 6px 25px;
+}
+.blue-btn:hover {
+  background-color: #599fd5;
+  color: #ffffff;
 }
 /* */
 /* */
@@ -345,6 +360,7 @@ a.tab div {
 }
 .graph {
   margin: 50px 0px;
+  min-height: 506px;
 }
 .stats-logo img {
   width: 90%;
@@ -396,7 +412,7 @@ a.tab div {
 #business-strategy {
   padding: 50px 0px;
   margin-top: -31.57%;
-  z-index: 999;
+  z-index: 799;
   position: relative;
   background-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.9);
@@ -475,7 +491,7 @@ a.tab div {
   height: 3px;
   background-color: #3497DA;
   position: absolute;
-  top: 48.7px;
+  top: 49px;
   left: 50%;
   margin-left: -84px;
   z-index: 509;
@@ -558,8 +574,7 @@ a.tab div {
   padding-left: 15px;
   margin: 45px 0px 40px 0px;
 }
-#contact input,
-#contact select {
+#contact input {
   border-radius: 5px;
   border: none;
   box-shadow: none;
@@ -571,7 +586,7 @@ a.tab div {
   box-shadow: none;
   height: 131px;
 }
-#contact .btn {
+#contact .btn-submit {
   width: 180px;
   font-size: 15px;
   height: 45px;
@@ -590,6 +605,15 @@ a.tab div {
 #social img {
   width: 47px;
   margin-right: 20px;
+}
+#plane {
+  overflow: hidden;
+}
+.plane {
+  background-image: url(../img/plane-slide.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  min-height: 600px;
 }
 footer {
   background-color: #1f1f1f;
@@ -695,27 +719,60 @@ footer .menu-blue a {
     height: 120px;
   }
 }
+/*
 .select-style {
-  width: 100%;
-  border-radius: 5px;
-  overflow: hidden;
-  background: #fafafa url(../img/icon-select.jpg) no-repeat 100% 50%;
-  background-size: 47px;
-  background-color: #2885cc;
+    width: 100%;
+	border-radius: 5px;
+    overflow: hidden;
+	background:#fafafa url(../img/icon-select.jpg) no-repeat 100% 50%;
+	background-size:47px;
+	background-color:#2885cc;
 }
-.select-style select {
-  color: #ffffff;
-  padding: 5px 8px;
-  width: 130%;
-  border: none;
-  box-shadow: none;
-  background: transparent;
-  background-image: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 0.01px;
-  text-overflow: '';
-}
+
+
 .select-style select:focus {
-  outline: none;
+    outline: none;
+}
+
+*/
+#contact .selectpicker {
+  height: 45px;
+  border: none;
+}
+.caret {
+  background: url(../img/icon-select.jpg) no-repeat;
+  width: 48.3px;
+  height: 45px;
+  background-size: cover;
+}
+.bootstrap-select.btn-group .btn .caret {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0;
+  border: none;
+}
+.dropdown-menu {
+  border: thin solid #2885cc;
+  box-shadow: none;
+  padding: 0;
+}
+.dropdown-menu > li > a {
+  background-color: #ffffff;
+  color: #2885cc;
+  padding: 5px 15px;
+}
+.dropdown-menu > li > a:hover {
+  background-color: #2885cc;
+  color: #ffffff;
+  padding: 5px 15px;
+}
+.btn-info,
+.btn-info:hover,
+.btn-info:focus,
+.btn-info.focus,
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  background-color: #2885cc;
 }

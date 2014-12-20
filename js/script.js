@@ -4,6 +4,7 @@ $(document).ready(function(){
 	
 //  Home Top Image Size
 $('#home-top-image').height($(window).height());
+$('.plane').height($(window).height());
 
 //  Tabs
 $('.domestic-travel a, .investment a').on('click', function(){
@@ -37,7 +38,7 @@ $('.popout-menu-wrapper').hover(function(){
 });	
 
 $(document).ready(function(){
-$(document).on("scroll", onScroll);
+// $(document).on("scroll", onScroll);
 //SMOOTH SCROLL
     $('.sub-menu a[href*=#]:not([href=#])').on('click', function (e) {
         e.preventDefault();
