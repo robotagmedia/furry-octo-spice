@@ -123,7 +123,7 @@ li {padding-top:0px !important; background-color:@grey !important; height:50px;}
 }
 
 .sub-menu a:hover li span.menu-icon, .sub-menu-active { background-position:0% 100%; color:@white}
-.sub-menu { 
+.sub-menu { a {display: block;}
 	.glyphicon { margin-right: 15px; font-size:20px; vertical-align: top; }
 	font-size:15px; 
 	}
@@ -164,8 +164,10 @@ p { font-family:@varela; font-size:15px;}
 .investment-wrapper h3 { margin-top:8%; margin-bottom:2%; line-height:40px;}
 .domestic-travel-wrapper h3 {margin-top:20px; margin-bottom:20px;}
 .visible {z-index:500}
-.map img { margin-top: -16.6%;
-display: inline;}
+.map { background-image:url(../img/grid.png); background-size:cover; margin-top: -22.85%; display: inline; display: block; }
+.map img {margin-top: 17.85%; padding:5% 10% 5% 10%}
+
+#map {line-height: 0px; border-bottom:#a5a5a5 thin solid }
 .statistics  { background-image:url(../img/graph-bg.jpg); background-size:cover; padding-top: 30px;
 padding-bottom: 50px;}
 .cta  { background-image:url(../img/tablet-slide.jpg); background-size:cover; padding-top: 30px;
@@ -175,15 +177,15 @@ h3 { margin:40px 0px 30px 0px; font-size:20px;}}
 
 .stats-logo img { width: 90%;
 margin: 5%;}
-.publicity {background-image:url(../img/lg-grey-bg.jpg); background-size:cover; padding-top: 30px;
+#publicity {background-image:url(../img/lg-grey-bg.jpg); background-size:cover; padding-top: 30px;
 padding-bottom: 50px;} 
-.publicity {
+#publicity {
 	padding-top: 30px; padding-bottom: 50px;
 	h2 { font-family:@aller-bd; margin-top:30px;}
 	h3 { margin-bottom:50px;}
 	p{margin-bottom:60px;}
 	}
-.publicity img { max-height:35px; width:auto; max-width:100%; margin: 15px 0px;}
+#publicity img { max-height:35px; width:auto; max-width:100%; margin: 15px 0px;}
 .ceo-mission {
 position:absolute; top: 8%; color:@white; .transparent(@light-blue, .8); padding:5%;
 h1 {margin-bottom:0px;}
@@ -191,14 +193,13 @@ h2 { font-family:@aller-bd; margin: 10px 0px 30px 0px;}
 }
 #business-strategy {
 padding:50px 0px;
-margin-top: -31.57%;
 z-index:799;
 position: relative;
-	.transparent(white, .9);	
+background: #e4e5e6 url(../img/ceo_grey_bg.jpg) no-repeat; background-size:contain;	
 }
 .ceo-font {font-size:18px; color:#282828 }
 
-#business-strategy {h2 { font-family:@aller-bd; margin-top:30px;}
+#business-strategy { h2 { font-family:@aller-bd; margin-top:30px;}
 p{margin:30px 0px;}
 }
 
@@ -278,7 +279,7 @@ h3 { margin:40px 0px 30px 0px;}}
 	label, h2, .glyphicon {color:#2885cc;}
 	.glyphicon {font-size:35px; margin-left:-15px;}
 	p{ font-size:15px; line-height: 22px;}
-	.adress {margin:40px 0px; height: 40px;}
+	.adress {margin-top:40px; height: 40px;}
 	h2 {font-family:@aller-bd; font-size:25px; padding-left:15px; margin:45px 0px 40px 0px;}
 	input { border-radius: 5px; border:none; box-shadow:none; height:45px;}
 	textarea { border-radius: 5px; border:none; box-shadow:none; height: 131px;}
@@ -304,7 +305,7 @@ footer {
 	.menu-blue:last-child:after { content:""; }
 	.menu-blue {a{ color:@menu-blue;} }
 	}
-
+iframe {border:none;}
 /* MEDIA QUERIES */
 
 /* Smartphones */
@@ -334,7 +335,9 @@ h1 {line-height: 40px; font-size:30px;}
 @media(max-width : 767px) { 
 .center-on-mobile { text-align:center; }
 .ceo-mission { position:relative;}
-#business-strategy {margin-top:0px;}
+#business-strategy {
+background-image: none;	
+}
 footer { padding-left: 50px; ul li {display:block; text-align:center; a{ width:100%; display:block; padding: 15px 0px;} .logo-footer {
     margin-bottom: 20px;
 }} }

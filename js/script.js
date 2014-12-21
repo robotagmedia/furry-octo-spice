@@ -5,7 +5,6 @@ $(document).ready(function(){
 //  Home Top Image Size
 $('#home-top-image').height($(window).height());
 $('.plane').height($(window).height());
-
 //  Tabs
 $('.domestic-travel a, .investment a').on('click', function(){
    var target = $(this).attr('rel');

@@ -210,6 +210,9 @@ a.lang {
 .sub-menu {
   font-size: 15px;
 }
+.sub-menu a {
+  display: block;
+}
 .sub-menu .glyphicon {
   margin-right: 15px;
   font-size: 20px;
@@ -338,9 +341,20 @@ a.tab div {
 .visible {
   z-index: 500;
 }
-.map img {
-  margin-top: -16.6%;
+.map {
+  background-image: url(../img/grid.png);
+  background-size: cover;
+  margin-top: -22.85%;
   display: inline;
+  display: block;
+}
+.map img {
+  margin-top: 17.85%;
+  padding: 5% 10% 5% 10%;
+}
+#map {
+  line-height: 0px;
+  border-bottom: #a5a5a5 thin solid;
 }
 .statistics {
   background-image: url(../img/graph-bg.jpg);
@@ -366,27 +380,27 @@ a.tab div {
   width: 90%;
   margin: 5%;
 }
-.publicity {
+#publicity {
   background-image: url(../img/lg-grey-bg.jpg);
   background-size: cover;
   padding-top: 30px;
   padding-bottom: 50px;
 }
-.publicity {
+#publicity {
   padding-top: 30px;
   padding-bottom: 50px;
 }
-.publicity h2 {
+#publicity h2 {
   font-family: 'allerbold';
   margin-top: 30px;
 }
-.publicity h3 {
+#publicity h3 {
   margin-bottom: 50px;
 }
-.publicity p {
+#publicity p {
   margin-bottom: 60px;
 }
-.publicity img {
+#publicity img {
   max-height: 35px;
   width: auto;
   max-width: 100%;
@@ -411,13 +425,10 @@ a.tab div {
 }
 #business-strategy {
   padding: 50px 0px;
-  margin-top: -31.57%;
   z-index: 799;
   position: relative;
-  background-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.9);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6ffffff, endColorstr=#e6ffffff);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6ffffff, endColorstr=#e6ffffff);
+  background: #e4e5e6 url(../img/ceo_grey_bg.jpg) no-repeat;
+  background-size: contain;
 }
 .ceo-font {
   font-size: 18px;
@@ -565,7 +576,7 @@ a.tab div {
   line-height: 22px;
 }
 #contact .adress {
-  margin: 40px 0px;
+  margin-top: 40px;
   height: 40px;
 }
 #contact h2 {
@@ -643,6 +654,9 @@ footer .menu-blue:last-child:after {
 footer .menu-blue a {
   color: #076d91;
 }
+iframe {
+  border: none;
+}
 /* MEDIA QUERIES */
 /* Smartphones */
 @media (max-width: 480px) {
@@ -676,7 +690,7 @@ footer .menu-blue a {
     position: relative;
   }
   #business-strategy {
-    margin-top: 0px;
+    background-image: none;
   }
   footer {
     padding-left: 50px;
