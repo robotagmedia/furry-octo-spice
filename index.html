@@ -13,7 +13,6 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.css' rel='stylesheet' />
 <link rel="stylesheet/less" type="text/css" href="css/style.less">
-
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -25,7 +24,6 @@
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/Chart.min.js"></script>
-<script src="js/custom_bar.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.js'></script>
 <script src="js/script.js"></script>
@@ -230,20 +228,35 @@
         <h1 class="yellow">Nearly 100 Million Sessions</h1>
         <h3 class="white">Venture Republic’s body of services listed above pull an <br />
           astounding 98 million sessions average each month!</h3>
-        <div class="graph">
-          <div class="col-md-7 col-centered"> 
+      </div>
+      <div class="col-md-12 graph-wrapper">
+        <div class="graph col-centered">
+          <div class="graph-years"> <span class="first-year">2010<span class="year-point"></span>
+            <hr width="0">
+            </span> <span class="second-year">2011<span class="year-point"></span>
+            <hr width="0">
+            </span> <span class="third-year">2012<span class="year-point"></span>
+            <hr width="0">
+            </span> <span class="fourth-year">2013<span class="year-point"></span>
+            <hr width="0">
+            </span> <span class="fifth-year">2014<span class="year-point"></span>
+            <hr width="0">
+            </span> </div>
+
             <script>
-
-    document.write("<canvas id=\"canvas_StackedBar2\" height=\""+defCanvasHeight+"\" width=\""+defCanvasWidth+"\"></canvas>");
-
-    </script> 
-          </div>
+document.write("<canvas id=\"canvas_StackedBar2\" height=\""+defCanvasHeight+"\" width=\""+defCanvasWidth+"\"></canvas>");
+window.onload = function() {
+var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
+skrollr.init({ forceHeight: false })
+;}
+			</script> 
+ 
         </div>
-        <div class="col-md-7 stats-logo col-centered text-center">
-          <div class="col-sm-4"><img class="img-responsive" src="img/travel-jp-logo-transparent.png" /></div>
-          <div class="col-sm-4"><img class="img-responsive" src="img/tabiness-jp-logo-transparent.png" /></div>
-          <div class="col-sm-4"><img class="img-responsive" src="img/hotel-jp-logo-transparent.png" /></div>
-        </div>
+      </div>
+      <div class="col-md-7 stats-logo col-centered text-center">
+        <div class="col-sm-4"><img class="img-responsive" src="img/travel-jp-logo-transparent.png" /></div>
+        <div class="col-sm-4"><img class="img-responsive" src="img/tabiness-jp-logo-transparent.png" /></div>
+        <div class="col-sm-4"><img class="img-responsive" src="img/hotel-jp-logo-transparent.png" /></div>
       </div>
     </div>
     <!-- Publicity -->
@@ -513,11 +526,7 @@ $('.selectpicker').selectpicker({
       style: 'btn-info',
 	  size: 'auto',
   });
-  
-window.onload = function() {
-var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
-skrollr.init({ forceHeight: false })
-;}
+ 
 
 
 	</script>

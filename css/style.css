@@ -79,7 +79,6 @@ a:focus {
 .col-centered {
   display: inline-block;
   float: none;
-  margin-right: -4px;
 }
 /* BTN */
 .btn-default {
@@ -126,8 +125,6 @@ a:focus {
   background-color: #599fd5;
   color: #ffffff;
 }
-/* */
-/* */
 /* HEADER / NAV */
 header .navbar {
   background-color: #252525;
@@ -193,6 +190,9 @@ a.lang {
 .popout-menu .popout-menu-title {
   color: #076d91;
   font-size: 21px;
+}
+.popout-menu .popout-menu-wrapper:last-child {
+  height: 1000px;
 }
 .grey-logo img {
   width: 170px;
@@ -371,10 +371,6 @@ a.tab div {
 .cta h3 {
   margin: 40px 0px 30px 0px;
   font-size: 20px;
-}
-.graph {
-  margin: 50px 0px;
-  min-height: 506px;
 }
 .stats-logo img {
   width: 90%;
@@ -657,6 +653,121 @@ footer .menu-blue a {
 iframe {
   border: none;
 }
+/* GRAPH */
+#canvas_StackedBar2 {
+  padding-top: 25px;
+  height: 506px !important;
+  width: 760px !important;
+}
+.graph-wrapper {
+  width: 100%;
+  border-top: dashed thin #9ca7ab;
+  border-bottom: dashed thin #9ca7ab;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.graph {
+  position: relative;
+}
+.graph-years {
+  position: absolute;
+  width: 100%;
+  top: -40px;
+}
+.graph-years span {
+  position: absolute;
+  font-size: 15px;
+  color: #9ca7ab;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.graph-years span hr {
+  border: 1px inset;
+  margin-top: 35px;
+}
+.year-point {
+  background: none repeat scroll 0% 0% #9ca7ab;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  top: 36.4px;
+  left: 40%;
+}
+.first-year {
+  left: 144px;
+}
+.first-year hr {
+  height: 352px;
+}
+.second-year {
+  left: 270px;
+}
+.second-year hr {
+  height: 316px;
+}
+.third-year {
+  left: 397px;
+}
+.third-year hr {
+  height: 263px;
+}
+.fourth-year {
+  left: 523px;
+}
+.fourth-year hr {
+  height: 187px;
+}
+.fifth-year {
+  left: 650px;
+}
+.fifth-year hr {
+  height: 124px;
+  color: #f2d13b !important;
+}
+.fifth-year .year-point {
+  background: none repeat scroll 0% 0% #f2d13b !important;
+}
+/* Contact Form*/
+#contact .selectpicker {
+  height: 45px;
+  border: none;
+}
+.caret {
+  background: url(../img/icon-select.jpg) no-repeat;
+  width: 48.3px;
+  height: 45px;
+  background-size: cover;
+}
+.bootstrap-select.btn-group .btn .caret {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0;
+  border: none;
+}
+.dropdown-menu {
+  border: thin solid #2885cc;
+  box-shadow: none;
+  padding: 0;
+}
+.dropdown-menu > li > a {
+  background-color: #ffffff;
+  color: #2885cc;
+  padding: 5px 15px;
+}
+.dropdown-menu > li > a:hover {
+  background-color: #2885cc;
+  color: #ffffff;
+  padding: 5px 15px;
+}
+.btn-info,
+.btn-info:hover,
+.btn-info:focus,
+.btn-info.focus,
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  background-color: #2885cc;
+}
 /* MEDIA QUERIES */
 /* Smartphones */
 @media (max-width: 480px) {
@@ -710,6 +821,46 @@ iframe {
   footer .menu-blue:after {
     content: "";
   }
+  .plane {
+    min-height: 230px;
+  }
+  #canvas_StackedBar2 {
+    height: 239.7px !important;
+    width: 360px !important;
+  }
+  .graph {
+    padding: 0;
+  }
+  .first-year {
+    left: 59px;
+  }
+  .first-year hr {
+    height: 164px;
+  }
+  .second-year {
+    left: 119.5px;
+  }
+  .second-year hr {
+    height: 144px;
+  }
+  .third-year {
+    left: 180px;
+  }
+  .third-year hr {
+    height: 119px;
+  }
+  .fourth-year {
+    left: 240px;
+  }
+  .fourth-year hr {
+    height: 84px;
+  }
+  .fifth-year {
+    left: 300px;
+  }
+  .fifth-year hr {
+    height: 55px;
+  }
 }
 /* Large screens */
 @media (min-width: 992px) {
@@ -732,61 +883,7 @@ iframe {
   .pad10 {
     height: 120px;
   }
-}
-/*
-.select-style {
-    width: 100%;
-	border-radius: 5px;
-    overflow: hidden;
-	background:#fafafa url(../img/icon-select.jpg) no-repeat 100% 50%;
-	background-size:47px;
-	background-color:#2885cc;
-}
-
-
-.select-style select:focus {
-    outline: none;
-}
-
-*/
-#contact .selectpicker {
-  height: 45px;
-  border: none;
-}
-.caret {
-  background: url(../img/icon-select.jpg) no-repeat;
-  width: 48.3px;
-  height: 45px;
-  background-size: cover;
-}
-.bootstrap-select.btn-group .btn .caret {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 0;
-  border: none;
-}
-.dropdown-menu {
-  border: thin solid #2885cc;
-  box-shadow: none;
-  padding: 0;
-}
-.dropdown-menu > li > a {
-  background-color: #ffffff;
-  color: #2885cc;
-  padding: 5px 15px;
-}
-.dropdown-menu > li > a:hover {
-  background-color: #2885cc;
-  color: #ffffff;
-  padding: 5px 15px;
-}
-.btn-info,
-.btn-info:hover,
-.btn-info:focus,
-.btn-info.focus,
-.btn-info:active,
-.btn-info.active,
-.open > .dropdown-toggle.btn-info {
-  background-color: #2885cc;
+  .plane {
+    min-height: 450px;
+  }
 }
