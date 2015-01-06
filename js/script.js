@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 	
+	
 //  Home Top Image Size
 $('#home-top-image').height($(window).height());
 //  Tabs
@@ -25,14 +26,19 @@ $('#media-icon').hover(function(){
 	$('.media-menu').toggle();
 });
 
-$('.popout-menu-wrapper').hover(function(){
-		$(this).children('.sub-menu').toggle();});
-		$('.menu-hover, .popout-menu').hover(function () {
-		$('.popout-menu').toggle();
-		$('.navbar-header').toggleClass('grey-navbar-header');
-		$('.navbar-brand').toggleClass('navbar-brand-hover');
-});
-		
+var toggle_sub_menu = function () {
+    $(this).children('.sub-menu').toggle();
+}
+$('.popout-menu-wrapper').hover(toggle_sub_menu);
+
+var toggle_menu = function () {
+    $('.popout-menu').toggle();
+	$('.navbar-header').toggleClass('grey-navbar-header');
+	$('.navbar-brand').toggleClass('navbar-brand-hover');
+}
+$('.menu-hover, .popout-menu').hover(toggle_menu);
+
+	
 });	
 
 $(document).ready(function(){

@@ -125,55 +125,43 @@
     </div>
     <!-- Travel & Hotel -->
     <div id="services" class="row domestic-travel"><a class="active-tab" href="#" rel="travel-jp">
-      <div class="col-lg-6 col-md-6 text-center"><img class="pad2" src="img/travel-jp-logo.png" /></div>
+      <div class="col-md-6 text-center"><img class="pad2" src="img/travel-jp-logo.png" /></div>
       </a> <a class="tab" href="#" rel="hotel-jp">
-      <div class="col-lg-6 col-md-6 text-center"><img class="pad2" src="img/hotel-jp-logo.png" /></div>
+      <div class="col-md-6 text-center"><img class="pad2" src="img/hotel-jp-logo.png" /></div>
       </a> </div>
     <div class="domestic-travel-wrapper relative"> 
       <!-- Tab  1 -->
       <div class="row" id="travel-jp">
-        <div class="col-md-12">
-          <div class="right-social-networks"><a href="" target="_blank"><img src="img/white-fb.png" /></a><a href="" target="_blank"><img src="img/white-twitter.png" /></a></div>
-        </div>
-        <div class="col-md-12 visible">
+        <div class="right-social-networks"><a href="" target="_blank"><img src="img/white-fb.png" /></a><a href="" target="_blank"><img src="img/white-twitter.png" /></a></div>
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <h3>Find the best deals on travel packages in Japan</h3>
           <div class="row">
-            <div class="col-md-10 col-md-offset-1 text-center">
-              <h3>Find the best deals on travel packages in Japan</h3>
-              <div class="row">
-                <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile"> <a class="btn btn-lg btn-default turquoise-btn">Visit Travel.jp</a> </div>
-                <div class="col-md-4 col-sm-6 text-left center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">Visit app</a> </div>
-              </div>
-              <div class="col-md-12 visible">
-                <div class="row">
-                  <div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 text-right"><img class="img-responsive pad2" src="img/travel-jp-tabiness.png" /></div>
-                  <div class="col-md-5 col-sm-6 text-left">
-                    <p>Travel.jp + Tabiness: Japan-Related Travel<br />
-                      Information from experienced Travel experts.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 visible text-center"> <a class="btn btn-lg btn-default turquoise-btn">Visit Tabiness</a> </div>
-              </div>
+            <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile visible"> <a class="btn btn-lg btn-default turquoise-btn">Visit Travel.jp</a> </div>
+            <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-lg btn-default light-blue-btn">Visit app</a> </div>
+            <div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 text-right"><img class="img-responsive pad2" src="img/travel-jp-tabiness.png" /></div>
+            <div class="col-md-5 col-sm-6 text-left">
+              <p>Travel.jp + Tabiness: Japan-Related Travel<br />
+                Information from experienced Travel experts.</p>
             </div>
+            <div class="col-md-10 col-md-offset-1 text-center visible"> <a class="btn btn-lg btn-default turquoise-btn">Visit Tabiness</a> </div>
           </div>
         </div>
       </div>
+      
       <!-- Tab  2 -->
       <div id="hotel-jp" class="row" style="display:none;">
         <div class="right-social-networks"><a href="" target="_blank"><img src="img/white-fb.png" /></a><a href="" target="_blank"><img src="img/white-twitter.png" /></a></div>
-        <div class="col-md-12 visible">
-          <div class="col-md-6 col-md-offset-3 text-center">
-            <h3>Leading Global Hotel-booking Site </h3>
-            <p>Empowering users to find the best hotel anywhere<br />
-              in the world with price comparison.</p>
-            <div class="col-md-12 visible"> <a class="btn btn-lg btn-default turquoise-btn">Visit Hotel.jp</a> </div>
-          </div>
-          <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
-          <div class="col-md-3 col-sm-6 text-left center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <h3>Leading Global Hotel-booking Site </h3>
+          <p>Empowering users to find the best hotel anywhere<br />
+            in the world with price comparison.</p>
         </div>
+        <div class="col-md-12 visible text-center"> <a class="btn btn-lg btn-default turquoise-btn">Visit Hotel.jp</a> </div>
+        <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
+        <div class="col-md-3 col-sm-6 text-left center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
       </div>
     </div>
+    
     <!-- Map 1 / Japan -->
     <div class="row relative map"> <img data-bottom-top="opacity:0" data-center="opacity:1" class="img-responsive" src="img/global-initiative-map.png" />
       <div class="blue-ribbon">
@@ -242,15 +230,13 @@
             </span> <span class="fifth-year">2014<span class="year-point"></span>
             <hr width="0">
             </span> </div>
-
-            <script>
+          <script>
 document.write("<canvas id=\"canvas_StackedBar2\" height=\""+defCanvasHeight+"\" width=\""+defCanvasWidth+"\"></canvas>");
 window.onload = function() {
 var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
 skrollr.init({ forceHeight: false })
 ;}
 			</script> 
- 
         </div>
       </div>
       <div class="col-md-7 stats-logo col-centered text-center">
@@ -261,18 +247,16 @@ skrollr.init({ forceHeight: false })
     </div>
     <!-- Publicity -->
     <div id="publicity" class="row text-center">
-      <div class="col-md-12">
+      <div class="col-md-10 col-md-offset-1">
         <h2>
         Publicity
         </h1>
         <h3>We’ve had the honor of being sponsored in the<br />
           following reputable publications.</h3>
-        <div class="col-md-10 col-md-offset-1">
+        <div class="row">
           <div class="col-md-4"><img src="img/wall-street-journal-logo.png" /></div>
           <div class="col-md-5"><img src="img/travel-journal-logo.png" /></div>
           <div class="col-md-3"><img src="img/online-logo.png" /></div>
-        </div>
-        <div class="col-md-10 col-md-offset-1">
           <div class="col-md-2"><img src="img/wit-logo.png" /></div>
           <div class="col-md-2"><img src="img/nikkei-logo.png" /></div>
           <div class="col-md-2"><img src="img/tv-tokyo-logo.png" /></div>
@@ -309,9 +293,7 @@ skrollr.init({ forceHeight: false })
     <!-- Business Strategy-->
     <div id="business-strategy" class="row text-center">
       <div class="col-md-8 col-md-offset-2">
-        <h2>
-        Business Strategy
-        </h1>
+        <h2> Business Strategy </h2>
         <p><b>Curated Content by Real Experts</b></p>
         <p>We operate curated travel media sites which leverage the expertise of knowledgeable and experienced “Navigators” (travel experts) to help our users make easy, and catered travel solutions. Our level of quality promises a surprise-free and high value experience to all of our users.</p>
       </div>
@@ -319,9 +301,7 @@ skrollr.init({ forceHeight: false })
     
     <!-- our History -->
     <div id="history" class="row">
-      <h2 class="text-center">
-      Our History
-      </h1>
+      <h2 class="text-center"> Our History </h2>
       <div class="col-md-12">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <div class="carousel-bar"></div>
@@ -446,6 +426,7 @@ skrollr.init({ forceHeight: false })
       <div class="col-md-12">
         <h2>Contact us</h2>
         <form role="form">
+          <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label for="name">Your name <span class="orange">*</span></label>
@@ -486,26 +467,28 @@ skrollr.init({ forceHeight: false })
         </form>
       </div>
     </div>
-    
-    <!-- Social Networks -->
-    <div id="social" class="row">
-      <div class="col-sm-6 text-right center-on-mobile">
-        <h2 class="blue">
-        Join our social network
-        </h1>
-      </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" target="_blank"><img src="img/blue-fb.jpg" /></a><a href="#" target="_blank"><img src="img/blue-twitter.jpg" /></a><a href="#" target="_blank"><img src="img/blue-insta.jpg" /></a> </div>
-    </div>
-    
-    <!-- Map -->
-    <div id="map" class="row">
-      <iframe width="100%" height="450px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
-    </div>
   </div>
+  
+  <!-- Social Networks -->
+  <div id="social" class="row">
+    <div class="col-sm-6 text-right center-on-mobile">
+      <h2 class="blue">
+      Join our social network
+      </h1>
+    </div>
+    <div class="col-sm-6 text-left center-on-mobile"> <a href="#" target="_blank"><img src="img/blue-fb.jpg" /></a><a href="#" target="_blank"><img src="img/blue-twitter.jpg" /></a><a href="#" target="_blank"><img src="img/blue-insta.jpg" /></a> </div>
+  </div>
+  
+  <!-- Map -->
+  <div id="map" class="row">
+    <iframe width="100%" height="450px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
+  </div>
+</div>
 </div>
 <footer>
   <div class="container-fluid">
     <div class="row">
+    <div class="col-md-12">
       <ul>
         <li><img class="logo-footer" src="img/black-logo.jpg" /></li>
         <li><a href="#">Home</a></li>
@@ -515,20 +498,16 @@ skrollr.init({ forceHeight: false })
         <li class="menu-blue"><a href="#">Privacy</a></li>
         <li class="menu-blue"><a href="#">Terms</a></li>
       </ul>
+      </div>
     </div>
   </div>
 </footer>
 <script type="text/javascript" src="js/skrollr.min.js"></script> 
 <script>
-
-
 $('.selectpicker').selectpicker({
       style: 'btn-info',
-	  size: 'auto',
+	  size: 4,
   });
- 
-
-
-	</script>
+</script>
 </body>
 </html>
