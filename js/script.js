@@ -5,6 +5,7 @@ $(document).ready(function(){
 	
 //  Home Top Image Size
 $('#home-top-image').height($(window).height());
+$('.plane').height($(window).height());
 //  Tabs
 $('.domestic-travel a, .investment a').on('click', function(){
    var target = $(this).attr('rel');
@@ -13,30 +14,39 @@ $('.domestic-travel a, .investment a').on('click', function(){
    return false;
 });
 //  PopOut Menu
-$('#home-icon').hover(function(){
-	$('.home-menu').toggle();
+$('#home-icon').click(function(){
+	$('.home-menu').show();
+	$('.about-menu, .recruit-menu, .media-menu').hide();
 });
-$('#about-icon').hover(function(){
-	$('.about-menu').toggle();
+$('#about-icon').click(function(){
+	$('.about-menu').show();
+	$('.home-menu, .recruit-menu, .media-menu').hide();
 });
-$('#recruit-icon').hover(function(){
-	$('.recruit-menu').toggle();
+$('#recruit-icon').click(function(){
+	$('.recruit-menu').show();
+	$('.about-menu, .home-menu, .media-menu').hide();
 });
-$('#media-icon').hover(function(){
-	$('.media-menu').toggle();
+$('#media-icon').click(function(){
+	$('.media-menu').show();
+	$('.about-menu, .recruit-menu, .home-menu').hide();
 });
 
-var toggle_sub_menu = function () {
-    $(this).children('.sub-menu').toggle();
-}
-$('.popout-menu-wrapper').hover(toggle_sub_menu);
+$('.popout-menu-title').click(function(){
+	$(this).siblings('.sub-menu').toggle();
+});
 
-var toggle_menu = function () {
-    $('.popout-menu').toggle();
-	$('.navbar-header').toggleClass('grey-navbar-header');
-	$('.navbar-brand').toggleClass('navbar-brand-hover');
-}
-$('.menu-hover, .popout-menu').hover(toggle_menu);
+$('.menu-hover').click(function(){
+	$('.popout-menu').show();
+	$('.navbar-header').addClass('grey-navbar-header');
+	$('.navbar-brand').addClass('navbar-brand-hover');
+});
+$('#skrollr-body, .sub-menu a, a.grey-logo').click(function(){
+	$('.popout-menu').hide();
+	$('.navbar-header').removeClass('grey-navbar-header');
+	$('.navbar-brand').removeClass('navbar-brand-hover');
+});
+
+
 
 	
 });	
@@ -44,7 +54,7 @@ $('.menu-hover, .popout-menu').hover(toggle_menu);
 $(document).ready(function(){
 // $(document).on("scroll", onScroll);
 //SMOOTH SCROLL
-    $('.sub-menu a[href*=#]:not([href=#])').on('click', function (e) {
+    $('.popout-menu a[href*=#]:not([href=#])').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
         
@@ -132,8 +142,7 @@ var opt2 = {
 	  scaleFontSize : 15,
 	  xAxisBottom:false,
 	  xAxisTop:true,
-	  scaleFontColor: "#9ca7ab",
-	  
+	  scaleFontColor: "#9ca7ab"
 }
 
 

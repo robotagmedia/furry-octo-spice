@@ -82,6 +82,7 @@ a:focus {
 }
 /* BTN */
 .btn-default {
+  font-family: 'rosarioregular';
   font-size: 20px;
   color: #ffffff;
   border: none;
@@ -247,6 +248,7 @@ span.menu-icon {
 #home-top-image {
   background-image: url(../img/fuji-home.jpg);
   background-size: cover;
+  background-attachment: fixed;
 }
 .absolute-center-parent {
   position: absolute;
@@ -268,6 +270,9 @@ a.tab div {
   background-size: cover;
   border-bottom: solid 1px #0072b5;
   padding-bottom: 2px;
+}
+.tabiness {
+  height: 70px;
 }
 .blue-ribbon {
   background-color: #2383bb;
@@ -291,14 +296,14 @@ a.tab div {
   padding-bottom: 40px;
   background-image: url(../img/domestic-travel.jpg);
   background-size: cover;
-  min-height: 362px;
+  min-height: 425px;
 }
 .domestic-travel-wrapper #hotel-jp {
   padding-top: 30px;
   padding-bottom: 40px;
   background-image: url(../img/hotel-jp-bg.jpg);
   background-size: cover;
-  min-height: 362px;
+  min-height: 425px;
 }
 .domestic-travel-wrapper p {
   font-family: 'Varela', sans-serif;
@@ -439,6 +444,9 @@ a.tab div {
 }
 #history {
   background-color: #f6f7f7;
+}
+#history .carousel-inner {
+  height: 470px;
 }
 #history .carousel-inner h2 {
   color: #3497da;
@@ -618,9 +626,8 @@ a.tab div {
 }
 .plane {
   background-image: url(../img/plane-slide.jpg);
-  background-size: 120%;
+  background-size: cover;
   background-repeat: no-repeat;
-  min-height: 600px;
 }
 footer {
   background-color: #1f1f1f;
@@ -649,6 +656,18 @@ footer .menu-blue:last-child:after {
 }
 footer .menu-blue a {
   color: #076d91;
+}
+.footer-social-networks {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 999;
+}
+.footer-social-networks img {
+  width: 28px;
+  height: 28px;
+  margin: 14px 7px 0px 5px;
+  padding: 0;
 }
 iframe {
   border: none;
@@ -696,13 +715,13 @@ iframe {
   left: 144px;
 }
 .first-year hr {
-  height: 352px;
+  height: 360px;
 }
 .second-year {
   left: 270px;
 }
 .second-year hr {
-  height: 316px;
+  height: 320px;
 }
 .third-year {
   left: 397px;
@@ -720,7 +739,7 @@ iframe {
   left: 650px;
 }
 .fifth-year hr {
-  height: 124px;
+  height: 122px;
   color: #f2d13b !important;
 }
 .fifth-year .year-point {
@@ -783,6 +802,69 @@ iframe {
     line-height: 40px;
     font-size: 30px;
   }
+  #history .carousel-indicators {
+    width: 90%;
+    left: 35%;
+  }
+  #history .carousel-bar {
+    width: 170px;
+    left: 50%;
+  }
+  .graph-wrapper {
+    padding: 0;
+  }
+  .graph-years span {
+    font-size: 10px;
+  }
+  .stats-logo img {
+    width: 80%;
+    margin: 15% 10%;
+  }
+  #canvas_StackedBar2 {
+    height: 173.1px !important;
+    width: 260px !important;
+    font-size: 22px;
+  }
+  .year-point {
+    left: 38%;
+  }
+  .graph {
+    padding: 0;
+  }
+  .first-year {
+    left: 43px;
+  }
+  .first-year hr {
+    height: 120px;
+  }
+  .second-year {
+    left: 87px;
+  }
+  .second-year hr {
+    height: 109px;
+  }
+  .third-year {
+    left: 131px;
+  }
+  .third-year hr {
+    height: 91px;
+  }
+  .fourth-year {
+    left: 174px;
+  }
+  .fourth-year hr {
+    height: 67px;
+  }
+  .fifth-year {
+    left: 217.5px;
+  }
+  .fifth-year hr {
+    height: 47px;
+  }
+  .footer-social-networks {
+    top: 90%;
+    right: 25%;
+  }
 }
 /* Tablets */
 @media (min-width: 481px) and (max-width: 767px) {
@@ -790,39 +872,6 @@ iframe {
     margin: 7.5px 5px;
     font-family: "Varela", sans-serif;
     font-size: 16px;
-  }
-}
-/* Smartphones & Tablets */
-@media (max-width: 767px) {
-  .center-on-mobile {
-    text-align: center;
-  }
-  .ceo-mission {
-    position: relative;
-  }
-  #business-strategy {
-    background-image: none;
-  }
-  footer {
-    padding-left: 50px;
-  }
-  footer ul li {
-    display: block;
-    text-align: center;
-  }
-  footer ul li a {
-    width: 100%;
-    display: block;
-    padding: 15px 0px;
-  }
-  footer ul li .logo-footer {
-    margin-bottom: 20px;
-  }
-  footer .menu-blue:after {
-    content: "";
-  }
-  .plane {
-    min-height: 230px;
   }
   #canvas_StackedBar2 {
     height: 239.7px !important;
@@ -862,9 +911,47 @@ iframe {
     height: 55px;
   }
 }
+/* Smartphones & Tablets */
+@media (max-width: 767px) {
+  .center-on-mobile {
+    text-align: center;
+  }
+  .ceo-mission {
+    position: relative;
+  }
+  #business-strategy {
+    background-image: none;
+  }
+  footer {
+    padding-left: 50px;
+  }
+  footer ul li {
+    display: block;
+    text-align: center;
+  }
+  footer ul li a {
+    width: 100%;
+    display: block;
+    padding: 15px 0px;
+  }
+  footer ul li .logo-footer {
+    margin-bottom: 20px;
+  }
+  footer .menu-blue:after {
+    content: "";
+  }
+}
 /* Large screens */
 @media (min-width: 992px) {
-  
+  .plane {
+    background-size: 120%;
+  }
+}
+/* Very Large screens */
+@media (min-width: 1260px) {
+  #business-strategy {
+    background-size: cover;
+  }
 }
 /* Mid */
 @media (min-width: 767px) and (max-width: 992px) {
@@ -883,7 +970,39 @@ iframe {
   .pad10 {
     height: 120px;
   }
-  .plane {
-    min-height: 450px;
+  #canvas_StackedBar2 {
+    height: 439.45px !important;
+    width: 660px !important;
+  }
+  .first-year {
+    left: 123px;
+  }
+  .first-year hr {
+    height: 315px;
+  }
+  .second-year {
+    left: 234px;
+  }
+  .second-year hr {
+    height: 285px;
+  }
+  .third-year {
+    left: 343px;
+  }
+  .third-year hr {
+    height: 236px;
+  }
+  .fourth-year {
+    left: 455px;
+  }
+  .fourth-year hr {
+    height: 166px;
+  }
+  .fifth-year {
+    left: 564px;
+  }
+  .fifth-year hr {
+    height: 110px;
+    color: #f2d13b !important;
   }
 }
