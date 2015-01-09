@@ -1,11 +1,20 @@
 // JavaScript Document
 
-$(document).ready(function(){
-	
+$(window).load(function() {
 	
 //  Home Top Image Size
-$('#home-top-image').height($(window).height());
+$('.panel').height($(window).height());
 $('.plane').height($(window).height());
+
+$('.absolute-center-parent').each(function(i, obj) {
+	var element_height = $(this).children('.absolute-center').outerHeight();
+	var half_height = ((element_height)/2);
+	$(this).css('marginTop', -half_height);
+});
+});
+$(document).ready(function(){
+
+
 //  Tabs
 $('.domestic-travel a, .investment a').on('click', function(){
    var target = $(this).attr('rel');
