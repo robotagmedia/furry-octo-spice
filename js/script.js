@@ -1,18 +1,22 @@
 // JavaScript Document
 
 $(window).load(function() {
-	
-//  Home Top Image Size
-$('.panel').height($(window).height());
-$('.plane').height($(window).height());
-
-$('.absolute-center-parent').each(function(i, obj) {
+  $(".main-content, footer").show();
+  
+  $('.absolute-center-parent').each(function(i, obj) {
 	var element_height = $(this).children('.absolute-center').outerHeight();
 	var half_height = ((element_height)/2);
 	$(this).css('marginTop', -half_height);
 });
 });
+
 $(document).ready(function(){
+	
+//  Home Top Image Size
+$('.panel').height($(window).height());
+$('.plane').height($(window).height());
+
+
 
 
 //  Tabs

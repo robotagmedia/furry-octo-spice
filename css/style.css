@@ -62,6 +62,10 @@ a:focus {
 }
 .main-content {
   margin-left: 50px;
+  display: none;
+}
+footer {
+  display: none;
 }
 .relative {
   position: relative;
