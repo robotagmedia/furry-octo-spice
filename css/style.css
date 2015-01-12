@@ -6,6 +6,9 @@
 body {
   font-family: 'rosarioregular';
   color: #464646;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #252525;
 }
 /* Titles */
 h1 {
@@ -379,7 +382,7 @@ a.tab div {
   display: block;
 }
 .map img {
-  margin-top: 17.85%;
+  margin-top: 29%;
   padding: 5% 10% 5% 10%;
 }
 #map {
@@ -1015,6 +1018,9 @@ iframe {
   .team_member img {
     width: 70px;
   }
+  .map img {
+    margin-top: 21%;
+  }
 }
 /* Tablets */
 @media (min-width: 481px) and (max-width: 767px) {
@@ -1062,6 +1068,9 @@ iframe {
   }
   #history .carousel-inner {
     height: 595px;
+  }
+  .map img {
+    margin-top: 26%;
   }
 }
 /* Smartphones & Tablets */
