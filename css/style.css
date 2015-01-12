@@ -1123,12 +1123,6 @@ iframe {
     background-size: 120%;
   }
 }
-/* Very Large screens */
-@media (min-width: 1260px) {
-  #business-strategy {
-    background-size: cover;
-  }
-}
 /* Mid */
 @media (min-width: 767px) and (max-width: 992px) {
   .blue-ribbon h3 {
