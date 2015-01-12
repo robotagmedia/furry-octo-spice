@@ -13,7 +13,7 @@ $(window).load(function() {
 $(document).ready(function(){
 	
 //  Home Top Image Size
-$('.panel').height($(window).height());
+$('.panel').height($(window).height() - 81);
 $('.plane').height($(window).height());
 
 
