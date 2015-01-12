@@ -206,7 +206,8 @@
         </div>
       </div>
       <!-- Map 2 / World -->
-      <div class="row relative map"> <img data-bottom-top="opacity:0" data-center="opacity:1" class="img-responsive" src="img/collaboration-map.png" />
+      <div class="row relative map"> <div id="the-list-map"><img data-bottom-top="opacity:0" data-center="opacity:1" class="img-responsive" src="img/collaboration-map.png" /></div>
+      <div id="other-map" style="display:none"><img data-bottom-top="opacity:0" data-center="opacity:1" class="img-responsive" src="img/collaboration-map-flocations.png" /></div>
         <div class="blue-ribbon">
           <h3>Collaborations</h3>
         </div>
@@ -430,11 +431,11 @@ skrollr.init({ forceHeight: false })
             <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="name">Your name <span class="orange">*</span></label>
+                <label for="name">Your name <span class="orange">&ast;</span></label>
                 <input type="text" class="form-control" id="name">
               </div>
               <div class="form-group">
-                <label for="email">E-mail <span class="orange">*</span></label>
+                <label for="email">E-mail <span class="orange">&ast;</span></label>
                 <input type="email" class="form-control" id="email">
               </div>
               <div class="form-group">
@@ -451,7 +452,7 @@ skrollr.init({ forceHeight: false })
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label>Purpose of Inquiry <span class="orange">*</span></label>
+                <label>Purpose of Inquiry <span class="orange">&ast;</span></label>
                 <select class="selectpicker" data-width="100%">
                   <option>Advertisers - Content Sources</option>
                   <option>Business Partnerships - Alliances</option>
@@ -460,7 +461,7 @@ skrollr.init({ forceHeight: false })
                 </select>
               </div>
               <div class="form-group">
-                <label>Message <span class="orange">*</span></label>
+                <label>Message <span class="orange">&ast;</span></label>
                 <textarea class="form-control" rows="4"></textarea>
               </div>
               <button type="submit" class="btn btn-submit btn-default blue-btn">Send</button>
@@ -482,7 +483,7 @@ skrollr.init({ forceHeight: false })
       
       <!-- Map -->
       <div id="map" class="row">
-        <iframe width="100%" height="450px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
+        <iframe width="100%" height="300px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
         </div>
     </div>
   </div>

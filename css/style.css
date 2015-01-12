@@ -928,6 +928,9 @@ iframe {
   .fifth-year hr {
     height: 55px;
   }
+  #history .carousel-inner {
+    height: 595px;
+  }
 }
 /* Smartphones & Tablets */
 @media (max-width: 767px) {
@@ -1022,6 +1025,9 @@ iframe {
   .fifth-year hr {
     height: 110px;
     color: #f2d13b !important;
+  }
+  #history .carousel-inner {
+    height: 700px;
   }
 }
 .panel h3 {

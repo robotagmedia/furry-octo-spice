@@ -26,6 +26,16 @@ $('.domestic-travel a, .investment a').on('click', function(){
    $(this).addClass("active-tab").removeClass("tab").siblings(this).addClass("tab").removeClass("active-tab");
    return false;
 });
+
+$("a[rel='the-list']").click(function(){
+  $("#the-list-map").show();
+  $("#other-map").hide();
+});
+$("a[rel='flocations'], a[rel='telunjuk']").click(function(){
+  $("#the-list-map").hide();
+  $("#other-map").show();
+});
+
 //  PopOut Menu
 $('#home-icon').click(function(){
 	$('.home-menu').show();
