@@ -42,9 +42,9 @@ a:hover, a:focus {text-decoration:none; color:@white}
 .logo-top {position:absolute; top:16px; left:15px;}
 .main-content {
 	margin-left:50px;
-	display:none;
+	/*display:none;*/
 }
-footer { display:none;}
+/*footer { display:none;}*/
 .relative {position:relative;}
 .img-responsive {width:100%;}
 .pad2 {padding: 3%;}
@@ -141,6 +141,8 @@ span.menu-icon { width:20px; height:20px; display:inline-block; vertical-align: 
 .users { background-image:url(../img/users.png);}
 /* Homepage */
 .panel { background-size:cover; background-attachment: fixed; margin-bottom:0; border:none; box-shadow: none;
+border-radius: 0;}
+#top-image { background-size:cover; background-attachment: fixed; margin-bottom:0; border:none; box-shadow: none;
 border-radius: 0;}
 .home-top {background-image:url(../img/fuji-home.jpg);}
 .absolute-center-parent { position:absolute; top:50%; width: 100%;text-align: center; height:auto;}
@@ -351,6 +353,28 @@ iframe {border:none;}
 .dropdown-menu > li > a:hover { background-color: #2885cc; color:@white; padding: 5px 15px;}
 .btn-info,.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info  {background-color:#2885cc;}
 
+// RECRUIT PAGE
+.panel h3 {font-size:20px; line-height: 30px; margin-top:50px; margin-bottom:50px}
+.recruit-top {background-image:url(../img/recruit_1.jpg); color:@white}
+#values {background-image:url(../img/recruit_2.jpg);  color:#012e4f !important; h1 {color:#012e4f}}
+#panel_recruit_3 {background-image:url(../img/recruit_3.jpg);color:@white }
+#panel_recruit_4 {background-image:url(../img/recruit_4.jpg);color:@white}
+#panel_recruit_5 {background-image:url(../img/recruit_5.jpg);color:@white}
+#panel_recruit_6 {background-image:url(../img/recruit_6.jpg);color:@white}
+#panel_recruit_7 {background-image:url(../img/recruit_7.jpg);color:@white}
+#panel_recruit_8 {background-image:url(../img/recruit_8.jpg);color:@white}
+#panel_recruit_9 {background-image:url(../img/recruit_9.jpg);color:@white}
+#panel_recruit_10 {background-image:url(../img/recruit_10.jpg);color:@white}
+#work_at_vr {background-image:url(../img/recruit_11.jpg);color:@white; h1 {color:#0072bc}}
+.stripe { color:@white; background-image:url(../img/dark_blue_bg.jpg); background-size:cover; padding-top: 15px;
+padding-bottom: 30px;
+h2 { font-family:@aller-bd; margin-top:20px; margin-bottom:20px;}
+}
+.team_member { margin:10px 0px;height:100px; img { width:100px;} p { text-align:left;vertical-align: middle; margin-left: 10px;line-height:22px; i{color:#0375c1; font-size:15px;} display:inline-block;}}
+.apply-btn {background-color:#0054a6;}
+.apply-btn:hover {background-color:#407fbc; color:@white}
+#application { color:@white; background-color:#0072bc; .col-sm-6 {padding: 50px; border: thin solid @white}.col-sm-6:first-child { border-right:0px} p{ height:100px; font-size:20px}}
+
 /* MEDIA QUERIES */
 
 /* Smartphones */
@@ -389,6 +413,14 @@ left: 50%;}
     top: 90%;
     right: 25%;
 }
+.panel, #top-image { background-position: 45% 0%;}
+h3 {
+	line-height:30px !important;
+	font-size: 20px;
+}
+p {line-height: 24px;}
+.btn-default {margin:10px 0px;}
+.team_member img { width:70px;}
 	}
 
 /* Tablets */
@@ -427,7 +459,16 @@ footer { padding-left: 50px; ul li {display:block; text-align:center; a{ width:1
 footer .menu-blue:after {
     content: "";
 }
-
+.team_member { text-align:center}
+.panel h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+	font-size:18px;
+}
+h2 {font-size: 18px;}
+#application .col-sm-6:first-child {
+    border: thin solid #FFF;
+}
  }
 /* Large screens */
 @media (min-width: 992px) {
@@ -471,24 +512,3 @@ footer { padding-left:50px;}
 
 
 
-// RECRUIT PAGE
-.panel h3 {font-size:20px; line-height: 30px; margin-top:50px; margin-bottom:50px}
-.recruit-top {background-image:url(../img/recruit_1.jpg); color:@white}
-#values {background-image:url(../img/recruit_2.jpg);  color:#012e4f !important; h1 {color:#012e4f}}
-#panel_recruit_3 {background-image:url(../img/recruit_3.jpg);color:@white }
-#panel_recruit_4 {background-image:url(../img/recruit_4.jpg);color:@white}
-#panel_recruit_5 {background-image:url(../img/recruit_5.jpg);color:@white}
-#panel_recruit_6 {background-image:url(../img/recruit_6.jpg);color:@white}
-#panel_recruit_7 {background-image:url(../img/recruit_7.jpg);color:@white}
-#panel_recruit_8 {background-image:url(../img/recruit_8.jpg);color:@white}
-#panel_recruit_9 {background-image:url(../img/recruit_9.jpg);color:@white}
-#panel_recruit_10 {background-image:url(../img/recruit_10.jpg);color:@white}
-#work_at_vr {background-image:url(../img/recruit_11.jpg);color:@white; h1 {color:#0072bc}}
-.stripe { color:@white; background-image:url(../img/dark_blue_bg.jpg); background-size:cover; padding-top: 15px;
-padding-bottom: 30px;
-h2 { font-family:@aller-bd; margin-top:20px; margin-bottom:20px;}
-}
-.team_member { height:100px; img { width:100px;} p { vertical-align: middle; margin-left: 10px;line-height:22px; i{color:#0375c1; font-size:15px;} display:inline-block;}}
-.apply-btn {background-color:#0054a6;}
-.apply-btn:hover {background-color:#407fbc; color:@white}
-#application { color:@white; background-color:#0072bc; .col-sm-6 {padding: 50px; border: thin solid @white}.col-sm-6:first-child { border-right:0px} p{ height:100px; font-size:20px}}

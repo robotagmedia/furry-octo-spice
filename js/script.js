@@ -1,7 +1,7 @@
 // JavaScript Document
 
 $(window).load(function() {
-  $(".main-content, footer").show();
+  /*$(".main-content, footer").show();*/
   
   $('.absolute-center-parent').each(function(i, obj) {
 	var element_height = $(this).children('.absolute-center').outerHeight();
@@ -13,7 +13,8 @@ $(window).load(function() {
 $(document).ready(function(){
 	
 //  Home Top Image Size
-$('.panel').height($(window).height() - 81);
+$('#top-image').height($(window).height() - 81);
+$('.panel').height($(window).height());
 $('.plane').height($(window).height());
 
 
