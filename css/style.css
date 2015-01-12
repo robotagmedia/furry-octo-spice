@@ -971,31 +971,31 @@ iframe {
     left: 43px;
   }
   .first-year hr {
-    height: 120px;
+    height: 120px !important;
   }
   .second-year {
     left: 87px;
   }
   .second-year hr {
-    height: 109px;
+    height: 109px !important;
   }
   .third-year {
     left: 131px;
   }
   .third-year hr {
-    height: 91px;
+    height: 91px !important;
   }
   .fourth-year {
     left: 174px;
   }
   .fourth-year hr {
-    height: 67px;
+    height: 67px !important;
   }
   .fifth-year {
     left: 217.5px;
   }
   .fifth-year hr {
-    height: 47px;
+    height: 47px !important;
   }
   .footer-social-networks {
     top: 90%;
@@ -1040,31 +1040,31 @@ iframe {
     left: 59px;
   }
   .first-year hr {
-    height: 164px;
+    height: 164px !important;
   }
   .second-year {
     left: 119.5px;
   }
   .second-year hr {
-    height: 144px;
+    height: 144px !important;
   }
   .third-year {
     left: 180px;
   }
   .third-year hr {
-    height: 119px;
+    height: 119px !important;
   }
   .fourth-year {
     left: 240px;
   }
   .fourth-year hr {
-    height: 84px;
+    height: 84px !important;
   }
   .fifth-year {
     left: 300px;
   }
   .fifth-year hr {
-    height: 55px;
+    height: 55px !important;
   }
   #history .carousel-inner {
     height: 595px;
@@ -1154,32 +1154,32 @@ iframe {
     left: 123px;
   }
   .first-year hr {
-    height: 315px;
+    height: 315px !important;
   }
   .second-year {
     left: 234px;
   }
   .second-year hr {
-    height: 285px;
+    height: 285px !important;
   }
   .third-year {
     left: 343px;
   }
   .third-year hr {
-    height: 236px;
+    height: 236px !important;
   }
   .fourth-year {
     left: 455px;
   }
   .fourth-year hr {
-    height: 166px;
+    height: 166px !important;
   }
   .fifth-year {
     left: 564px;
   }
   .fifth-year hr {
-    height: 110px;
-    color: #f2d13b !important;
+    height: 110px !important;
+    color: #f2d13b;
   }
   #history .carousel-inner {
     height: 700px;

@@ -219,21 +219,21 @@
           <h3 class="white">Venture Republic’s body of services listed above pull an <br />
             astounding 98 million sessions average each month!</h3>
         </div>
-        <div class="col-md-12 graph-wrapper">
+        <div class="col-md-12 graph-wrapper" data-bottom-top="opacity:0;" data-center="opacity:1">
           <div class="graph col-centered">
             <div class="graph-years"> <span class="first-year">2010<span class="year-point"></span>
-              <hr width="0">
+              <hr data-bottom-top="height:0px;" data-center="height:360px;" width="0">
               </span> <span class="second-year">2011<span class="year-point"></span>
-              <hr width="0">
+              <hr data-bottom-top="height:0px;" data-center="height:320px;" width="0">
               </span> <span class="third-year">2012<span class="year-point"></span>
-              <hr width="0">
+              <hr data-bottom-top="height:0px;" data-center="height:263px;" width="0">
               </span> <span class="fourth-year">2013<span class="year-point"></span>
-              <hr width="0">
+              <hr data-bottom-top="height:0px;" data-center="height:187px;" width="0">
               </span> <span class="fifth-year">2014<span class="year-point"></span>
-              <hr width="0">
+              <hr data-bottom-top="height:0px;" data-center="height:122px;" width="0">
               </span> </div>
             <script>
-document.write("<canvas id=\"canvas_StackedBar2\" height=\""+defCanvasHeight+"\" width=\""+defCanvasWidth+"\"></canvas>");
+document.write("<canvas height=\""+defCanvasHeight+"\" id=\"canvas_StackedBar2\"  width=\""+defCanvasWidth+"\"></canvas>");
 window.onload = function() {
 var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
 skrollr.init({ forceHeight: false })
