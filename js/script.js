@@ -13,7 +13,7 @@ $(window).load(function() {
 $(document).ready(function(){
 	
 //  Home Top Image Size
-$('#top-image').height($(window).height() - 81);
+$('#top-image').height($(window).height() - 77);
 $('.panel').height($(window).height());
 $('.plane').height($(window).height());
 
@@ -78,7 +78,7 @@ $('#skrollr-body, .sub-menu a, a.grey-logo').click(function(){
 $(document).ready(function(){
 // $(document).on("scroll", onScroll);
 //SMOOTH SCROLL
-    $('.popout-menu a[href*=#]:not([href=#])').on('click', function (e) {
+    $('.is_page_menu a[href*=#]:not([href=#])').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
         
