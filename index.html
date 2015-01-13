@@ -111,16 +111,16 @@
   </nav>
 </header>
 <!-- Content -->
-<div id="skrollr-body"> 
-<div class="main-content">
-  <div class="container-fluid">
+<div id="skrollr-body">
+  <div class="main-content">
+    <div class="container-fluid"> 
       <!-- Top image -->
       <div class="row relative home-top" id="top-image">
-          <div class="logo-top"><img src="img/logo-white.png" /></div>
-          <div class="absolute-center-parent">
-            <h1 class="absolute-center">We Bring the Best Travel Prices<br />
-              and Content to the World</h1>
-          </div>
+        <div class="logo-top"><img src="img/logo-white.png" /></div>
+        <div class="absolute-center-parent">
+          <h1 class="absolute-center">We Bring the Best Travel Prices<br />
+            and Content to the World</h1>
+        </div>
       </div>
       <!-- Travel & Hotel -->
       <div id="services" class="row domestic-travel"><a class="active-tab" href="#" rel="travel-jp">
@@ -138,11 +138,11 @@
               <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile visible"> <a class="btn btn-lg btn-default turquoise-btn">Visit Travel.jp</a> </div>
               <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-lg btn-default light-blue-btn">Visit app</a> </div>
               <div class="row-fluid">
-              <div class="col-sm-3 col-sm-offset-2 col-xs-12 center-on-mobile text-right"><img class="tabiness" src="img/travel-jp-tabiness.png" /></div>
-              <div class="col-sm-5 col-xs-12 text-left center-on-mobile">
-                <p>Travel.jp + Tabiness: Japan-Related Travel<br />
-                  Information from experienced Travel experts.</p>
-              </div>
+                <div class="col-sm-3 col-sm-offset-2 col-xs-12 center-on-mobile text-right"><img class="tabiness" src="img/travel-jp-tabiness.png" /></div>
+                <div class="col-sm-5 col-xs-12 text-left center-on-mobile">
+                  <p>Travel.jp + Tabiness: Japan-Related Travel<br />
+                    Information from experienced Travel experts.</p>
+                </div>
               </div>
               <div class="col-md-10 col-md-offset-1 text-center visible"> <a class="btn btn-lg btn-default turquoise-btn">Visit Tabiness</a> </div>
             </div>
@@ -164,10 +164,11 @@
       </div>
       
       <!-- Map 1 / Japan -->
-      <div class="row relative map" data-bottom-top="opacity:0;background-position:0% 0%" data-center="opacity:1; background-position:50% 0%" data-top-bottom="background-position:100% 0%"> <img class="img-responsive" src="img/global-initiative-map.png" />
+      <div class="row relative map" data-bottom-top="background-position:0% 0%" data-center="background-position:50% 0%" data-top-bottom="background-position:100% 0%"> <img data-bottom-top="opacity:0;" data-center="opacity:1" class="img-responsive" src="img/global-initiative-map-no-japan.png" />
         <div class="blue-ribbon">
           <h3>Japan</h3>
         </div>
+        <div class="japan-map" style="position:absolute; top:0; z-index:888"><img class="img-responsive" src="img/collaboration-map-japan.png"></div>
       </div>
       <!-- Investments -->
       <div class="row relative investment"> <a class="active-tab" rel="the-list" href="#">
@@ -206,12 +207,17 @@
         </div>
       </div>
       <!-- Map 2 / World -->
-      <div class="row relative map" data-bottom-top="opacity:0;background-position:0% 0%" data-center="opacity:1; background-position:50% 0%" data-top-bottom="background-position:100% 0%"> <div id="the-list-map"><img class="img-responsive" src="img/collaboration-map.png" /></div>
-      <div id="other-map" style="display:none"><img class="img-responsive" src="img/collaboration-map-flocations.png" /></div>
+      <div class="row relative map" data-bottom-top="background-position:0% 0%" data-center="background-position:50% 0%" data-top-bottom="background-position:100% 0%">
+        <div class="maps-wrapper" data-bottom-top="opacity:0" data-center="opacity:1;">
+          <div id="the-list-map"><img class="img-responsive" src="img/collaboration-map-no-japan.png" /></div>
+          <div id="other-map" style="display:none"><img class="img-responsive" src="img/collaboration-map-flocations-no-japan.png" /></div>
+        </div>
         <div class="blue-ribbon">
           <h3>Collaborations</h3>
         </div>
+        <div class="japan-map" style="position:absolute; top:0; z-index:888"><img class="img-responsive" src="img/collaboration-map-japan.png"></div>
       </div>
+      
       <!-- Statistics -->
       <div id="statistics" class="row statistics text-center">
         <div class="col-md-12">
@@ -469,36 +475,35 @@ skrollr.init({ forceHeight: false })
           </form>
         </div>
       </div>
+    </div>
+    
+    <!-- Social Networks -->
+    <div id="social" class="row">
+      <div class="col-sm-6 text-right center-on-mobile">
+        <h2 class="blue">
+        Join our social network
+        </h1>
       </div>
-      
-      <!-- Social Networks -->
-      <div id="social" class="row">
-        <div class="col-sm-6 text-right center-on-mobile">
-          <h2 class="blue">
-          Join our social network
-          </h1>
-        </div>
-        <div class="col-sm-6 text-left center-on-mobile"> <a href="#" target="_blank"><img src="img/blue-fb.jpg" /></a><a href="#" target="_blank"><img src="img/blue-twitter.jpg" /></a><a href="#" target="_blank"><img src="img/blue-insta.jpg" /></a> </div>
-      </div>
-      
-      <!-- Map -->
-      <div id="map" class="row">
-        <iframe width="100%" height="300px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
-        </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" target="_blank"><img src="img/blue-fb.jpg" /></a><a href="#" target="_blank"><img src="img/blue-twitter.jpg" /></a><a href="#" target="_blank"><img src="img/blue-insta.jpg" /></a> </div>
+    </div>
+    
+    <!-- Map -->
+    <div id="map" class="row">
+      <iframe width="100%" height="300px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
     </div>
   </div>
+</div>
 <footer class="relative">
-<div class="footer-social-networks"><a href="#" target="_blank"><img src="img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="img/black-insta.jpg" /></a></div>
+  <div class="footer-social-networks"><a href="#" target="_blank"><img src="img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="img/black-insta.jpg" /></a></div>
   <div class="container-fluid">
     <div class="row">
-    
       <div class="col-md-12">
         <ul>
           <li><img class="logo-footer" src="img/black-logo.jpg" /></li>
           <li><a href="index.html">Home</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="recruit.html">Recruit</a></li>
-            <li><a href="about.html">About</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="recruit.html">Recruit</a></li>
+          <li><a href="about.html">About</a></li>
           <li class="menu-blue"><a href="#">Privacy</a></li>
           <li class="menu-blue"><a href="#">Terms</a></li>
         </ul>
