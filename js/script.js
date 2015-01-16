@@ -13,10 +13,10 @@ $(window).load(function() {
 $(document).ready(function(){
 	
 //  Home Top Image Size
-$('#top-image').height($(window).height() - 77);
-$('.panel').height($(window).height());
+$('.panel').height($(window).height() - 77);
 $('.plane').height($(window).height());
 $('#slide-press .item').height($(window).height() - 60);
+$('#top-image').height($(window).height() - 77);
 
 //  Video media
 $('#video_1').siblings("div").hide();
@@ -98,9 +98,16 @@ $('#skrollr-body, .sub-menu a, a.grey-logo').click(function(){
 });	
 
 $(document).ready(function(){
+	
+	$('#news .news-bloc:gt(5)').hide();
+$('.load-news').click(function() {
+    $('#news .news-bloc:gt(5)').fadeToggle();
+	return false;
+});
+
 // $(document).on("scroll", onScroll);
 //SMOOTH SCROLL
-    $('.is_page_menu a[href*=#]:not([href=#])').on('click', function (e) {
+    $('.is_page_menu a[href*=#]:not([href=#]), .video-feed a[href*=#]:not([href=#])').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
         

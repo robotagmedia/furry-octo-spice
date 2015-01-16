@@ -57,16 +57,16 @@ a:hover, a:focus {text-decoration:none; color:@white}
  
 }
 /* BTN */
-.btn-default { font-family:@rosario-rg; font-size:20px; color:@white; border:@none; border-radius:3px; margin:20px 0px; z-index:999; letter-spacing:1px; white-space: normal;}
+.btn-default { font-family:@rosario-rg; font-size:20px; color:@white; border:@none; border-radius:3px; margin:20px 0px; z-index:999; letter-spacing:1px; white-space: normal; padding: 16px 16px;}
 .turquoise-btn { background-color:@turquoise}
 .turquoise-btn:hover { background-color:#92d4e6; color:@white}
 .light-blue-btn { background-color:@light-blue}
 .light-blue-btn:hover { background-color:#67b1e3; color:@white}
 .btn-lg { width:200px; }
-.yellow-btn {  background-color:@yellow; color:@dark; padding:6px 25px}
+.yellow-btn {  background-color:@yellow; color:@dark; padding:16px 25px}
 .yellow-btn:hover {background-color:#f5dd6c;}
 
-.blue-btn {  background-color:@i_blue; color:@white; padding:6px 25px}
+.blue-btn {  background-color:@i_blue; color:@white; padding:16px 25px}
 .blue-btn:hover {background-color:#599fd5; color:@white; }
 
 /* HEADER / NAV */
@@ -153,7 +153,8 @@ border-radius: 0;}
 .absolute-center-parent { position:absolute; top:50%; width: 100%;text-align: center; height:auto;}
 a.tab:hover div, a.active-tab div {background-image:url(../img/light-grey-bg-rectangle.jpg); background-size:cover; border-bottom:solid 3px @dark-blue; padding-bottom: 0px; }
 a.tab div {background-image:url(../img/grey-bg-rectangle.jpg); background-size:cover; border-bottom:solid 1px @dark-blue; padding-bottom: 2px;}
-.tabiness {height:70px;}
+.tabiness {height:60px;}
+.tabiness-wrapper{margin-top:30px; .btn {margin-top:10px;}}
 .blue-ribbon {background-color:@blue; position:absolute; bottom:10%; color:@white; padding: 1% 2%; min-width:19.2%; text-align:right;}
 .blue-ribbon h3 {
     margin: 15px 10px;
@@ -179,7 +180,7 @@ p { font-family:@varela; font-size:15px;}
 .visible {z-index:500}
 .map { background-image:url(../img/grid.png); background-size:cover; margin-top: -22.85%; display: inline; display: block; }
 .map img {margin-top: 29%; padding:5% 10% 5% 10%}
-.japan-map, .asia-map {width:100%;}
+.japan-map, .asia-map, .japan-only-map {position:absolute; top:0; z-index: 499;width:100%;}
 #map {line-height: 0px; border-bottom:#a5a5a5 thin solid }
 .statistics  { background-image:url(../img/graph-bg.jpg); background-size:cover; padding-top: 30px;
 padding-bottom: 50px;}
@@ -293,10 +294,10 @@ h3 { margin:40px 0px 30px 0px;}}
 	.glyphicon {font-size:35px; margin-left:-15px;}
 	p{ font-size:15px; line-height: 22px;}
 	.adress {margin-top:40px; height: 40px;}
-	h2 {font-family:@aller-bd; font-size:25px; padding-left:15px; margin:45px 0px 40px 0px;}
+	h2 {font-family:@aller-bd; font-size:25px; margin:45px 0px 40px 0px;}
 	input { border-radius: 5px; border:none; box-shadow:none; height:45px;}
 	textarea { border-radius: 5px; border:none; box-shadow:none; height: 131px;}
-	.btn-submit {width:180px; font-size:15px; height:45px;}
+	.btn-submit {width:180px; font-size:15px; height:45px; padding:6px 25px}
 	}
 
 #social { background-color:#f8f8f8; padding:50px 0px; border-bottom:1px solid #f7941d; border-top:1px solid #a1a1a1;
@@ -462,14 +463,14 @@ div { height:100%;} .btn { position:absolute; bottom:18%;}}
 
 #november {background-image:url(../img/press_bg.jpg); background-size:cover;}
 #timeline {
-	margin-top:-62px;
+	margin-top: -45px;
 	height: 60px;
 	.col-md-12 {padding:0px}
 	.table { height:60px;}
 	.table tr {background-color:#ebebeb; border-bottom:solid thin @white;}
 	.table tr td {padding:0; vertical-align: middle; border-left:solid thin @white; border-right:solid thin @white; border-top:none; min-width: 30px;}
 	.table tr td a {height: 60px;display: inline-block;width: 100%; padding-top: 20px;}
-	.table-responsive {padding-top: 0px; padding-bottom: 50px; border-bottom: #FFF solid thin;}
+	.table-responsive {padding-top: 0px; padding-bottom: 40px; border-bottom: #FFF solid thin;}
 	.table tr td a:hover, .table tr td.active a {background-color:#acacac; color:@white;}
 }
 .year {border: 0px !important;padding-left: 5px !important; padding-right:5px !important;background-color:#3497da !important; color:@white; font-size:20px; font-family:@aller-bd;}
@@ -485,7 +486,7 @@ a.arrow-slide-right:hover {background-position:100% 100%}
 
 .video-desc-content { position:absolute; width:30%; height:150px; width:400px; top:50%; left:50%; margin-left:-200px; margin-top:-75px; img { width:20%; display:inline-block;} p{ vertical-align: middle;display:inline-block; margin-left:5%; width:70%; color:@white; line-height:24px; font-style:italic}}
 
-.more-news { a:hover { color:@i_blue;} font-size:18px; margin-top: 15px; img {width:30px; margin-right:10px;} } 
+.more-news { a:hover, a:focus, a:active { color:@i_blue;} font-size:18px; margin-top: 15px; img {width:30px; margin-right:10px;} } 
 
 /* End Media Page */
 
@@ -509,10 +510,6 @@ left: 50%;}
 .graph-years span {
     font-size: 10px;
 }
-.stats-logo img {
-	width: 80%;
-    margin: 15% 10%;
-}
 #canvas_StackedBar2 {height:173.1px !important; width: 260px !important; font-size: 22px;}
 .year-point {left: 38%;}
 .graph {padding:0;}
@@ -524,7 +521,7 @@ left: 50%;}
 	hr { height: 47px !important;}
 }
 .footer-social-networks {
-    top: 90%;
+    top: 85%;
     right: 25%;
 }
 .panel, #top-image { background-position: 45% 0%;}
@@ -584,9 +581,13 @@ h2 {font-size: 18px;}
 #application .col-sm-6:first-child {
     border: thin solid #FFF;
 }
-.table-responsive {
+#timeline .table-responsive {
     border: 0px;
-	padding: 0px;
+	padding-bottom: 0px;
+}
+.stats-logo img {
+	width: 50%;
+    margin: 15% 25%;
 }
 .table {margin:20px 0px;}
 .blockquote {padding:0px; h1 {
@@ -612,10 +613,15 @@ h2 {font-size: 18px;}
 	bottom:auto;
 }
 #timeline {
-   margin-top: -2px;
+   margin-top: 50px;
 background-color: #EBEBEB;
 padding-bottom: 120px;
  }
+ #contact .adress {
+    height: 80px;
+}
+#map iframe {height:200px}
+footer {padding: 60px 0px 100px 50px;}
  }
 /* Large screens */
 @media (min-width: 992px) {
@@ -636,7 +642,7 @@ footer { padding-left:50px;}
     height: 120px;
 }
 #timeline {
-   margin-top: -2px;
+   margin-top: 50px;
 background-color: #EBEBEB;
 padding-bottom: 120px;
  }
