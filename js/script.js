@@ -16,8 +16,26 @@ $(document).ready(function(){
 $('#top-image').height($(window).height() - 77);
 $('.panel').height($(window).height());
 $('.plane').height($(window).height());
+$('#slide-press .item').height($(window).height() - 60);
 
+//  Video media
+$('#video_1').siblings("div").hide();
+$('.video_thumb_hover').hide();
 
+$('.video-feed a').on('click', function(){
+   var target = $(this).attr('rel');
+   $("#"+target).show().siblings("div").hide();
+   return false;
+});
+
+$('.video-feed a').hover(function() {
+   $(this).children('.video_thumb_hover').fadeToggle(100);
+});
+
+$('.video-desc').click(function(){
+  $(this).hide();
+  return false;
+});
 
 
 //  Tabs
@@ -31,10 +49,14 @@ $('.domestic-travel a, .investment a').on('click', function(){
 $("a[rel='the-list']").click(function(){
   $("#the-list-map").show();
   $("#other-map").hide();
+  $(".japan-map").show();
+  $(".asia-map").hide();
 });
 $("a[rel='flocations'], a[rel='telunjuk']").click(function(){
   $("#the-list-map").hide();
   $("#other-map").show();
+  $(".japan-map").hide();
+  $(".asia-map").show();
 });
 
 //  PopOut Menu
