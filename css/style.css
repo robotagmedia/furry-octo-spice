@@ -1134,6 +1134,9 @@ a.i_blue {
 .video-feed .col-sm-3 a:last-child {
   margin-top: 30px;
 }
+#video iframe {
+  min-height: 600px;
+}
 .video_thumb_hover {
   position: absolute;
   background-color: rgba(1, 42, 81, 0.8);
@@ -1161,7 +1164,7 @@ a.i_blue {
   padding: 15px 8px;
   margin-bottom: 0px;
 }
-.news-bloc a.read-more {
+.news-bloc .read-more {
   font-style: italic;
   font-weight: bold;
   background-color: #e1e1e1;
@@ -1182,12 +1185,12 @@ a.i_blue {
   background-image: url(../img/blue-bg.jpg);
   background-size: cover;
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 #press h2 {
   font-family: 'allerbold';
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #slide-press .carousel-indicators {
   bottom: 23%;
@@ -1369,7 +1372,7 @@ a.arrow-slide-right:hover {
   }
   h1 {
     line-height: 40px;
-    font-size: 30px;
+    font-size: 28px;
   }
   #history .carousel-indicators {
     width: 90%;
@@ -1608,6 +1611,9 @@ a.arrow-slide-right:hover {
   footer {
     padding: 60px 0px 100px 50px;
   }
+  #video iframe {
+    min-height: 300px;
+  }
 }
 /* Large screens */
 @media (min-width: 992px) {
@@ -1675,4 +1681,46 @@ a.arrow-slide-right:hover {
   #history .carousel-inner {
     height: 700px;
   }
+}
+.insta-feed {
+  margin-left: -16.3px;
+  padding-left: 18px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.instagram-lite {
+  margin: 15px 0px 0px 0px;
+  width: 3010px;
+}
+.instagram-lite li {
+  display: inline-block;
+  padding: 10px;
+}
+.instagram-lite li img {
+  width: 280px;
+  border: 6px solid #ffffff;
+}
+.instagram-lite li:first-child {
+  padding-left: 5px;
+}
+.mCustomScrollbar {
+  background-image: url(../img/lg-grey-bg.jpg);
+  background-size: cover;
+}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background: #448ccb;
+}
+.mCSB_dragger_bar {
+  background-image: url(../img/slider-button.png);
+  background-size: cover;
+  height: 18px !important;
+  width: 18px !important;
+}
+.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+  height: 18px !important;
+  width: 18px !important;
+  top: -2px;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  height: 18px;
 }

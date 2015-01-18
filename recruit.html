@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.css' rel='stylesheet' />
 <link rel="stylesheet/less" type="text/css" href="css/style.less">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,6 +27,8 @@
 <script src="js/Chart.min.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.js'></script>
+<script src="js/instagramLite.js"></script>
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
 <script src="js/script.js"></script>
 </head>
 <body>
@@ -307,6 +310,16 @@
       </div>
       <!-- Instagram Banner -->
       <div class="row relative"> <a href="#"><img src="img/follow_us_banner.jpg" class="img-responsive"></a> </div>
+      
+      <!--TEST-->
+      <div class="mCustomScrollbar row" data-mcs-theme="dark">
+      <div class="col-md-12">
+      <div class="insta-feed">
+      <ul class="instagram-lite"></ul>
+      </div>
+      </div>
+      </div>
+      
       <!-- Social Networks -->
       <div id="social" class="row">
         <div class="col-sm-6 text-right center-on-mobile">
@@ -373,6 +386,21 @@
     </div>
   </footer>
   <script type="text/javascript" src="js/skrollr.min.js"></script> 
+  <script>
+  $('.instagram-lite').instagramLite({
+    clientID: '1370728303674c46ac2e0f8b59b1cd19',
+    username: 'romain.lgr',
+	limit: 10
+});
+(function($){
+        $(window).load(function(){
+            $(".insta-feed").mCustomScrollbar({
+    axis:"x", 
+	theme:"rounded-dark"
+});
+        });
+    })(jQuery);
+</script> 
 </div>
 </body>
 </html>

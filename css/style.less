@@ -432,6 +432,7 @@ margin-right: 15px;
 .video-feed img {border: 7px solid @white }
 .video-feed a {display: block; position:relative}
 .video-feed .col-sm-3 a:last-child { margin-top:30px; }
+#video iframe {min-height:600px;}
 .video_thumb_hover
 {
   position: absolute;
@@ -440,10 +441,10 @@ margin-right: 15px;
   height: 100%;
 }
 #news { padding-bottom:50px; background-color:@white; h2{ margin:60px 0px; font-family:@aller-bd;}}
-.news-bloc { margin-bottom:30px; text-align:left; p{ height:212px; background-color:#ebe9e9; line-height:26px; font-family:@aller-bd; color:#2e73b7; padding:15px 8px; margin-bottom:0px;} a.read-more{font-style:italic; font-weight:bold; background-color:#e1e1e1; color:#2e73b7; display: block; height: 40px; line-height: 37px; padding: 0px 8px;} .date { text-transform:uppercase; color:@dark; font-family:@rosario-rg; display:block;}}
+.news-bloc { margin-bottom:30px; text-align:left; p{ height:212px; background-color:#ebe9e9; line-height:26px; font-family:@aller-bd; color:#2e73b7; padding:15px 8px; margin-bottom:0px;} .read-more{font-style:italic; font-weight:bold; background-color:#e1e1e1; color:#2e73b7; display: block; height: 40px; line-height: 37px; padding: 0px 8px;} .date { text-transform:uppercase; color:@dark; font-family:@rosario-rg; display:block;}}
 #press { color:@white; background-image:url(../img/blue-bg.jpg); background-size:cover; padding-top: 30px;
-padding-bottom: 50px;
-h2 { font-family:@aller-bd; margin-top:20px; margin-bottom:30px;}
+padding-bottom: 40px;
+h2 { font-family:@aller-bd; margin-top:20px; margin-bottom:20px;}
 }
 #slide-press {
 .carousel-indicators {bottom: 23%;
@@ -502,7 +503,7 @@ a.arrow-slide-right:hover {background-position:100% 100%}
 .pad10 {
     height: 50px;
 }	
-h1 {line-height: 40px; font-size:30px;}
+h1 {line-height: 40px; font-size:28px;}
 #history .carousel-indicators { width:90%; left: 35%;}
 #history .carousel-bar { width: 170px;
 left: 50%;}
@@ -622,6 +623,7 @@ padding-bottom: 120px;
 }
 #map iframe {height:200px}
 footer {padding: 60px 0px 100px 50px;}
+#video iframe {min-height:300px;}
  }
 /* Large screens */
 @media (min-width: 992px) {
@@ -662,4 +664,19 @@ padding-bottom: 120px;
 
 }
 
-
+.insta-feed {margin-left: -16.3px;padding-left: 18px; padding-top: 30px;
+padding-bottom: 30px; }
+.instagram-lite {
+	margin: 15px 0px 0px 0px;
+	width: 3010px;
+	li { display: inline-block; padding:10px;
+	img {width:280px; border:6px solid @white;}}
+	li:first-child {padding-left: 5px;}
+	}
+	
+	.mCustomScrollbar {background-image:url(../img/lg-grey-bg.jpg); background-size:cover;}
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail {background: #448ccb;}
+	
+.mCSB_dragger_bar { background-image:url(../img/slider-button.png);background-size:cover;height:18px !important; width:18px !important; }
+.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger {height:18px !important; width:18px !important; top: -2px;}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {height: 18px;}

@@ -25,7 +25,7 @@ $('.video_thumb_hover').hide();
 $('.video-feed a').on('click', function(){
    var target = $(this).attr('rel');
    $("#"+target).show().siblings("div").hide();
-   return false;
+   $("#"+target+" .video-desc").hide();  
 });
 
 $('.video-feed a').hover(function() {
@@ -36,6 +36,46 @@ $('.video-desc').click(function(){
   $(this).hide();
   return false;
 });
+
+$("#video_1 .video-desc, a[rel='video_1']").click(function(){
+    $f($('#video_1 iframe')[0]).api('play');
+	$f($('#video_2 iframe')[0]).api('unload');
+	$f($('#video_3 iframe')[0]).api('unload');
+	$f($('#video_4 iframe')[0]).api('unload');
+	$f($('#video_5 iframe')[0]).api('unload');
+})
+
+$("#video_2 .video-desc, a[rel='video_2']").click(function(){
+    $f($('#video_2 iframe')[0]).api('play');
+	$f($('#video_1 iframe')[0]).api('unload');
+	$f($('#video_3 iframe')[0]).api('unload');
+	$f($('#video_4 iframe')[0]).api('unload');
+	$f($('#video_5 iframe')[0]).api('unload');
+})
+
+$("#video_3 .video-desc, a[rel='video_3']").click(function(){
+    $f($('#video_3 iframe')[0]).api('play');
+	$f($('#video_1 iframe')[0]).api('unload');
+	$f($('#video_2 iframe')[0]).api('unload');
+	$f($('#video_4 iframe')[0]).api('unload');
+	$f($('#video_5 iframe')[0]).api('unload');
+})
+
+$("#video_4 .video-desc, a[rel='video_4']").click(function(){
+    $f($('#video_4 iframe')[0]).api('play');
+	$f($('#video_1 iframe')[0]).api('unload');
+	$f($('#video_2 iframe')[0]).api('unload');
+	$f($('#video_3 iframe')[0]).api('unload');
+	$f($('#video_5 iframe')[0]).api('unload');
+})
+
+$("#video_5 .video-desc, a[rel='video_5']").click(function(){
+    $f($('#video_5 iframe')[0]).api('play');
+	$f($('#video_1 iframe')[0]).api('unload');
+	$f($('#video_2 iframe')[0]).api('unload');
+	$f($('#video_3 iframe')[0]).api('unload');
+	$f($('#video_4 iframe')[0]).api('unload');
+})
 
 
 //  Tabs
@@ -107,7 +147,7 @@ $('.load-news').click(function() {
 
 // $(document).on("scroll", onScroll);
 //SMOOTH SCROLL
-    $('.is_page_menu a[href*=#]:not([href=#]), .video-feed a[href*=#]:not([href=#])').on('click', function (e) {
+    $('.is_page_menu a[href*=#]:not([href=#]), .video-feed a[href*=#]:not([href=#]), #video a[href*=#]:not([href=#])').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
         
