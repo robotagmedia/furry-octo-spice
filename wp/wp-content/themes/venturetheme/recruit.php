@@ -132,9 +132,8 @@ Template Name: Recruit
       </div>
       
       <!-- Panel 5 -->
-      <div class="row relative panel" id="panel_recruit_5">
-        <div class="absolute-center-parent">
-          <div class="absolute-center col-md-7 col-centered">
+      <div class="row relative team-wrapper" id="panel_recruit_5">
+          <div class="col-md-8 col-md-offset-2">
             <div class="row text-left">
               <div class="col-sm-6 team_member"> <img src="<?php bloginfo('template_url'); ?>/img/benxi.png">
                 <p>Benxi<br>
@@ -150,7 +149,6 @@ Template Name: Recruit
             </div>
             <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
           </div>
-        </div>
       </div>
       
       <!-- Stripe 2 -->
@@ -161,9 +159,8 @@ Template Name: Recruit
       </div>
       
       <!-- Panel 6 -->
-      <div class="row relative panel" id="panel_recruit_6">
-        <div class="absolute-center-parent">
-          <div class="absolute-center col-md-7 col-centered">
+      <div class="row relative team-wrapper" id="panel_recruit_6">
+          <div class="col-md-8 col-md-offset-2">
             <div class="row text-left">
               <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/rizumi.png">
                 <p>Rizumi<br>
@@ -175,7 +172,6 @@ Template Name: Recruit
             </div>
             <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
           </div>
-        </div>
       </div>
       
       <!-- Stripe3 -->
@@ -186,9 +182,8 @@ Template Name: Recruit
       </div>
       
       <!-- Panel 7 -->
-      <div class="row relative panel" id="panel_recruit_7">
-        <div class="absolute-center-parent">
-          <div class="absolute-center col-md-7 col-centered">
+      <div class="row relative team-wrapper" id="panel_recruit_7">
+        <div class="col-md-8 col-md-offset-2">
             <div class="row text-left">
               <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/akemi.png">
                 <p>Akemi<br>
@@ -200,7 +195,6 @@ Template Name: Recruit
             </div>
             <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
           </div>
-        </div>
       </div>
       
       <!-- Stripe 4 -->
@@ -211,9 +205,8 @@ Template Name: Recruit
       </div>
       
       <!-- Panel 8 -->
-      <div class="row relative panel" id="panel_recruit_8">
-        <div class="absolute-center-parent">
-          <div class="absolute-center col-md-7 col-centered">
+      <div class="row relative team-wrapper" id="panel_recruit_8">
+        <div class="col-md-8 col-md-offset-2">
             <div class="row text-left">
             
               <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/kyoko.png">
@@ -228,7 +221,6 @@ Template Name: Recruit
             </div>
             <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
           </div>
-        </div>
       </div>
       
       <!-- Stripe 5 -->
@@ -239,9 +231,8 @@ Template Name: Recruit
       </div>
       
       <!-- Panel 9 -->
-      <div class="row relative panel" id="panel_recruit_9">
-        <div class="absolute-center-parent">
-          <div class="absolute-center col-md-7 col-centered">
+      <div class="row relative team-wrapper" id="panel_recruit_9">
+        <div class="col-md-8 col-md-offset-2">
             <div class="row text-left">
               <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/ryo.png">
                 <p>Ryo<br>
@@ -253,7 +244,6 @@ Template Name: Recruit
             </div>
             <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
           </div>
-        </div>
       </div>
       
       <!-- Stripe 6 -->
@@ -264,9 +254,8 @@ Template Name: Recruit
       </div>
       
       <!-- Panel 10 -->
-      <div class="row relative panel" id="panel_recruit_10">
-        <div class="absolute-center-parent">
-          <div class="absolute-center col-md-7 col-centered">
+      <div class="row relative team-wrapper" id="panel_recruit_10">
+        <div class="col-md-8 col-md-offset-2">
             <div class="row text-left">
               <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/kenji.png">
                 <p>Kenji<br>
@@ -278,7 +267,6 @@ Template Name: Recruit
             </div>
             <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
           </div>
-        </div>
       </div>
       <!-- Instagram Banner -->
       <div class="row relative"> <a href="#"><img src="<?php bloginfo('template_url'); ?>/img/follow_us_banner.jpg" class="img-responsive"></a> </div>
@@ -332,11 +320,12 @@ Template Name: Recruit
     </div>
       
       <!-- Map -->
-      <div id="map" class="row">
-        <iframe width="100%" height="450px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
-      </div>
-    </div>
+    <div id="map" class="row"> <a target="_blank" href="https://www.google.co.jp/maps/place/〒106-0031+Tōkyō-to,+Minato-ku,+Nishiazabu,+4+Chome−3−11+西麻布幸田ビル泉西麻布ビル/@35.6578435,139.7233975,17z/data=!3m1!4b1!4m2!3m1!1s0x60188b704f2e5d9d:0x6fb185ca69b6db99">
+      <div class="overlay" onClick="style.pointerEvents='none'"></div>
+      <iframe width="100%" height="300px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
+      </a> </div>
   </div>
+</div>
   <footer class="relative">
     <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
     <div class="container-fluid">
@@ -363,14 +352,11 @@ Template Name: Recruit
 	limit: 10,
 	urls:true
 });
-(function($){
-        $(window).load(function(){
-            $(".insta-feed").mCustomScrollbar({
-    axis:"x", 
-	theme:"rounded-dark"
+
+$(window).load(function(){
+  $(".insta-feed").mCustomScrollbar({axis:"x", theme:"rounded-dark"});
 });
-        });
-    })(jQuery);
+
 </script> 
 
 <?php get_footer(); ?>

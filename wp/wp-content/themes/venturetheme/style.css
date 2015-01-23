@@ -829,6 +829,7 @@ iframe {
   height: 45px;
   border: none;
   margin: 0px;
+  width:100%;
 }
 .caret {
   background: url(img/icon-select.jpg) no-repeat;
@@ -937,7 +938,8 @@ iframe {
   margin-bottom: 20px;
 }
 .team_member {
-  margin: 10px 0px;
+  margin-top: 10px;
+margin-bottom: 10px;
   height: 100px;
 }
 .team_member img {
@@ -1033,6 +1035,7 @@ a.i_blue {
 }
 .two-columns .row i {
   color: #2885cc;
+  font-size:18px;
 }
 .top-border {
   margin: 0px;
@@ -1781,3 +1784,5 @@ a.arrow-slide-right:hover {
   margin-top: -300px;
 }
 .nav a.active {display:none;}
+.bootstrap-select {width: 100%;}
+.team-wrapper {height:auto; padding: 50px 0px; display:block}

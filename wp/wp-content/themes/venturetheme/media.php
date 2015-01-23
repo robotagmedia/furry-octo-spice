@@ -3,82 +3,83 @@
 Template Name: Media
 */
 ?>
-
 <?php get_header(); ?>
-
+<?php remove_filter ('the_content', 'wpautop'); ?>
 <?php if (qtrans_getLanguage() == 'en'): ?>
 
 <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header text-center menu-hover"> <a class="navbar-brand" href="javascript:void(0)"></a> </div>
-    <div class="navbar-collapse">
-      <ul class="nav navbar-nav text-center">
-        <li id="home-icon" class="active menu-hover"><a href="javascript:void(0)"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/home-icon.jpg" /></a></li>
-        <li id="media-icon" class="menu-hover"><a href="javascript:void(0)"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/media-icon.jpg" /></a></li>
-        <li id="recruit-icon" class="menu-hover"><a href="javascript:void(0)"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/recruit-icon.jpg" /></a></li>
-        <li id="about-icon" class="menu-hover"><a href="javascript:void(0)"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/about-icon.jpg" /></a></li>
-        <li><?php qtrans_generateLanguageSelectCode(); ?></li>
-      </ul>
-    </div>
-    <div class="popout-menu" style="display:none;"  >
-      <ul>
-        <a class="grey-logo" href="#top-image">
-        <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
+  <div class="navbar-header text-center menu-hover"> <a class="navbar-brand" href="javascript:void(0)"></a> </div>
+  <div class="navbar-collapse">
+    <ul class="nav navbar-nav text-center">
+      <li id="home-icon" class="active menu-hover"><a href="javascript:void(0)"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/home-icon.jpg" /></a></li>
+      <li id="media-icon" class="menu-hover"><a href="javascript:void(0)"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/media-icon.jpg" /></a></li>
+      <li id="recruit-icon" class="menu-hover"><a href="javascript:void(0)"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/recruit-icon.jpg" /></a></li>
+      <li id="about-icon" class="menu-hover"><a href="javascript:void(0)"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/about-icon.jpg" /></a></li>
+      <li>
+        <?php qtrans_generateLanguageSelectCode(); ?>
+      </li>
+    </ul>
+  </div>
+  <div class="popout-menu" style="display:none;"  >
+    <ul>
+      <a class="grey-logo" href="#top-image">
+      <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
+      </a>
+      <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="index">
+        <li>Home</li>
         </a>
-        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="index">
-          <li>Home</li>
+        <ul class="sub-menu home-menu" style="display:none">
+          <a href="<?php echo site_url(); ?>#services">
+          <li><span class="menu-icon cog"></span>Services</li>
+          </a> <a href="<?php echo site_url(); ?>#statistics">
+          <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
+          </a> <a href="<?php echo site_url(); ?>#publicity">
+          <li><span class="menu-icon eye"></span>Publicity</li>
+          </a> <a href="<?php echo site_url(); ?>#ceo">
+          <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
+          </a> <a href="<?php echo site_url(); ?>#history">
+          <li><span class="menu-icon ribbon"></span>Our History</li>
+          </a> <a href="<?php echo site_url(); ?>#business-alliances">
+          <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
+          </a> <a href="<?php echo site_url(); ?>#contact">
+          <li><span class="menu-icon align"></span>Contact VR</li>
           </a>
-          <ul class="sub-menu home-menu" style="display:none">
-             <a href="<?php echo site_url(); ?>#services">
-            <li><span class="menu-icon cog"></span>Services</li>
-            </a> <a href="<?php echo site_url(); ?>#statistics">
-            <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
-            </a> <a href="<?php echo site_url(); ?>#publicity">
-            <li><span class="menu-icon eye"></span>Publicity</li>
-            </a> <a href="<?php echo site_url(); ?>#ceo">
-            <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
-            </a> <a href="<?php echo site_url(); ?>#history">
-            <li><span class="menu-icon ribbon"></span>Our History</li>
-            </a> <a href="<?php echo site_url(); ?>#business-alliances">
-            <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
-            </a> <a href="<?php echo site_url(); ?>#contact">
-            <li><span class="menu-icon align"></span>Contact VR</li>
-            </a>
-          </ul>
-        </div>
-        <div class="popout-menu-wrapper is_page_menu"> <a class="popout-menu-title" href="media">
-          <li>Media</li>
+        </ul>
+      </div>
+      <div class="popout-menu-wrapper is_page_menu"> <a class="popout-menu-title" href="media">
+        <li>Media</li>
+        </a>
+        <ul class="sub-menu media-menu" style="display:none">
+          <a href="#video">
+          <li><span class="menu-icon icon-text-left"></span>Recent News</li>
+          </a> <a href="#news">
+          <li><span class="menu-icon play"></span>Commercial/Video Stream</li>
+          </a> <a href="#press">
+          <li><span class="menu-icon pad"></span>Press Releases</li>
+          </a> <a href="#contact">
+          <li><span class="menu-icon align"></span>Contact VR</li>
           </a>
-          <ul class="sub-menu media-menu" style="display:none">
-            <a href="#video">
-            <li><span class="menu-icon icon-text-left"></span>Recent News</li>
-            </a> <a href="#news">
-            <li><span class="menu-icon play"></span>Commercial/Video Stream</li>
-            </a> <a href="#press">
-            <li><span class="menu-icon pad"></span>Press Releases</li>
-            </a> <a href="#contact">
-            <li><span class="menu-icon align"></span>Contact VR</li>
-            </a>
-          </ul>
-        </div>
-        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="recruit">
-          <li>Recruit</li>
+        </ul>
+      </div>
+      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="recruit">
+        <li>Recruit</li>
+        </a>
+        <ul class="sub-menu recruit-menu" style="display:none">
+          <a href="recruit.html#values">
+          <li><span class="menu-icon star"></span>Our Values</li>
+          </a> <a href="recruit.html#team">
+          <li><span class="menu-icon users"></span>Meet the Team</li>
+          </a> <a href="recruit.html#work_at_vr">
+          <li><span class="menu-icon user"></span>Work at VR</li>
           </a>
-          <ul class="sub-menu recruit-menu" style="display:none">
-            <a href="recruit.html#values">
-            <li><span class="menu-icon star"></span>Our Values</li>
-            </a> <a href="recruit.html#team">
-            <li><span class="menu-icon users"></span>Meet the Team</li>
-            </a> <a href="recruit.html#work_at_vr">
-            <li><span class="menu-icon user"></span>Work at VR</li>
-            </a>
-          </ul>
-        </div>
-        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="about">
-          <li>About</li>
-          </a> </div>
-      </ul>
-    </div>
-  </nav>
+        </ul>
+      </div>
+      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="about">
+        <li>About</li>
+        </a> </div>
+    </ul>
+  </div>
+</nav>
 </header>
 <!-- Content -->
 <div id="skrollr-body">
@@ -93,7 +94,7 @@ Template Name: Media
             <h1>What's New at Venture Republic</h1>
           </div>
         </div>
-      </div> 
+      </div>
       
       <!-- Lists -->
       <div class="row text-center" id="news">
@@ -101,33 +102,20 @@ Template Name: Media
           <h2>Venture Republic News</h2>
         </div>
         <div class="col-md-12">
-          <div class="col-md-4 news-bloc"><a href="#"> <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_1.jpg">
-            <p><span class="date">OCTOBER 22, 2014</span> 2014 travel information site "Travel.jp" (Travel Jepi) provides the start of the iPhone app - Compare and search from travel company about 200 companies domestic travel-day tour about 300,000 of ...</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_2.jpg">
-            <p><span class="date">OCTOBER 14, 2014</span> "Empty lowest" TVCM was awarded the ACC Silver congratulation! ~ ACC Silver commemorative gift Campaign - travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_3.jpg">
-            <p><span class="date">OCTOBER 1, 2014</span> Tourist season finally coming of autumn, by far popular Kyoto! September 2014 in the domestic tour, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_4.jpg">
-            <p><span class="date">September 2, 2014</span> 2014 just before the last Summer Sale & price-sensitive tour popular concentration in August 2014 of domestic tours, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_2.jpg">
-            <p><span class="date">August 11, 2014</span> Travel and Tourism Guide Media by experts of journey "Tabinesu", posted start overseas guide with articles and charming photos of more than 4,000 around the world, and proposed a destination or theme ...</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_3.jpg">
-            <p><span class="date">August 1, 2014</span> USJ popular Harry Potter attraction suddenly emerged! July 2014 of domestic tours, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_2.jpg">
-            <p><span class="date">OCTOBER 14, 2014</span> "Empty lowest" TVCM was awarded the ACC Silver congratulation! ~ ACC Silver commemorative gift Campaign - travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_3.jpg">
-            <p><span class="date">OCTOBER 1, 2014</span> Tourist season finally coming of autumn, by far popular Kyoto! September 2014 in the domestic tour, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_4.jpg">
-            <p><span class="date">September 2, 2014</span> 2014 just before the last Summer Sale & price-sensitive tour popular concentration in August 2014 of domestic tours, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
+          <?php
+$catquery = new WP_Query( 'cat=2&posts_per_page=20' );
+while($catquery->have_posts()) : $catquery->the_post();
+?>
+          <div class="col-md-4 news-bloc"><a href="<?php the_permalink(); ?>">
+            <?php
+  if ( has_post_thumbnail() ) {
+	the_post_thumbnail( array('class' => ' img-responsive') );
+} ?>
+            <p><span class="date">
+              <?php the_date(); ?>
+              </span> <?php echo $post->post_excerpt; ?> </p>
+            <span class="read-more" href="<?php the_permalink(); ?>">Read More</span></a> </div>
+          <?php endwhile; ?>
         </div>
         <div class="col-md-12 text-center more-news"> <a class="load-news" href="#"><img src="<?php bloginfo('template_url'); ?>/img/more-news.png"> Load more news
           </h3>
@@ -196,7 +184,7 @@ Template Name: Media
           <iframe src="//player.vimeo.com/video/112032756?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>
-  
+      
       <!-- Grey Stripe 1 -->
       <div class="row grey-stripe video-feed">
         <div class="col-md-12">
@@ -222,6 +210,8 @@ Template Name: Media
           <h2> Press Release </h2>
         </div>
       </div>
+
+      
       
       <!--Timeline-->
       <div class="row panel relative" id="slide-press">
@@ -302,8 +292,7 @@ Template Name: Media
       <div id="contact" class="row">
         <div class="col-md-12">
           <h2>Contact us</h2>
-          <?php echo do_shortcode( '[contact-form-7 id="15" title="Contact Form Eng"]' ); ?>
-        </div>
+          <?php echo do_shortcode( '[contact-form-7 id="15" title="Contact Form Eng"]' ); ?> </div>
       </div>
     </div>
     
@@ -318,9 +307,10 @@ Template Name: Media
     </div>
     
     <!-- Map -->
-    <div id="map" class="row">
-      <iframe width="100%" height="450px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
-    </div>
+    <div id="map" class="row"> <a target="_blank" href="https://www.google.co.jp/maps/place/〒106-0031+Tōkyō-to,+Minato-ku,+Nishiazabu,+4+Chome−3−11+西麻布幸田ビル泉西麻布ビル/@35.6578435,139.7233975,17z/data=!3m1!4b1!4m2!3m1!1s0x60188b704f2e5d9d:0x6fb185ca69b6db99">
+      <div class="overlay" onClick="style.pointerEvents='none'"></div>
+      <iframe width="100%" height="300px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
+      </a> </div>
   </div>
 </div>
 <footer class="relative">
@@ -341,18 +331,14 @@ Template Name: Media
     </div>
   </div>
 </footer>
-<script type="text/javascript" src="js/skrollr.min.js"></script> 
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/skrollr.min.js"></script> 
 <script>
 $('.selectpicker').selectpicker({
       style: 'btn-info',
 	  size: 4,
 });
 </script>
-
 <?php get_footer(); ?>
-
 <?php else: ?>
-
 <?php get_template_part( 'media_jp' ); ?>
-
 <?php endif ?>

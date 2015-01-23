@@ -97,41 +97,30 @@ Template Name: Media JP
       <!-- Lists -->
       <div class="row text-center" id="news">
         <div class="col-md-12">
-          <h2>Venture Republic ニュース</h2>
+          <h2>Venture Republic News</h2>
         </div>
         <div class="col-md-12">
-          <div class="col-md-4 news-bloc"><a href="#"> <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_1.jpg">
-            <p><span class="date">OCTOBER 22, 2014</span> 2014 travel information site "Travel.jp" (Travel Jepi) provides the start of the iPhone app - Compare and search from travel company about 200 companies domestic travel-day tour about 300,000 of ...</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_2.jpg">
-            <p><span class="date">OCTOBER 14, 2014</span> "Empty lowest" TVCM was awarded the ACC Silver congratulation! ~ ACC Silver commemorative gift Campaign - travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_3.jpg">
-            <p><span class="date">OCTOBER 1, 2014</span> Tourist season finally coming of autumn, by far popular Kyoto! September 2014 in the domestic tour, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_4.jpg">
-            <p><span class="date">September 2, 2014</span> 2014 just before the last Summer Sale & price-sensitive tour popular concentration in August 2014 of domestic tours, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_2.jpg">
-            <p><span class="date">August 11, 2014</span> Travel and Tourism Guide Media by experts of journey "Tabinesu", posted start overseas guide with articles and charming photos of more than 4,000 around the world, and proposed a destination or theme ...</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_3.jpg">
-            <p><span class="date">August 1, 2014</span> USJ popular Harry Potter attraction suddenly emerged! July 2014 of domestic tours, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_2.jpg">
-            <p><span class="date">OCTOBER 14, 2014</span> "Empty lowest" TVCM was awarded the ACC Silver congratulation! ~ ACC Silver commemorative gift Campaign - travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_3.jpg">
-            <p><span class="date">OCTOBER 1, 2014</span> Tourist season finally coming of autumn, by far popular Kyoto! September 2014 in the domestic tour, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
-          <div class="col-md-4 news-bloc"><a href="#"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/news_image_4.jpg">
-            <p><span class="date">September 2, 2014</span> 2014 just before the last Summer Sale & price-sensitive tour popular concentration in August 2014 of domestic tours, access ranking the announcement travel information site "Travel.jp" (Travel Jepi)</p>
-            <span class="read-more" href="#">Read More</span></a> </div>
+          <?php
+$catquery = new WP_Query( 'cat=2&posts_per_page=20' );
+while($catquery->have_posts()) : $catquery->the_post();
+?>
+          <div class="col-md-4 news-bloc"><a href="<?php the_permalink(); ?>">
+            <?php
+  if ( has_post_thumbnail() ) {
+	the_post_thumbnail( array('class' => ' img-responsive') );
+} ?>
+            <p><span class="date">
+              <?php the_date(); ?>
+              </span> <?php echo $post->post_excerpt; ?> </p>
+            <span class="read-more" href="<?php the_permalink(); ?>">Read More</span></a> </div>
+          <?php endwhile; ?>
         </div>
         <div class="col-md-12 text-center more-news"> <a class="load-news" href="#"><img src="<?php bloginfo('template_url'); ?>/img/more-news.png"> 過去のニュース
           </h3>
           </a> </div>
       </div>
+      
+      
       
       <!-- Panel 2 -->
       <div class="row relative" id="video">
@@ -317,9 +306,10 @@ Template Name: Media JP
     </div>
     
     <!-- Map -->
-    <div id="map" class="row">
-      <iframe width="100%" height="450px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
-    </div>
+    <div id="map" class="row"> <a target="_blank" href="https://www.google.co.jp/maps/place/〒106-0031+Tōkyō-to,+Minato-ku,+Nishiazabu,+4+Chome−3−11+西麻布幸田ビル泉西麻布ビル/@35.6578435,139.7233975,17z/data=!3m1!4b1!4m2!3m1!1s0x60188b704f2e5d9d:0x6fb185ca69b6db99">
+      <div class="overlay" onClick="style.pointerEvents='none'"></div>
+      <iframe width="100%" height="300px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
+      </a> </div>
   </div>
 </div>
 <footer class="relative">
@@ -340,7 +330,7 @@ Template Name: Media JP
     </div>
   </div>
 </footer>
-<script type="text/javascript" src="js/skrollr.min.js"></script> 
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/skrollr.min.js"></script> 
 <script>
 $('.selectpicker').selectpicker({
       style: 'btn-info',

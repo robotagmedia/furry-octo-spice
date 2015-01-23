@@ -87,7 +87,7 @@ Template Name: About
       
       <!-- Top image -->
       <div class="row relative about-top panel" id="top-image">
-        <div class="logo-top"><img src="<?php echo site_url(); ?>/img/logo-white.png" /></div>
+        <div class="logo-top"><img src="<?php bloginfo('template_url'); ?>/img/logo-white.png" /></div>
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
             <h1>Venture Republic</br>
@@ -97,7 +97,7 @@ Template Name: About
       </div>
       
       <!-- Grey Logo -->
-      <div class="row grey-red-logo"> <img src="<?php echo site_url(); ?>/img/grey-logo.png"> </div>
+      <div class="row grey-red-logo"> <img src="<?php bloginfo('template_url'); ?>/img/grey-logo.png"> </div>
       <!-- Columns -->
       <div class="row two-columns">
         <div class="col-md-10 col-md-offset-1">
@@ -383,29 +383,30 @@ Template Name: About
     <div id="social" class="row">
       <div class="col-sm-6 text-right center-on-mobile">
         <h2 class="blue">
-        Join our social network
+        JOIN OUR SOCIAL NETWORK
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" target="_blank"><img src="img/blue-fb.jpg" /></a><a href="#" target="_blank"><img src="img/blue-twitter.jpg" /></a><a href="#" target="_blank"><img src="img/blue-insta.jpg" /></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
     </div>
     
     <!-- Map -->
-    <div id="map" class="row">
-      <iframe width="100%" height="450px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
-    </div>
+    <div id="map" class="row"> <a target="_blank" href="https://www.google.co.jp/maps/place/〒106-0031+Tōkyō-to,+Minato-ku,+Nishiazabu,+4+Chome−3−11+西麻布幸田ビル泉西麻布ビル/@35.6578435,139.7233975,17z/data=!3m1!4b1!4m2!3m1!1s0x60188b704f2e5d9d:0x6fb185ca69b6db99">
+      <div class="overlay" onClick="style.pointerEvents='none'"></div>
+      <iframe width="100%" height="300px" src="http://api.tiles.mapbox.com/v4/vr.kca37a5p.html?access_token=pk.eyJ1IjoidnIiLCJhIjoiSElUV2J0ayJ9.FgAQ_S6-ic0k72d7heqhNg#17/35.65580/139.72338"></iframe>
+      </a> </div>
   </div>
 </div>
 <footer class="relative">
-  <div class="footer-social-networks"><a href="#" target="_blank"><img src="img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="img/black-insta.jpg" /></a></div>
+  <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <ul>
-          <li><img class="logo-footer" src="img/black-logo.jpg" /></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="recruit.html">Recruit</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
+          <li><a href="index">Home</a></li>
+          <li><a href="media">Media</a></li>
+          <li><a href="recruit">Recruit</a></li>
+          <li><a href="about">About</a></li>
           <li class="menu-blue"><a href="#">Privacy</a></li>
           <li class="menu-blue"><a href="#">Terms</a></li>
         </ul>
@@ -413,7 +414,7 @@ Template Name: About
     </div>
   </div>
 </footer>
-<script type="text/javascript" src="js/skrollr.min.js"></script> 
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/skrollr.min.js"></script> 
 <script>
 $('.selectpicker').selectpicker({
       style: 'btn-info',

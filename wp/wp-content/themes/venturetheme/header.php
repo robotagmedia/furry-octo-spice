@@ -20,7 +20,7 @@ Blog Archive -
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap-select.min.css">
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.css' rel='stylesheet' />
-<link href="<?php bloginfo('stylesheet_url'); ?>?v2" rel="stylesheet" />
+<link href="<?php bloginfo('stylesheet_url'); ?>?v5" rel="stylesheet" />
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -35,6 +35,7 @@ Blog Archive -
 <script src="<?php echo get_template_directory_uri(); ?>/js/Chart.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap-select.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.js'></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/froogaloop.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
 <?php wp_head(); ?>
