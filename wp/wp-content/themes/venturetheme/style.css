@@ -298,6 +298,7 @@ span.menu-icon {
   border: none;
   box-shadow: none;
   border-radius: 0;
+  min-height: 600px;
 }
 #top-image {
   background-size: cover;
@@ -306,6 +307,7 @@ span.menu-icon {
   border: none;
   box-shadow: none;
   border-radius: 0;
+  min-height: 600px;
 }
 .home-top {
   background-image: url(img/fuji-home.jpg);
@@ -1252,7 +1254,7 @@ a.i_blue {
   background-size: cover;
 }
 #timeline {
-  margin-top: -40px;
+  margin-top: -45px;
   height: 60px;
 }
 #timeline .col-md-12 {
@@ -1288,15 +1290,6 @@ a.i_blue {
 #timeline .table tr td.active a {
   background-color: #acacac;
   color: #ffffff;
-}
-.year {
-  border: 0px !important;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
-  background-color: #3497da !important;
-  color: #ffffff;
-  font-size: 20px;
-  font-family: 'allerbold';
 }
 .arrow {
   border: 0px !important;
@@ -1624,7 +1617,7 @@ a.arrow-slide-right:hover {
     bottom: auto;
   }
   #timeline {
-    margin-top: 50px;
+    margin-top: 35px;
     background-color: #EBEBEB;
     padding-bottom: 120px;
   }
@@ -1665,7 +1658,7 @@ a.arrow-slide-right:hover {
     height: 120px;
   }
   #timeline {
-    margin-top: 50px;
+    margin-top: 35px;
     background-color: #EBEBEB;
     padding-bottom: 120px;
   }
@@ -1786,3 +1779,7 @@ a.arrow-slide-right:hover {
 .nav a.active {display:none;}
 .bootstrap-select {width: 100%;}
 .team-wrapper {height:auto; padding: 50px 0px; display:block}
+body:after{
+    display:none;
+    content: url(img/cog.png) url(img/pie-chart.png) url(img/eye.png) url(img/speach_bubble.png) url(img/ribbon.png) url(img/align.png) url(img/star.png) url(img/user.png) url(img/users.png) url(img/play.png) url(img/text-left.png) url(img/pad.png);
+}

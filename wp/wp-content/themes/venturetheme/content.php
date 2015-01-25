@@ -16,56 +16,56 @@
       <a class="grey-logo" href="#top-image">
       <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
       </a>
-      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo site_url(); ?>">
+      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
         <li>Home</li>
         </a>
-        <ul class="sub-menu home-menu is_page_menu" style="display:none">
-          <a href="<?php echo site_url(); ?>#services">
+        <ul class="sub-menu home-menu" style="display:none">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
           <li><span class="menu-icon cog"></span>Services</li>
-          </a> <a href="<?php echo site_url(); ?>#statistics">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
           <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
-          </a> <a href="<?php echo site_url(); ?>#publicity">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
           <li><span class="menu-icon eye"></span>Media Coverage</li>
-          </a> <a href="<?php echo site_url(); ?>#ceo">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
           <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
-          </a> <a href="<?php echo site_url(); ?>#history">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
           <li><span class="menu-icon ribbon"></span>Our History</li>
-          </a> <a href="<?php echo site_url(); ?>#business-alliances">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
           <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
-          </a> <a href="<?php echo site_url(); ?>#contact">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
           <li><span class="menu-icon align"></span>Contact VR</li>
           </a>
         </ul>
       </div>
-      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="media">
+      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>media">
         <li>Media</li>
         </a>
         <ul class="sub-menu media-menu" style="display:none">
-          <a href="media#news">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>media#news">
           <li><span class="menu-icon icon-text-left"></span>Recent News</li>
-          </a> <a href="media#video">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>media#video">
           <li><span class="menu-icon play"></span>Commercial/Video Stream</li>
-          </a> <a href="media#press">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>media#press">
           <li><span class="menu-icon pad"></span>Press Releases</li>
-          </a> <a href="media#contact">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>media#contact">
           <li><span class="menu-icon align"></span>Contact VR</li>
           </a>
         </ul>
       </div>
-      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="recruit">
+      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>recruit">
         <li>Recruit</li>
         </a>
         <ul class="sub-menu recruit-menu" style="display:none">
-          <a href="recruit#values">
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>recruit#values">
           <li><span class="menu-icon star"></span>Our Values</li>
-          </a> <a href="recruit#team">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>recruit#team">
           <li><span class="menu-icon users"></span>Meet the Team</li>
-          </a> <a href="recruit#work_at_vr">
+          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>recruit#work_at_vr">
           <li><span class="menu-icon user"></span>Work at VR</li>
           </a>
         </ul>
       </div>
-      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="about">
+      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>about">
         <li>About</li>
         </a> </div>
     </ul>
@@ -76,22 +76,20 @@
 <div id="skrollr-body">
 <div class="main-content">
   <div class="container-fluid">
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  
+  <?php if ( have_posts() ) : ?>
   <?php $additional_class = get_post_meta($post->ID, 'class', true); ?>
+  <?php while ( have_posts() ) : the_post(); ?>  
     <div class="row <?php echo $additional_class;?>">
+    
       <div class="col-md-10 col-md-offset-1">
    <h1><?php the_title(); ?></h1>
         <p><?php the_content(); ?></p>
-        <?php endwhile; else: ?>
-        <?php _e('Sorry, no posts matched your criteria.'); ?>
-
       </div>
+      
     </div>
+    <?php endwhile; ?>
     <?php endif; ?>
-    
-</div>
-    
-    </div>
     
     <!-- Map -->
     <div id="map" class="row"> <a target="_blank" href="https://www.google.co.jp/maps/place/〒106-0031+Tōkyō-to,+Minato-ku,+Nishiazabu,+4+Chome−3−11+西麻布幸田ビル泉西麻布ビル/@35.6578435,139.7233975,17z/data=!3m1!4b1!4m2!3m1!1s0x60188b704f2e5d9d:0x6fb185ca69b6db99">
@@ -107,10 +105,10 @@
       <div class="col-md-12">
         <ul>
           <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-          <li><a href="<?php echo site_url(); ?>">Home</a></li>
-          <li><a href="media">Media</a></li>
-          <li><a href="recruit">Recruit</a></li>
-          <li><a href="about">About</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/media">Media</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/recruit">Recruit</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/about">About</a></li>
           <li class="menu-blue"><a href="#">Privacy</a></li>
           <li class="menu-blue"><a href="#">Terms</a></li>
         </ul>

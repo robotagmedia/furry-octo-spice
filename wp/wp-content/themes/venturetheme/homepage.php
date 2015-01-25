@@ -14,32 +14,32 @@
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
-        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo site_url(); ?>">
+        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
           <li>Home</li>
           </a>
           <ul class="sub-menu home-menu is_page_menu" style="display:none">
             <a href="#services">
             <li><span class="menu-icon cog"></span>Services</li>
-            </a> <a href="#statistics">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
             <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
-            </a> <a href="#publicity">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
             <li><span class="menu-icon eye"></span>Media Coverage</li>
-            </a> <a href="#ceo">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
             <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
-            </a> <a href="#history">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
             <li><span class="menu-icon ribbon"></span>Our History</li>
-            </a> <a href="#business-alliances">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
             <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
-            </a> <a href="#contact">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
             <li><span class="menu-icon align"></span>Contact VR</li>
             </a>
           </ul>
         </div>
-        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="media">
+        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>/media">
           <li>Media</li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
-            <a href="media#news">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>/media#news">
             <li><span class="menu-icon icon-text-left"></span>Recent News</li>
             </a> <a href="media#video">
             <li><span class="menu-icon play"></span>Commercial/Video Stream</li>

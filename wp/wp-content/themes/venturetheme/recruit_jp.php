@@ -25,19 +25,19 @@ Template Name: Recruit JP
           <li>ホーム</li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
-            <a href="<?php echo site_url(); ?>#services">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
             <li><span class="menu-icon cog"></span>サービス紹介</li>
-            </a> <a href="<?php echo site_url(); ?>#statistics">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
             <li><span class="menu-icon pie-chart"></span>サイト訪問数推移</li>
-            </a> <a href="<?php echo site_url(); ?>#publicity">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
             <li><span class="menu-icon eye"></span>メディア掲載</li>
-            </a> <a href="<?php echo site_url(); ?>#ceo">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
             <li><span class="menu-icon speach_bubble"></span>代表挨拶</li>
-            </a> <a href="<?php echo site_url(); ?>#history">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
             <li><span class="menu-icon ribbon"></span>沿革</li>
-            </a> <a href="<?php echo site_url(); ?>#business-alliances">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
             <li><span class="glyphicon glyphicon-globe"></span>ビジネスパートナー</li>
-            </a> <a href="<?php echo site_url(); ?>#contact">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
             <li><span class="menu-icon align"></span>お問い合わせ</li>
             </a>
           </ul>
@@ -154,7 +154,7 @@ Template Name: Recruit JP
       <!-- Stripe 2 -->
       <div class="stripe row text-center">
         <div class="col-md-8 col-md-offset-2">
-          <h2> Design & Content Team </h2>
+          <h2> デザイン・コンテンツグループ </h2>
         </div>
       </div>
       

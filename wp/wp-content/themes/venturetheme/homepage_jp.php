@@ -14,7 +14,7 @@
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
-        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo site_url(); ?>">
+        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
           <li>ホーム</li>
           </a>
           <ul class="sub-menu home-menu is_page_menu" style="display:none">

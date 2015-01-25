@@ -211,60 +211,47 @@ while($catquery->have_posts()) : $catquery->the_post();
         </div>
       </div>
 
-      
-      
       <!--Timeline-->
       <div class="row panel relative" id="slide-press">
+      <?php 
+ $number = 0;
+ $monthnum = date('n');
+ query_posts("monthnum=$monthnum");
+ if(have_posts()):  
+?>
         <div id="carousel-press" class="carousel slide" data-ride="carousel"> 
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <li data-target="#carousel-press" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-press" data-slide-to="1"></li>
-            <li data-target="#carousel-press" data-slide-to="2"></li>
-            <li data-target="#carousel-press" data-slide-to="3"></li>
-            <li data-target="#carousel-press" data-slide-to="4"></li>
+          <?php while(have_posts()): the_post(); ?>
+            <li data-target="#carousel-press" data-slide-to="<?php echo $number++; ?>"></li>
+            <?php endwhile; ?>
           </ol>
           
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox" id="november">
-            <div class="item active">
-              <div class="col-md-6 col-md-offset-6">
-                <h2>Yahoo Japan acquires e-commerce portal provider Venture Republic</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">Read full article</a> </div>
-            </div>
+          <?php while(have_posts()): the_post(); ?>
             <div class="item">
               <div class="col-md-6 col-md-offset-6">
-                <h2>Slide 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">Read full article</a> </div>
+                <h2><?php the_title(); ?> </h2>
+                <p><?php echo $post->post_excerpt; ?></p>
+                <a class="btn btn-lg btn-default light-blue-btn" href="<?php the_permalink(); ?>">Read full article</a> </div>
             </div>
-            <div class="item">
-              <div class="col-md-6 col-md-offset-6">
-                <h2>Slide 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">Read full article</a> </div>
-            </div>
-            <div class="item">
-              <div class="col-md-6 col-md-offset-6">
-                <h2>Slide 4</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">Read full article</a> </div>
-            </div>
-            <div class="item">
-              <div class="col-md-6 col-md-offset-6">
-                <h2>Slide 5</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">Read full article</a> </div>
-            </div>
+            
+            <?php endwhile; ?>
           </div>
+          
         </div>
+        <?php endif; wp_reset_query(); ?>
       </div>
       
       <!-- Timeline -->
+      
       <div id="timeline" class="row">
         <div class="col-md-12">
-          <div class="table-responsive text-center">
+        
+        <?php if ( !function_exists('vr_widgets_init') || !dynamic_sidebar(2) ) : endif; ?>
+        
+          <!-- <div class="table-responsive text-center">
             <table class="table">
               <tr>
                 <td class="arrow"><a class="arrow-slide-left" href="#"></a></td>
@@ -285,6 +272,7 @@ while($catquery->have_posts()) : $catquery->the_post();
               </tr>
             </table>
           </div>
+          -->
         </div>
       </div>
       

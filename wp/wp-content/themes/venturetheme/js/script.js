@@ -11,7 +11,17 @@ $(window).load(function() {
 });
 
 $(document).ready(function(){
-	
+
+if(window.location.href.indexOf("/ja/") > -1) {
+      $(".lang[title|='JP']").hide();
+};
+if(window.location.href.indexOf("/ja/") === -1) {
+      $(".lang[title|='EN']").hide();
+};
+
+
+$('#slide-press .carousel-inner .item:first').addClass('active');
+$("#slide-press .carousel-indicators li:first").addClass("active");
 //  Home Top Image Size
 $('.panel').height($(window).height() - 77);
 $('.plane').height($(window).height());
@@ -230,7 +240,7 @@ var opt2 = {
 	  responsive:false,
 	  barShowStroke : false,
 	  dynamicDisplay: false,
-	  annotateDisplay : true,
+	  annotateDisplay : false,
 	  scaleShowGridLines: false,
 	  scaleFontSize : 15,
 	  xAxisBottom:false,
