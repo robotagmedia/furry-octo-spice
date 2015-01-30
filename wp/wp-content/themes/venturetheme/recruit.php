@@ -49,7 +49,7 @@ Template Name: Recruit
           <li>Media</li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
-            <a href="#video">
+            <a href="media#video">
             <li><span class="menu-icon icon-text-left"></span>Recent News</li>
             </a> <a href="media#news">
             <li><span class="menu-icon play"></span>Commercial/Video Stream</li>
@@ -90,8 +90,8 @@ Template Name: Recruit
         <div class="logo-top"><img src="<?php bloginfo('template_url'); ?>/img/logo-white.png" /></div>
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>Join Venture Republic</h1>
-            <h3>Where to go? How to go? What price to pay? What to do? Those are among many questions that travelers always have. We were born to answer them all.</h3>
+            <h1><?php the_field('title_1'); ?></h1>
+            <h3><?php the_field('text_1'); ?></h3>
           </div>
         </div>
       </div>
@@ -100,8 +100,8 @@ Template Name: Recruit
       <div class="row relative panel" id="values">
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>A “Venture” Spirit</h1>
-            <h3>Our staff are unique in that everyone has not just their own areas of expertise, but a true venture spirit or business mindset. Through this, we’re able to develop highly professional services and great quality content for our customers. That’s our strongest asset and the way we’re able to realize our Mission.</h3>
+            <h1><?php the_field('title_2'); ?></h1>
+            <h3><?php the_field('text_2'); ?></h3>
           </div>
         </div>
       </div>
@@ -109,8 +109,8 @@ Template Name: Recruit
       <div class="row relative panel" id="panel_recruit_3">
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>Team Player</h1>
-            <h3>Having included the word “Republic” in our company name, it’s easy to see that we really value “team” play. Staff are encouraged to speak out. Flexibility, thinking from the ground up, and not getting caught or locked into past success, for the sake of innovation and growth, are a few things we value in VR staff.</h3>
+            <h1><?php the_field('title_3'); ?></h1>
+            <h3><?php the_field('text_3'); ?></h3>
           </div>
         </div>
       </div>
@@ -118,156 +118,49 @@ Template Name: Recruit
       <div class="row relative panel" id="panel_recruit_4">
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>Expertise</h1>
-            <h3>What makes VR’s services and products great is that the staff developing it are experts. Have you got a passion or something you love that will help us bring real value to global travel, we’d love to hear from you.</h3>
+            <h1><?php the_field('title_4'); ?></h1>
+            <h3><?php the_field('text_4'); ?></h3>
           </div>
         </div>
       </div>
       
+      
+      <?php if(get_field('team_panel')): ?>
+      
+      <?php while(has_sub_field('team_panel')): ?>
       <!-- Stripe 1-->
       <div class="stripe row text-center" id="team">
         <div class="col-md-8 col-md-offset-2">
-          <h2> System Development Team </h2>
+          <h2> <?php the_sub_field('team_title'); ?> </h2>
         </div>
       </div>
+      
       
       <!-- Panel 5 -->
-      <div class="row relative team-wrapper" id="panel_recruit_5">
+      <div class="row relative team-wrapper" id="<?php the_sub_field('team_id'); ?>">
           <div class="col-md-8 col-md-offset-2">
             <div class="row text-left">
-              <div class="col-sm-6 team_member"> <img src="<?php bloginfo('template_url'); ?>/img/benxi.png">
-                <p>Benxi<br>
-                  <i>System Engineer</i></p>
+            <?php if(get_sub_field('team_member')): ?>
+            <?php while(has_sub_field('team_member')): ?>
+              <div class="col-sm-6 team_member <?php the_sub_field('team_additional_class'); ?>"> <img src="<?php the_sub_field('team_member_portrait'); ?>">
+                <p><?php the_sub_field('team_member_name'); ?><br>
+                  <i><?php the_sub_field('team_member_position'); ?></i></p>
               </div>
-              <div class="col-sm-6 team_member"> <img src="<?php bloginfo('template_url'); ?>/img/xiaowei.png">
-                <p>Xiaowei<br>
-                  <i>System Engineer</i></p>
-              </div>
+			<?php endwhile; ?>
+            <?php endif; ?>
               <div class="col-md-12 text-center">
-                <h3>Xiaowei and Benxi are a couple of young engineers from China. Not only are they doing incredible things in engineering, they’re also friends who share a love of cooking and dance!</h3>
+                <h3><?php the_sub_field('team_description'); ?></h3>
               </div>
             </div>
             <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
           </div>
       </div>
+      <?php endwhile; ?>
+      <?php endif; ?>
       
-      <!-- Stripe 2 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> Design & Content Team </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 6 -->
-      <div class="row relative team-wrapper" id="panel_recruit_6">
-          <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/rizumi.png">
-                <p>Rizumi<br>
-                  <i>Web Developer</i></p>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3>Rizumi’s not just a breathe of fresh air around the office, she’s also an incredibly talented designer. On the weekends you can find her outdoors; she’s what the Japanese call a “Mountain Girl”.</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
-      
-      <!-- Stripe3 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> Sales Team </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 7 -->
-      <div class="row relative team-wrapper" id="panel_recruit_7">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/akemi.png">
-                <p>Akemi<br>
-                  <i>Sales Representative</i></p>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3>Introducing Akemi, our energetic and enthusiastic sales rep. When she’s not in and out of the country promoting international sales, she’s a passionate florist!</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
-      
-      <!-- Stripe 4 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> Product Data Management Team </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 8 -->
-      <div class="row relative team-wrapper" id="panel_recruit_8">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-            
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/kyoko.png">
-                <p>Kyoko<br>
-                  <i>Product Data Scientist</i></p>
-              </div>
-              
-              
-              <div class="col-md-12 text-center">
-                <h3>Kyoko’s our France and french culture-loving data superhero—always improving the site with a focus on fixing any issues that come up and making everything perfect. Merci, Kyoko-san!</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
-      
-      <!-- Stripe 5 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> Marketing Team </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 9 -->
-      <div class="row relative team-wrapper" id="panel_recruit_9">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/ryo.png">
-                <p>Ryo<br>
-                  <i>Marketing Analyst</i></p>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3>Ryo does various marketing tasks from international projects, to analysis. In the evenings, he can be found enjoying movies as he’s an avid cinema fan.</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
-      
-      <!-- Stripe 6 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> Administrative Division </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 10 -->
-      <div class="row relative team-wrapper" id="panel_recruit_10">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/kenji.png">
-                <p>Kenji<br>
-                  <i>Accountant</i></p>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3>The keeper of VR’s metaphorical “wallet”, Kenji is our ever-reliable accountant. Owning many certifications and licenses, he’s super diligent!</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
+    
+    
+    
       <!-- Instagram Banner -->
       <div class="row relative"> <a href="#"><img src="<?php bloginfo('template_url'); ?>/img/follow_us_banner.jpg" class="img-responsive"></a> </div>
       

@@ -21,23 +21,23 @@ Template Name: Recruit JP
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
-        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="<?php echo site_url(); ?>">
+        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="home">
           <li>ホーム</li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
+            <a href="home#services">
             <li><span class="menu-icon cog"></span>サービス紹介</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
+            </a> <a href="home#statistics">
             <li><span class="menu-icon pie-chart"></span>サイト訪問数推移</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
+            </a> <a href="home#publicity">
             <li><span class="menu-icon eye"></span>メディア掲載</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
+            </a> <a href="home#ceo">
             <li><span class="menu-icon speach_bubble"></span>代表挨拶</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
+            </a> <a href="home#history">
             <li><span class="menu-icon ribbon"></span>沿革</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
+            </a> <a href="home#business-alliances">
             <li><span class="glyphicon glyphicon-globe"></span>ビジネスパートナー</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
+            </a> <a href="home#contact">
             <li><span class="menu-icon align"></span>お問い合わせ</li>
             </a>
           </ul>
@@ -46,7 +46,7 @@ Template Name: Recruit JP
           <li>ニュース/メディア関連</li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
-            <a href="#news">
+            <a href="media#news">
             <li><span class="menu-icon icon-text-left"></span>お知らせ</li>
             </a> <a href="media#video">
             <li><span class="menu-icon play"></span>TVCM/動画ギャラリー</li>
@@ -87,8 +87,8 @@ Template Name: Recruit JP
         <div class="logo-top"><img src="<?php bloginfo('template_url'); ?>/img/logo-white.png" /></div>
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>Join Venture Republic</h1>
-            <h3>どこへ、どうやって、いくらで、そこで何ができるのか、ユーザーのあらゆる疑問や質問に対し、常にベストな回答を目指します。</h3>
+            <h1><?php the_field('title_1'); ?></h1>
+            <h3><?php the_field('text_1_jp'); ?></h3>
           </div>
         </div>
       </div>
@@ -97,9 +97,8 @@ Template Name: Recruit JP
       <div class="row relative panel" id="values">
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>A “Venture” Spirit</h1>
-            <h3>当社のスタッフはそれぞれ得意分野（専門分野）を持ち、かつベンチャースピリット・ビジネスマインドを持った人が多いことが特徴です。
-当社の専門性の高いサービスやコンテンツは、スタッフの得意分野へのこだわりとベンチャースピリットから生まれたもので、それこそが当社の最大の強みであり、当社のミッション（会社のミッションが分かるところへリンクを貼る）実現の要素です。</h3>
+            <h1><?php the_field('title_2'); ?></h1>
+            <h3><?php the_field('text_2_jp'); ?></h3>
           </div>
         </div>
       </div>
@@ -107,10 +106,8 @@ Template Name: Recruit JP
       <div class="row relative panel" id="panel_recruit_3">
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>Team Player</h1>
-            <h3>リパブリックという単語が社名に含まれている通り、当社はひとつのチームであり、
-すなわちチームプレーも重視しています。
-当社には、ひとつのチームであるからこそ、個々を尊重しながらオープンに議論できる土壌があり、ロジカルに本質論で議論ができる、柔軟な考えを持つ、成功体験にとらわれずゼロベースで思考できる、そういうコミュニケーション力を生かすことで、得意分野とベンチャースピリットそしてチームプレーを追求し「世界でも類を見ないメディア」＝「究極の消費応援メディア」を目指しています。</h3>
+            <h1><?php the_field('title_3'); ?></h1>
+            <h3><?php the_field('text_3_jp'); ?></h3>
           </div>
         </div>
       </div>
@@ -118,156 +115,44 @@ Template Name: Recruit JP
       <div class="row relative panel" id="panel_recruit_4">
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>Expertise</h1>
-            <h3>当社はこれからも他にない分野の開拓も進めていくつもりです。当然そこにはベンチャースピリットとともに、専門性の追求、得意分野へのこだわりが求められ、当社はそうした資質を持つ人材に期待しています。</h3>
+            <h1><?php the_field('title_4'); ?></h1>
+            <h3><?php the_field('text_4_jp'); ?></h3>
           </div>
         </div>
       </div>
       
+      <?php if(get_field('team_panel')): ?>
+      
+      <?php while(has_sub_field('team_panel')): ?>
       <!-- Stripe 1-->
       <div class="stripe row text-center" id="team">
         <div class="col-md-8 col-md-offset-2">
-          <h2> システム開発グループ</h2>
+          <h2> <?php the_sub_field('team_title_jp'); ?> </h2>
         </div>
       </div>
+      
       
       <!-- Panel 5 -->
-      <div class="row relative team-wrapper" id="panel_recruit_5">
-        <div class="col-md-8 col-md-offset-2">
+      <div class="row relative team-wrapper" id="<?php the_sub_field('team_id'); ?>">
+          <div class="col-md-8 col-md-offset-2">
             <div class="row text-left">
-              <div class="col-sm-6 team_member"> <img src="<?php bloginfo('template_url'); ?>/img/benxi.png">
-                <p>Benxi<br>
-                  <i>System Engineer</i></p>
+            <?php if(get_sub_field('team_member')): ?>
+            <?php while(has_sub_field('team_member')): ?>
+              <div class="col-sm-6 team_member <?php the_sub_field('team_additional_class'); ?>"> <img src="<?php the_sub_field('team_member_portrait'); ?>">
+                <p><?php the_sub_field('team_member_name'); ?><br>
+                  <i><?php the_sub_field('team_member_position'); ?></i></p>
               </div>
-              <div class="col-sm-6 team_member"> <img src="<?php bloginfo('template_url'); ?>/img/xiaowei.png">
-                <p>Xiaowei<br>
-                  <i>System Engineer</i></p>
-              </div>
+			<?php endwhile; ?>
+            <?php endif; ?>
               <div class="col-md-12 text-center">
-                <h3>中国出身の若手有望株！料理とダンスを愛する仲良しコンビです</h3>
+                <h3><?php the_sub_field('team_description_jp'); ?></h3>
               </div>
             </div>
             <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
           </div>
       </div>
-      
-      <!-- Stripe 2 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> デザイン・コンテンツグループ </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 6 -->
-      <div class="row relative team-wrapper" id="panel_recruit_6">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/rizumi.png">
-                <p>Rizumi<br>
-                  <i>Web Developer</i></p>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3>キュートなコンテンツを創り出す癒し系の彼女は誰もが認める山ガール！</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
-      
-      <!-- Stripe3 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> 営業グループ </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 7 -->
-      <div class="row relative team-wrapper" id="panel_recruit_7">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/akemi.png">
-                <p>Akemi<br>
-                  <i>Sales Representative</i></p>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3>国内外を飛び回るパワフル女子の本来の姿はお花を愛するフローリスト！</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
-      
-      <!-- Stripe 4 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> プロダクトデータグループ </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 8 -->
-      <div class="row relative team-wrapper" id="panel_recruit_8">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-            
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/kyoko.png">
-                <p>Kyoko<br>
-                  <i>Product Data Scientist</i></p>
-              </div>
-              
-              
-              <div class="col-md-12 text-center">
-                <h3>サイトの支えとなるデータを操る旅行のエキスパート。フランス大好き！口癖はMerci!</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
-      
-      <!-- Stripe 5 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> マーケティンググループ </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 9 -->
-      <div class="row relative team-wrapper" id="panel_recruit_9">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/ryo.png">
-                <p>Ryo<br>
-                  <i>Marketing Analyst</i></p>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3>マーケティング、市場分析、海外案件などマルチにこなす彼は映画愛好家です！</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
-      
-      <!-- Stripe 6 -->
-      <div class="stripe row text-center">
-        <div class="col-md-8 col-md-offset-2">
-          <h2> 管理部 </h2>
-        </div>
-      </div>
-      
-      <!-- Panel 10 -->
-      <div class="row relative team-wrapper" id="panel_recruit_10">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row text-left">
-              <div class="col-sm-6 team_member col-md-offset-3"> <img src="<?php bloginfo('template_url'); ?>/img/kenji.png">
-                <p>Kenji<br>
-                  <i>Accountant</i></p>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3>会社のお財布を司るにふさわしい真面目な彼はたくさんの資格を持つ勉強家！</h3>
-              </div>
-            </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
-          </div>
-      </div>
+      <?php endwhile; ?>
+      <?php endif; ?>
       <!-- Instagram Banner -->
       <div class="row relative"> <a href="#"><img src="<?php bloginfo('template_url'); ?>/img/follow_us_banner.jpg" class="img-responsive"></a> </div>
       
@@ -332,7 +217,7 @@ Template Name: Recruit JP
         <div class="col-md-12">
           <ul>
           <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-          <li><a href="<?php echo site_url(); ?>">ホーム</a></li>
+          <li><a href="home">ホーム</a></li>
           <li><a href="media">ニュース/メディア関連</a></li>
           <li><a href="recruit">採用情報</a></li>
           <li><a href="about">About</a></li>

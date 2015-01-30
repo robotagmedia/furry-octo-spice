@@ -22,23 +22,23 @@ Template Name: About JP
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
-        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="<?php echo site_url(); ?>">
+        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="home">
           <li>ホーム</li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
+            <a href="home#services">
             <li><span class="menu-icon cog"></span>サービス紹介</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
+            </a> <a href="home#statistics">
             <li><span class="menu-icon pie-chart"></span>サイト訪問数推移</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
+            </a> <a href="home#publicity">
             <li><span class="menu-icon eye"></span>メディア掲載</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
+            </a> <a href="home#ceo">
             <li><span class="menu-icon speach_bubble"></span>代表挨拶</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
+            </a> <a href="home#history">
             <li><span class="menu-icon ribbon"></span>沿革</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
+            </a> <a href="home#business-alliances">
             <li><span class="glyphicon glyphicon-globe"></span>ビジネスパートナー</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
+            </a> <a href="home#contact">
             <li><span class="menu-icon align"></span>お問い合わせ</li>
             </a>
           </ul>
@@ -47,13 +47,13 @@ Template Name: About JP
           <li>ニュース/メディア関連</li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
-            <a href="#news">
+            <a href="media#news">
             <li><span class="menu-icon icon-text-left"></span>お知らせ</li>
-            </a> <a href="#video">
+            </a> <a href="media#video">
             <li><span class="menu-icon play"></span>TVCM/動画ギャラリー</li>
-            </a> <a href="#press">
+            </a> <a href="media#press">
             <li><span class="menu-icon pad"></span>プレスリリース</li>
-            </a> <a href="#contact">
+            </a> <a href="media#contact">
             <li><span class="menu-icon align"></span>お問い合わせ</li>
             </a>
           </ul>
@@ -62,11 +62,11 @@ Template Name: About JP
           <li>採用情報</li>
           </a>
           <ul class="sub-menu recruit-menu" style="display:none">
-            <a href="#values">
+            <a href="recruit#values">
             <li><span class="menu-icon star"></span>メッセージ</li>
-            </a> <a href="#team">
+            </a> <a href="recruit#team">
             <li><span class="menu-icon users"></span>チーム紹介</li>
-            </a> <a href="#work_at_vr">
+            </a> <a href="recruit#work_at_vr">
             <li><span class="menu-icon user"></span>求人一覧</li>
             </a>
           </ul>
@@ -396,7 +396,7 @@ Template Name: About JP
       <div class="col-md-12">
         <ul>
           <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-          <li><a href="<?php echo site_url(); ?>">ホーム</a></li>
+          <li><a href="home">ホーム</a></li>
           <li><a href="media">ニュース/メディア関連</a></li>
           <li><a href="recruit">採用情報</a></li>
           <li><a href="about">About</a></li>

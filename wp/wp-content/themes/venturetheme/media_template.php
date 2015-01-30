@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: Media
+Template Name: Media Template
 */
 ?>
 <?php get_header(); ?>
-<?php remove_filter ('the_content', 'wpautop'); ?>
+
 <?php if (qtrans_getLanguage() == 'en'): ?>
 
 <nav class="navbar navbar-default" role="navigation">
@@ -65,11 +65,11 @@ Template Name: Media
         <li>Recruit</li>
         </a>
         <ul class="sub-menu recruit-menu" style="display:none">
-          <a href="recruit.html#values">
+          <a href="recruit#values">
           <li><span class="menu-icon star"></span>Our Values</li>
-          </a> <a href="recruit.html#team">
+          </a> <a href="recruit#team">
           <li><span class="menu-icon users"></span>Meet the Team</li>
-          </a> <a href="recruit.html#work_at_vr">
+          </a> <a href="recruit#work_at_vr">
           <li><span class="menu-icon user"></span>Work at VR</li>
           </a>
         </ul>
@@ -96,16 +96,16 @@ Template Name: Media
         </div>
       </div>
       
+
+          
       <!-- Lists -->
       <div class="row text-center" id="news">
         <div class="col-md-12">
           <h2>Venture Republic News</h2>
         </div>
         <div class="col-md-12">
-          <?php
-$catquery = new WP_Query( 'cat=2&posts_per_page=20' );
-while($catquery->have_posts()) : $catquery->the_post();
-?>
+              <?php query_posts('cat=2');  if(have_posts()):   ?>
+			<?php while(have_posts()): the_post(); ?>
           <div class="col-md-4 news-bloc"><a href="<?php the_permalink(); ?>">
             <?php
   if ( has_post_thumbnail() ) {
@@ -113,9 +113,10 @@ while($catquery->have_posts()) : $catquery->the_post();
 } ?>
             <p><span class="date">
               <?php the_date(); ?>
-              </span> <?php echo $post->post_excerpt; ?> </p>
+              </span> <?php echo get_excerpt(); ?> </p>
             <span class="read-more" href="<?php the_permalink(); ?>">Read More</span></a> </div>
           <?php endwhile; ?>
+          <?php endif; wp_reset_query(); ?>
         </div>
         <div class="col-md-12 text-center more-news"> <a class="load-news" href="#"><img src="<?php bloginfo('template_url'); ?>/img/more-news.png"> Load more news
           </h3>
@@ -127,61 +128,46 @@ while($catquery->have_posts()) : $catquery->the_post();
         <div id="video_1"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_1_description'); ?></p>
             </div>
           </div>
-          <iframe src="//player.vimeo.com/video/112044084?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_1_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div id="video_2"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_2_description'); ?></p>
             </div>
           </div>
           </a>
-          <iframe src="//player.vimeo.com/video/116133338?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_2_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div id="video_3"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_3_description'); ?></p>
             </div>
           </div>
           </a>
-          <iframe src="//player.vimeo.com/video/112032872?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_3_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div id="video_4"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_4_description'); ?></p>
             </div>
           </div>
           </a>
-          <iframe src="//player.vimeo.com/video/112031877?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_4_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div id="video_5"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_5_description'); ?></p>
             </div>
           </div>
           </a>
-          <iframe src="//player.vimeo.com/video/112032756?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_5_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>
       
@@ -189,18 +175,18 @@ while($catquery->have_posts()) : $catquery->the_post();
       <div class="row grey-stripe video-feed">
         <div class="col-md-12">
           <div class="col-sm-6"> <a href="#video" rel="video_1">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span> </div>
-            <img height="295" class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_1_test.jpg"> </a> </div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_1_title'); ?></span> </div>
+            <img height="295" class="img-responsive" src="<?php the_field('video_1_thumbnail'); ?>"> </a> </div>
           <div class="col-sm-3"> <a href="#video" rel="video_2">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span></div>
-            <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_2.jpg"></a> <a href="#video" rel="video_3">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span></div>
-            <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_3.jpg"></a> </div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_2_title'); ?></span></div>
+            <img class="img-responsive" src="<?php the_field('video_2_thumbnail'); ?>"></a> <a href="#video" rel="video_3">
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_3_title'); ?></span></div>
+            <img class="img-responsive" src="<?php the_field('video_3_thumbnail'); ?>"></a> </div>
           <div class="col-sm-3"> <a href="#video" rel="video_4">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span></div>
-            <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_4.jpg"></a> <a href="#video" rel="video_5">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span></div>
-            <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_5.jpg"></a> </div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_4_title'); ?></span></div>
+            <img class="img-responsive" src="<?php the_field('video_4_thumbnail'); ?>"></a> <a href="#video" rel="video_5">
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_5_title'); ?></span></div>
+            <img class="img-responsive" src="<?php the_field('video_5_thumbnail'); ?>"></a> </div>
         </div>
       </div>
       

@@ -1,3 +1,13 @@
+<?php
+/*
+Template Name: Home
+*/
+?>
+
+<?php get_header(); ?>
+
+<?php if (qtrans_getLanguage() == 'en'): ?>
+
 <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header text-center menu-hover"> <a class="navbar-brand" href="javascript:void(0)"></a> </div>
     <div class="navbar-collapse">
@@ -35,7 +45,7 @@
             </a>
           </ul>
         </div>
-        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>/media">
+        <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>media">
           <li>Media</li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
@@ -347,24 +357,31 @@ skrollr.init({ forceHeight: false })
       <!-- Carousel 2 -->
       <div id="carousel-alliances" class="carousel slide row" data-ride="carousel"> 
         <!-- Indicators -->
+        <?php if(get_field('business_alliances')): ?>
+        
         <ol class="carousel-indicators">
-          <li data-target="#carousel-alliances" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-alliances" data-slide-to="1"></li>
+        <?php while(has_sub_field('business_alliances')): ?>
+        <?php if(get_sub_field('carousel_indicators')): ?>
+        <?php while(has_sub_field('carousel_indicators')): ?>
+          <li data-target="#carousel-alliances" data-slide-to="<?php the_sub_field('slide_number'); ?>"></li>
+          <?php endwhile; ?>
+        <?php endif; ?>
+        <?php endwhile; ?>
         </ol>
         
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <div class="col-md-6 col-md-offset-3 text-center"> <img src="<?php bloginfo('template_url'); ?>/img/hankyu_koutuusya.png">
-              <p><i>Through alliance with Travel.jp and Hotel.jp, we were able to reach a wider user base, accelerate new user acquisition and grow our business.</i></p>
-            </div>
-          </div>
+        
+        <?php while(has_sub_field('business_alliances')): ?>
           <div class="item">
-            <div class="col-md-6 col-md-offset-3 text-center"> <img src="<?php bloginfo('template_url'); ?>/img/hato-bus-logo.png" />
-              <p><i>Thanks to collaboration with Travel.jp, we were able to release a written guide for users, which effectively improved web-based sales for products that were previously difficult to sell online.</i></p>
+            <div class="col-md-6 col-md-offset-3 text-center"> <img src="<?php the_sub_field('logo'); ?>">
+              <p><i><?php the_sub_field('text'); ?></i></p>
             </div>
           </div>
+          <?php endwhile; ?>
         </div>
+        
+        <?php endif; ?>
       </div>
       
       <!-- CTA 2 -->
@@ -426,3 +443,11 @@ $('.selectpicker').selectpicker({
 	  size: 4,
   });
 </script>
+
+<?php get_footer(); ?>
+
+<?php else: ?>
+
+<?php get_template_part( 'homepage_jp' ); ?>
+
+<?php endif ?>

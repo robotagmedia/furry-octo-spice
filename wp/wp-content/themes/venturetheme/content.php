@@ -77,19 +77,56 @@
 <div class="main-content">
   <div class="container-fluid">
   
-  <?php if ( have_posts() ) : ?>
-  <?php $additional_class = get_post_meta($post->ID, 'class', true); ?>
+   <?php if ( have_posts() ) : ?>
+  
   <?php while ( have_posts() ) : the_post(); ?>  
-    <div class="row <?php echo $additional_class;?>">
+  <!-- Top image -->
+      <div class="row relative about-top panel" id="top-image">
+        <div class="logo-top"><img src="<?php bloginfo('template_url'); ?>/img/logo-white.png" /></div>
+        <div class="absolute-center-parent">
+          <div class="absolute-center col-md-8 col-centered">
+            <h1><?php the_title(); ?></h1>
+          </div>
+        </div>
+      </div>
+      
+  <!-- Grey Stripe 2 -->
+      <div class="row date-post">
+        <div class="col-md-10 col-md-offset-1">
+          <h4><?php the_date(); ?></h4>
+        </div>
+      </div>
+  
+ 
+  <?php $additional_class = get_post_meta($post->ID, 'class', true); ?>
+    <div class="row post-content <?php echo $additional_class;?>">
     
       <div class="col-md-10 col-md-offset-1">
-   <h1><?php the_title(); ?></h1>
         <p><?php the_content(); ?></p>
       </div>
       
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
+    
+    <!-- Contact -->
+      <div id="contact" class="row">
+        <div class="col-md-12">
+          <h2>Contact Us</h2>
+          <?php echo do_shortcode( '[contact-form-7 id="15" title="Contact Form Eng"]' ); ?>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Social Networks -->
+    <div id="social" class="row">
+      <div class="col-sm-6 text-right center-on-mobile">
+        <h2 class="blue">
+        JOIN OUR SOCIAL NETWORK
+        </h1>
+      </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+    </div>
     
     <!-- Map -->
     <div id="map" class="row"> <a target="_blank" href="https://www.google.co.jp/maps/place/〒106-0031+Tōkyō-to,+Minato-ku,+Nishiazabu,+4+Chome−3−11+西麻布幸田ビル泉西麻布ビル/@35.6578435,139.7233975,17z/data=!3m1!4b1!4m2!3m1!1s0x60188b704f2e5d9d:0x6fb185ca69b6db99">
@@ -105,10 +142,10 @@
       <div class="col-md-12">
         <ul>
           <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/media">Media</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/recruit">Recruit</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/about">About</a></li>
+          <li><a href="<?php echo site_url(); ?>">Home</a></li>
+          <li><a href="media">Media</a></li>
+          <li><a href="recruit">Recruit</a></li>
+          <li><a href="about">About</a></li>
           <li class="menu-blue"><a href="#">Privacy</a></li>
           <li class="menu-blue"><a href="#">Terms</a></li>
         </ul>
@@ -116,3 +153,10 @@
     </div>
   </div>
 </footer>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/skrollr.min.js"></script> 
+<script>
+$('.selectpicker').selectpicker({
+      style: 'btn-info',
+	  size: 4,
+  });
+</script>

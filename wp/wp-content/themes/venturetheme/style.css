@@ -307,7 +307,6 @@ span.menu-icon {
   border: none;
   box-shadow: none;
   border-radius: 0;
-  min-height: 600px;
 }
 .home-top {
   background-image: url(img/fuji-home.jpg);
@@ -1782,4 +1781,17 @@ a.arrow-slide-right:hover {
 body:after{
     display:none;
     content: url(img/cog.png) url(img/pie-chart.png) url(img/eye.png) url(img/speach_bubble.png) url(img/ribbon.png) url(img/align.png) url(img/star.png) url(img/user.png) url(img/users.png) url(img/play.png) url(img/text-left.png) url(img/pad.png);
+}
+.post-content { background-color:#FFF; padding:50px 0px;}
+.post-content a { color: #076d91;}
+.post-content a:hover, .post-content a:focus { color: #0b83ad;}
+.date-post {
+  padding: 30px 0px;
+  background-color: #ebebeb;
+  color: #282828;
+}
+.date-post h4 {
+  margin: 0px;
+  font-size: 15px;
+  text-transform: uppercase;
 }

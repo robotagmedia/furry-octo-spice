@@ -21,23 +21,23 @@ Template Name: Media JP
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
-        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="<?php echo site_url(); ?>">
+        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="home">
           <li>ホーム</li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
+            <a href="home#services">
             <li><span class="menu-icon cog"></span>サービス紹介</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
+            </a> <a href="home#statistics">
             <li><span class="menu-icon pie-chart"></span>サイト訪問数推移</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
+            </a> <a href="home#publicity">
             <li><span class="menu-icon eye"></span>メディア掲載</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
+            </a> <a href="home#ceo">
             <li><span class="menu-icon speach_bubble"></span>代表挨拶</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
+            </a> <a href="home#history">
             <li><span class="menu-icon ribbon"></span>沿革</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
+            </a> <a href="home#business-alliances">
             <li><span class="glyphicon glyphicon-globe"></span>ビジネスパートナー</li>
-            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
+            </a> <a href="home#contact">
             <li><span class="menu-icon align"></span>お問い合わせ</li>
             </a>
           </ul>
@@ -100,10 +100,8 @@ Template Name: Media JP
           <h2>Venture Republic News</h2>
         </div>
         <div class="col-md-12">
-          <?php
-$catquery = new WP_Query( 'cat=2&posts_per_page=20' );
-while($catquery->have_posts()) : $catquery->the_post();
-?>
+              <?php query_posts('cat=2');  if(have_posts()):   ?>
+			<?php while(have_posts()): the_post(); ?>
           <div class="col-md-4 news-bloc"><a href="<?php the_permalink(); ?>">
             <?php
   if ( has_post_thumbnail() ) {
@@ -111,9 +109,10 @@ while($catquery->have_posts()) : $catquery->the_post();
 } ?>
             <p><span class="date">
               <?php the_date(); ?>
-              </span> <?php echo $post->post_excerpt; ?> </p>
+              </span> <?php echo get_excerpt(); ?> </p>
             <span class="read-more" href="<?php the_permalink(); ?>">Read More</span></a> </div>
           <?php endwhile; ?>
+          <?php endif; wp_reset_query(); ?>
         </div>
         <div class="col-md-12 text-center more-news"> <a class="load-news" href="#"><img src="<?php bloginfo('template_url'); ?>/img/more-news.png"> 過去のニュース
           </h3>
@@ -127,80 +126,65 @@ while($catquery->have_posts()) : $catquery->the_post();
         <div id="video_1"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_1_description'); ?></p>
             </div>
           </div>
-          <iframe src="//player.vimeo.com/video/112044084?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_1_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div id="video_2"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_2_description'); ?></p>
             </div>
           </div>
           </a>
-          <iframe src="//player.vimeo.com/video/116133338?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_2_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div id="video_3"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_3_description'); ?></p>
             </div>
           </div>
           </a>
-          <iframe src="//player.vimeo.com/video/112032872?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_3_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div id="video_4"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_4_description'); ?></p>
             </div>
           </div>
           </a>
-          <iframe src="//player.vimeo.com/video/112031877?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_4_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div id="video_5"> <a href="#video">
           <div class="video-desc">
             <div class="video-desc-content"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/play-blue.png">
-              <p><span class="i_blue">Travel.jp Television Advertisement</span></br>
-                Starring: Saro Hara & Khodor Ellaik</br>
-                AD Agency: Tsunago</br>
-                Directed by Noel Paul</p>
+              <p><?php the_field('video_5_description'); ?></p>
             </div>
           </div>
           </a>
-          <iframe src="//player.vimeo.com/video/112032756?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="<?php the_field('video_5_link'); ?>?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>
-  
+      
       <!-- Grey Stripe 1 -->
       <div class="row grey-stripe video-feed">
         <div class="col-md-12">
           <div class="col-sm-6"> <a href="#video" rel="video_1">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span> </div>
-            <img height="295" class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_1_test.jpg"> </a> </div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_1_title_jp'); ?></span> </div>
+            <img height="295" class="img-responsive" src="<?php the_field('video_1_thumbnail'); ?>"> </a> </div>
           <div class="col-sm-3"> <a href="#video" rel="video_2">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span></div>
-            <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_2.jpg"></a> <a href="#video" rel="video_3">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span></div>
-            <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_3.jpg"></a> </div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_2_title_jp'); ?></span></div>
+            <img class="img-responsive" src="<?php the_field('video_2_thumbnail'); ?>"></a> <a href="#video" rel="video_3">
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_3_title_jp'); ?></span></div>
+            <img class="img-responsive" src="<?php the_field('video_3_thumbnail'); ?>"></a> </div>
           <div class="col-sm-3"> <a href="#video" rel="video_4">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span></div>
-            <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_4.jpg"></a> <a href="#video" rel="video_5">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title">Video Title</span></div>
-            <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/video_5.jpg"></a> </div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_4_title_jp'); ?></span></div>
+            <img class="img-responsive" src="<?php the_field('video_4_thumbnail'); ?>"></a> <a href="#video" rel="video_5">
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_5_title_jp'); ?></span></div>
+            <img class="img-responsive" src="<?php the_field('video_5_thumbnail'); ?>"></a> </div>
         </div>
       </div>
       
@@ -319,7 +303,7 @@ while($catquery->have_posts()) : $catquery->the_post();
       <div class="col-md-12">
         <ul>
           <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-          <li><a href="<?php echo site_url(); ?>">ホーム</a></li>
+          <li><a href="home">ホーム</a></li>
           <li><a href="media">ニュース/メディア関連</a></li>
           <li><a href="recruit">採用情報</a></li>
           <li><a href="about">About</a></li>

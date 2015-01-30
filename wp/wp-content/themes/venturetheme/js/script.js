@@ -22,6 +22,8 @@ if(window.location.href.indexOf("/ja/") === -1) {
 
 $('#slide-press .carousel-inner .item:first').addClass('active');
 $("#slide-press .carousel-indicators li:first").addClass("active");
+$('#carousel-alliances .carousel-inner .item:first').addClass('active');
+$("#carousel-alliances .carousel-indicators li:first").addClass("active");
 //  Home Top Image Size
 $('.panel').height($(window).height() - 77);
 $('.plane').height($(window).height());
@@ -126,11 +128,11 @@ $('#media-icon').click(function(){
 	$('.media-menu').show();
 	$('.about-menu, .recruit-menu, .home-menu').hide();
 });
-
+/*
 $('.popout-menu-title').click(function(){
-	$(this).siblings('.sub-menu').toggle();
+	$(this).siblings('.is_page_menu').toggle();
 });
-
+*/
 $('.menu-hover').click(function(){
 	$('.popout-menu').show();
 	$('.navbar-header').addClass('grey-navbar-header');
