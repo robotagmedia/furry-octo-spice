@@ -25,26 +25,26 @@ Template Name: Media Template
       <a class="grey-logo" href="#top-image">
       <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
       </a>
-      <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="index">
-        <li>Home</li>
-        </a>
-        <ul class="sub-menu home-menu" style="display:none">
-          <a href="<?php echo site_url(); ?>#services">
-          <li><span class="menu-icon cog"></span>Services</li>
-          </a> <a href="<?php echo site_url(); ?>#statistics">
-          <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
-          </a> <a href="<?php echo site_url(); ?>#publicity">
-          <li><span class="menu-icon eye"></span>Publicity</li>
-          </a> <a href="<?php echo site_url(); ?>#ceo">
-          <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
-          </a> <a href="<?php echo site_url(); ?>#history">
-          <li><span class="menu-icon ribbon"></span>Our History</li>
-          </a> <a href="<?php echo site_url(); ?>#business-alliances">
-          <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
-          </a> <a href="<?php echo site_url(); ?>#contact">
-          <li><span class="menu-icon align"></span>Contact VR</li>
+      <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <li>Home</li>
           </a>
-        </ul>
+          <ul class="sub-menu home-menu" style="display:none">
+             <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
+            <li><span class="menu-icon cog"></span>Services</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
+            <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
+            <li><span class="menu-icon eye"></span>Publicity</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
+            <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
+            <li><span class="menu-icon ribbon"></span>Our History</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
+            <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
+            <li><span class="menu-icon align"></span>Contact VR</li>
+            </a>
+          </ul>
       </div>
       <div class="popout-menu-wrapper is_page_menu"> <a class="popout-menu-title" href="media">
         <li>Media</li>
@@ -103,20 +103,23 @@ Template Name: Media Template
         <div class="col-md-12">
           <h2>Venture Republic News</h2>
         </div>
+        <div class="row" style="margin:0">
         <div class="col-md-12">
               <?php query_posts('cat=2');  if(have_posts()):   ?>
 			<?php while(have_posts()): the_post(); ?>
-          <div class="col-md-4 news-bloc"><a href="<?php the_permalink(); ?>">
+          <div class="col-md-4 col-sm-6 news-bloc"><a href="<?php the_permalink(); ?>">
+          <div class="news-img-overlay"></div>
             <?php
   if ( has_post_thumbnail() ) {
-	the_post_thumbnail( array('class' => ' img-responsive') );
+	the_post_thumbnail();
 } ?>
             <p><span class="date">
               <?php the_date(); ?>
-              </span> <?php echo get_excerpt(); ?> </p>
-            <span class="read-more" href="<?php the_permalink(); ?>">Read More</span></a> </div>
+              </span><?php the_title(); ?> - <?php echo get_excerpt(); ?> </p>
+            <span class="read-more"><i>Read More</i></span></a> </div>
           <?php endwhile; ?>
           <?php endif; wp_reset_query(); ?>
+        </div>
         </div>
         <div class="col-md-12 text-center more-news"> <a class="load-news" href="#"><img src="<?php bloginfo('template_url'); ?>/img/more-news.png"> Load more news
           </h3>
@@ -198,12 +201,12 @@ Template Name: Media Template
       </div>
 
       <!--Timeline-->
-      <div class="row panel relative" id="slide-press">
-      <?php 
- $number = 0;
- $monthnum = date('n');
- query_posts("monthnum=$monthnum");
- if(have_posts()):  
+      <div class="row relative" id="slide-press">
+<?php 
+ $current_year = date('Y', current_time('timestamp'));
+ $current_month = date('m', current_time('timestamp'));
+ query_posts("year=$current_year&monthnum=$current_month");
+ if(have_posts()) : 
 ?>
         <div id="carousel-press" class="carousel slide" data-ride="carousel"> 
           <!-- Indicators -->
@@ -214,12 +217,19 @@ Template Name: Media Template
           </ol>
           
           <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox" id="november">
           <?php while(have_posts()): the_post(); ?>
+          <?php if ( $background_image = get_field('post_background_image') ): ?>
+          <div class="carousel-inner" role="listbox">
+          <img class="press-slide-background-image" src="<?php the_field('post_background_image'); ?>" />
+          <?php else: ?>
+          <div class="carousel-inner" role="listbox" id="november">
+          <?php endif ?>
             <div class="item">
               <div class="col-md-6 col-md-offset-6">
+              <div class="press-slider-content-wrapper">
                 <h2><?php the_title(); ?> </h2>
-                <p><?php echo $post->post_excerpt; ?></p>
+                <p><?php echo get_excerpt(); ?></p>
+                </div>
                 <a class="btn btn-lg btn-default light-blue-btn" href="<?php the_permalink(); ?>">Read full article</a> </div>
             </div>
             
@@ -229,6 +239,7 @@ Template Name: Media Template
         </div>
         <?php endif; wp_reset_query(); ?>
       </div>
+      
       
       <!-- Timeline -->
       
@@ -260,8 +271,7 @@ Template Name: Media Template
           </div>
           -->
         </div>
-      </div>
-      
+      </div> 
       <!-- Contact -->
       <div id="contact" class="row">
         <div class="col-md-12">
@@ -277,7 +287,7 @@ Template Name: Media Template
         Join our social network
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
     
     <!-- Map -->
@@ -288,13 +298,13 @@ Template Name: Media Template
   </div>
 </div>
 <footer class="relative">
-  <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
+  <div class="footer-social-networks"><a href="https://www.facebook.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="https://twitter.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="http://instagram.com/vkanri" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <ul>
           <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-          <li><a href="<?php echo site_url(); ?>">Home</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
           <li><a href="media">Media</a></li>
           <li><a href="recruit">Recruit</a></li>
           <li><a href="about">About</a></li>

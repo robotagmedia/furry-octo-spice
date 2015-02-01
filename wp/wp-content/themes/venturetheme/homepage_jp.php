@@ -16,13 +16,13 @@ Template Name: Home JP
         <li><?php qtrans_generateLanguageSelectCode(); ?></li>
       </ul>
     </div>
-    <div class="popout-menu" style="display:none;"  >
+    <div class="popout-menu jp-menu" style="display:none;"  >
       <ul>
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-          <li>ホーム</li>
+          <li><b>ホーム</b></li>
           </a>
           <ul class="sub-menu home-menu is_page_menu" style="display:none">
             <a href="#services">
@@ -43,7 +43,7 @@ Template Name: Home JP
           </ul>
         </div>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="media">
-          <li>ニュース/メディア関連</li>
+          <li><b>ニュース/メディア関連</b></li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
             <a href="media#news">
@@ -58,7 +58,7 @@ Template Name: Home JP
           </ul>
         </div>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="recruit">
-          <li>採用情報</li>
+          <li><b>採用情報</b></li>
           </a>
           <ul class="sub-menu recruit-menu" style="display:none">
             <a href="recruit#values">
@@ -78,14 +78,14 @@ Template Name: Home JP
   </nav>
 </header>
 <!-- Content -->
-<div id="skrollr-body">
+<div id="skrollr-body" class="jp">
   <div class="main-content">
     <div class="container-fluid">
       <!-- Top image -->
       <div class="row relative home-top" id="top-image">
         <div class="logo-top"><img src="<?php bloginfo('template_url'); ?>/img/logo-white.png" /></div>
         <div class="absolute-center-parent">
-          <h1 class="absolute-center">旅行に関するあらゆる疑問や質問に答える<br />オンライントラベルメディア</h1>
+          <h1 class="absolute-center"><b>旅行に関するあらゆる疑問や質問に答える<br />オンライントラベルメディア</b></h1>
         </div>
       </div>
       <!-- Travel & Hotel -->
@@ -97,12 +97,12 @@ Template Name: Home JP
       <div class="domestic-travel-wrapper relative"> 
         <!-- Tab  1 -->
         <div class="row" id="travel-jp">
-          <div class="right-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/white-fb.png" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/white-twitter.png" /></a></div>
+          <div class="right-social-networks"><a href="https://www.facebook.com/travel.jp" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/white-fb.png" /></a><a href="https://twitter.com/travel_jp" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/white-twitter.png" /></a></div>
           <div class="col-md-10 col-md-offset-1 text-center">
             <h3>日本最大級の旅行情報サイト</h3>
             <div class="row">
-              <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile visible"> <a class="btn btn-lg btn-default turquoise-btn">Visit Travel.jp</a> </div>
-              <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
+              <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile visible"> <a href="http://travel.jp" target="_blank" class="btn btn-lg btn-default turquoise-btn">Visit Travel.jp</a> </div>
+              <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="https://itunes.apple.com/jp/app/travel.jp-toraberu-jepi-guo/id923319321?mt=8&ign-mpt=uo%3D4" target="_blank" class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
             </div>
             <div class="row tabiness-wrapper">
               <div class="col-sm-3 col-sm-offset-2 col-xs-12 center-on-mobile text-right"><img class="tabiness" src="<?php bloginfo('template_url'); ?>/img/travel-jp-tabiness.png" /></div>
@@ -111,24 +111,28 @@ Template Name: Home JP
               </div>
               </div>
               <div class="row">
-                <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile visible"> <a class="btn btn-lg btn-default dark-yellow-btn">Visit Tabiness<span>(日本語)</span></a> </div>
-                <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-lg btn-default dark-yellow-btn">Visit Tabiness<span>(英語) </span></a> </div>
+                <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile visible"> <a href="http://guide.travel.co.jp/" target="_blank" class="btn btn-lg btn-default dark-yellow-btn">Visit Tabiness <span class="meiryo">(日本語)</span></a> </div>
+                <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://trip101.com" target="_blank" class="btn btn-lg btn-default dark-yellow-btn">Visit Tabiness <span class="meiryo">(英語) </span></a> </div>
               </div>
             </div>
           </div>
       
       <!-- Tab  2 -->
         <div id="hotel-jp" class="row" style="display:none;">
-          <div class="right-social-networks"><a href="" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/white-fb.png" /></a><a href="" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/white-twitter.png" /></a></div>
-          <div class="col-md-6 col-md-offset-3 text-center">
-            <h3>日本最大級のホテル・宿のクチコミ検索サイト</h3>
+          <div class="right-social-networks"><a href="https://www.facebook.com/hotel.jp" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/white-fb.png" /></a><a href="https://twitter.com/_hoteljp" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/white-twitter.png" /></a></div>
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h3 style="margin-bottom: 50px;">日本最大級のホテル・宿のクチコミ検索サイト</h3>
           </div>
-          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp (国内)</a> </div>
-          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp (グローバル)</a> </div>
-          <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
-          <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
+          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(国内)</span></a> </div>
+          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://hotel.jp" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(グローバル)</span></a> </div>
+          <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a href="https://itunes.apple.com/jp/app/hoteru-jepi-hotel.jp-kuchikomide/id445300541?mt=8" target="_blank" class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
+          <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a href="https://play.google.com/store/apps/details?id=jp.hotel.android&hl=ja" target="_blank" class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
         </div>
       </div>
+
+
+
+
       
       <!-- Map 1 / Japan -->
       <div class="row relative map" data-bottom-top="background-position:0% 0%" data-center="background-position:50% 0%" data-top-bottom="background-position:100% 0%"> <img data-bottom-top="opacity:1;" data-bottom="opacity:0.2" class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/global-initiative-map-no-japan.png" />
@@ -152,14 +156,14 @@ Template Name: Home JP
             <h3>ホテルのエキスパートが厳選する<br />
             ”とっておき”のホテルサイト</h3>
           </div>
-          <div class="col-md-12 visible"> <a class="btn btn-lg btn-default light-blue-btn">Visit THE LIST</a> </div>
+          <div class="col-md-12 visible"> <a href="http://thelist101.com" target="_blank" class="btn btn-lg btn-default light-blue-btn">Visit THE LIST</a> </div>
         </div>
         <!-- Tab  2 -->
         <div id="flocations" class="row text-center" style="display:none">
           <div class="col-md-12 visible">
             <h3>関連会社：<br />東南アジアを拠点とする旅行検索サイト</h3>
           </div>
-          <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a class="btn btn-lg btn-default turquoise-btn">Visit Flocations</a> </div>
+          <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a href="http://www.flocations.com/" target="_blank" class="btn btn-lg btn-default turquoise-btn">Visit Flocations</a> </div>
           <div class="col-md-3 col-sm-6 text-left visible center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
         </div>
         <!-- Tab  3 -->
@@ -168,7 +172,7 @@ Template Name: Home JP
             <h3>関連会社：<br />
               インドネシアを拠点とするショッピング検索比較サイト</h3>
           </div>
-          <div class="col-md-3 col-md-offset-3 col-sm-6 text-right center-on-mobile visible"> <a class="btn btn-lg btn-default turquoise-btn">Visit Telunjuk</a> </div>
+          <div class="col-md-3 col-md-offset-3 col-sm-6 text-right center-on-mobile visible"> <a href="https://www.telunjuk.com/" target="_blank" class="btn btn-lg btn-default turquoise-btn">Visit Telunjuk</a> </div>
           <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
         </div>
       </div>
@@ -232,7 +236,7 @@ skrollr.init({ forceHeight: false })
             <div class="col-md-5"><img src="<?php bloginfo('template_url'); ?>/img/travel-journal-logo.png" /></div>
             <div class="col-md-3"><img src="<?php bloginfo('template_url'); ?>/img/online-logo.png" /></div>
             <div class="col-md-2"><img src="<?php bloginfo('template_url'); ?>/img/wit-logo.png" /></div>
-            <div class="col-md-2"><img src="<?php bloginfo('template_url'); ?>/img/nikkei-logo.png" /></div>
+            <div class="col-md-2"><img src="<?php bloginfo('template_url'); ?>/img/nikkei-jp.png" style="padding-top: 8px;" /></div>
             <div class="col-md-2"><img src="<?php bloginfo('template_url'); ?>/img/tv-tokyo-logo.png" /></div>
             <div class="col-md-2"><img src="<?php bloginfo('template_url'); ?>/img/wbs-logo.png" /></div>
             <div class="col-md-2"><img src="<?php bloginfo('template_url'); ?>/img/travel-voice-logo.png" /></div>
@@ -244,14 +248,14 @@ skrollr.init({ forceHeight: false })
       <div class="row cta text-center">
         <div class="col-md-12">
           <h1 class="yellow">提携に関して</h1>
-          <h3 class="white">広告出稿や提携に関してのお問い合わせはこちらから。</h3>
-          <a class="btn btn-default yellow-btn">問い合わせ</a> </div>
+          <h3 class="white meiryo">広告出稿や提携に関してのお問い合わせはこちらから。</h3>
+          <a class="btn btn-default yellow-btn meiryo">お問い合わせ</a> </div>
       </div>
       <!-- Transition -->
       <div id="plane" class="row relative text-center">
-        <div class="plane" data-bottom-top="background-position:0% 0%" data-top-bottom="background-position:100% 0%"></div>
-        <div class="absolute-center-parent">
-          <h1 class="absolute-center"><i>旅先を決めるところから、予約、現地でのアクティビティ、<br />思い出を振り返る楽しみまで、これまでにない旅行の楽しみ方を提案します。</i></h1>
+        <div class="plane" data-bottom-top="background-position:0% 10%" data-top-bottom="background-position:100% 10%"></div>
+        <div class="absolute-center-parent col-md-12">
+          <h1 class="absolute-center">旅先を決めるところから、予約、現地でのアクティビティ、思い出を振り返る楽しみまで、これまでにない旅行の楽しみ方を提案します。</h1>
         </div>
       </div>
       <!-- CEO -->
@@ -367,8 +371,8 @@ skrollr.init({ forceHeight: false })
         
         <?php while(has_sub_field('business_alliances')): ?>
           <div class="item">
-            <div class="col-md-6 col-md-offset-3 text-center"> <img src="<?php the_sub_field('logo'); ?>">
-              <p><i><?php the_sub_field('text_jp'); ?></i></p>
+            <div class="col-md-7 text-center" style="float:none; margin:auto"> <img src="<?php the_sub_field('logo'); ?>">
+              <p><?php the_sub_field('text_jp'); ?></p>
             </div>
           </div>
           <?php endwhile; ?>
@@ -382,7 +386,7 @@ skrollr.init({ forceHeight: false })
         <div class="col-md-10 col-md-offset-1">
           <h1 class="blue">ビジネスパートナーに関して</h1>
           <h3 class="white">ビジネスパートナーや提携に関してのお問い合わせはこちらから。</h3>
-          <a class="btn btn-default blue-btn">問い合わせ</a> </div>
+          <a class="btn btn-default blue-btn meiryo">お問い合わせ</a> </div>
       </div>
       
       <!-- Contact -->
@@ -401,7 +405,7 @@ skrollr.init({ forceHeight: false })
         Join our social network
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
     
     <!-- Map -->
@@ -412,7 +416,7 @@ skrollr.init({ forceHeight: false })
   </div>
 </div>
 <footer class="relative">
-  <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
+  <div class="footer-social-networks"><a href="https://www.facebook.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="https://twitter.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="http://instagram.com/vkanri" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">

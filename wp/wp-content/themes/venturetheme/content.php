@@ -16,26 +16,26 @@
       <a class="grey-logo" href="#top-image">
       <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
       </a>
-      <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-        <li>Home</li>
-        </a>
-        <ul class="sub-menu home-menu" style="display:none">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
-          <li><span class="menu-icon cog"></span>Services</li>
-          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
-          <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
-          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
-          <li><span class="menu-icon eye"></span>Media Coverage</li>
-          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
-          <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
-          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
-          <li><span class="menu-icon ribbon"></span>Our History</li>
-          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
-          <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
-          </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
-          <li><span class="menu-icon align"></span>Contact VR</li>
+      <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+          <li>Home</li>
           </a>
-        </ul>
+          <ul class="sub-menu home-menu" style="display:none">
+             <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
+            <li><span class="menu-icon cog"></span>Services</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
+            <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
+            <li><span class="menu-icon eye"></span>Publicity</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
+            <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
+            <li><span class="menu-icon ribbon"></span>Our History</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
+            <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
+            <li><span class="menu-icon align"></span>Contact VR</li>
+            </a>
+          </ul>
       </div>
       <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>media">
         <li>Media</li>
@@ -81,7 +81,16 @@
   
   <?php while ( have_posts() ) : the_post(); ?>  
   <!-- Top image -->
-      <div class="row relative about-top panel" id="top-image">
+  
+  <?php if ( $background_image = get_field('post_background_image') ): ?>
+  <div class="row relative">
+      <div class="post_background_image"></div>
+      <img class="img-responsive" src="<?php the_field('post_background_image'); ?>" />
+   <?php else: ?>
+  <div class="row relative about-top panel" id="top-image">
+  <?php endif ?>
+  
+      
         <div class="logo-top"><img src="<?php bloginfo('template_url'); ?>/img/logo-white.png" /></div>
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
@@ -98,8 +107,7 @@
       </div>
   
  
-  <?php $additional_class = get_post_meta($post->ID, 'class', true); ?>
-    <div class="row post-content <?php echo $additional_class;?>">
+    <div class="row post-content">
     
       <div class="col-md-10 col-md-offset-1">
         <p><?php the_content(); ?></p>
@@ -125,7 +133,7 @@
         JOIN OUR SOCIAL NETWORK
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
     
     <!-- Map -->
@@ -136,13 +144,13 @@
   </div>
 </div>
 <footer class="relative">
-  <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
+  <div class="footer-social-networks"><a href="https://www.facebook.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="https://twitter.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="http://instagram.com/vkanri" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <ul>
           <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-          <li><a href="<?php echo site_url(); ?>">Home</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
           <li><a href="media">Media</a></li>
           <li><a href="recruit">Recruit</a></li>
           <li><a href="about">About</a></li>

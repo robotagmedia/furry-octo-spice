@@ -9,13 +9,13 @@
         <li><?php qtrans_generateLanguageSelectCode(); ?></li>
       </ul>
     </div>
-    <div class="popout-menu" style="display:none;"  >
+    <div class="popout-menu jp-menu" style="display:none;"  >
       <ul>
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-          <li>ホーム</li>
+          <li><b>ホーム</b></li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
             <a href="home#services">
@@ -36,7 +36,7 @@
           </ul>
         </div>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="media">
-          <li>ニュース/メディア関連</li>
+          <li><b>ニュース/メディア関連</b></li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
             <a href="media#news">
@@ -51,7 +51,7 @@
           </ul>
         </div>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="recruit">
-          <li>採用情報</li>
+          <li><b>採用情報</b></li>
           </a>
           <ul class="sub-menu recruit-menu" style="display:none">
             <a href="recruit#values">
@@ -71,7 +71,7 @@
   </nav>
 </header>
 <!-- Content -->
-<div id="skrollr-body">
+<div id="skrollr-body" class="jp">
 <div class="main-content">
   <div class="container-fluid">
   
@@ -79,7 +79,14 @@
   
   <?php while ( have_posts() ) : the_post(); ?>  
   <!-- Top image -->
-      <div class="row relative about-top panel" id="top-image">
+  
+  <?php if ( $background_image = get_field('post_background_image') ): ?>
+  <div class="row relative">
+      <div class="post_background_image"></div>
+      <img class="img-responsive" src="<?php the_field('post_background_image'); ?>" />
+   <?php else: ?>
+  <div class="row relative about-top panel" id="top-image">
+  <?php endif ?>
         <div class="logo-top"><img src="<?php bloginfo('template_url'); ?>/img/logo-white.png" /></div>
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
@@ -94,10 +101,7 @@
           <h4><?php the_date(); ?></h4>
         </div>
       </div>
-  
- 
-  <?php $additional_class = get_post_meta($post->ID, 'class', true); ?>
-    <div class="row post-content <?php echo $additional_class;?>">
+    <div class="row post-content">
     
       <div class="col-md-10 col-md-offset-1">
         <p><?php the_content(); ?></p>
@@ -110,7 +114,7 @@
     <!-- Contact -->
       <div id="contact" class="row">
         <div class="col-md-12">
-          <h2>お問い合わせ</h2>
+          <h2><b>お問い合わせ</b></h2>
           <?php echo do_shortcode( '[contact-form-7 id="16" title="無題"]' ); ?>
         </div>
       </div>
@@ -123,7 +127,7 @@
         Join our social network
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
     
     <!-- Map -->
@@ -134,7 +138,7 @@
   </div>
 </div>
 <footer class="relative">
-  <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
+  <div class="footer-social-networks"><a href="https://www.facebook.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="https://twitter.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="http://instagram.com/vkanri" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">

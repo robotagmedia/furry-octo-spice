@@ -5,7 +5,7 @@ $excerpt = get_the_excerpt();
 $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
 $excerpt = strip_shortcodes($excerpt);
 $excerpt = strip_tags($excerpt);
-$excerpt = substr($excerpt, 0, 200);
+$excerpt = substr($excerpt, 0, 100);
 $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
 $excerpt = $excerpt.'...';
@@ -41,3 +41,21 @@ function qtrans_convertHomeURL($url, $what) {
 }
 
 add_filter('home_url', 'qtrans_convertHomeURL', 10, 2);
+// Remove images link
+add_filter( 'the_content', 'attachment_image_link_remove_filter' );
+
+function attachment_image_link_remove_filter( $content ) {
+    $content =
+        preg_replace(
+            array('{<a(.*?)(wp-att|wp-content\/uploads)[^>]*><img}',
+                '{ wp-image-[0-9]*" /></a>}'),
+            array('<img','" />'),
+            $content
+        );
+    return $content;
+}
+
+add_filter('the_content', 'filter_ptags_on_images');
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<img .* \/>)\s*<\/p>/iU', '\1\2\3', $content);
+}

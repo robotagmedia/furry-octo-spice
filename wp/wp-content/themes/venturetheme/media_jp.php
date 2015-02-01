@@ -16,13 +16,13 @@ Template Name: Media JP
         <li><?php qtrans_generateLanguageSelectCode(); ?></li>
       </ul>
     </div>
-    <div class="popout-menu" style="display:none;"  >
+    <div class="popout-menu jp-menu" style="display:none;"  >
       <ul>
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
         <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="home">
-          <li>ホーム</li>
+          <li><b>ホーム</b></li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
             <a href="home#services">
@@ -43,7 +43,7 @@ Template Name: Media JP
           </ul>
         </div>
         <div class="popout-menu-wrapper is_page_menu"> <a class="popout-menu-title" href="media">
-          <li>ニュース/メディア関連</li>
+          <li><b>ニュース/メディア関連</b></li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
             <a href="#news">
@@ -58,7 +58,7 @@ Template Name: Media JP
           </ul>
         </div>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="recruit">
-          <li>採用情報</li>
+          <li><b>採用情報</b></li>
           </a>
           <ul class="sub-menu recruit-menu" style="display:none">
             <a href="recruit#values">
@@ -78,7 +78,7 @@ Template Name: Media JP
   </nav>
 </header>
 <!-- Content -->
-<div id="skrollr-body">
+<div id="skrollr-body" class="jp">
   <div class="main-content">
     <div class="container-fluid"> 
       
@@ -99,22 +99,26 @@ Template Name: Media JP
         <div class="col-md-12">
           <h2>Venture Republic News</h2>
         </div>
+        <div class="row" style="margin:0">
         <div class="col-md-12">
               <?php query_posts('cat=2');  if(have_posts()):   ?>
 			<?php while(have_posts()): the_post(); ?>
-          <div class="col-md-4 news-bloc"><a href="<?php the_permalink(); ?>">
+          <div class="col-md-4 col-sm-6 news-bloc"><a href="<?php the_permalink(); ?>">
+          <div class="news-img-overlay"></div>
+          <div class="press-thumbnail">
             <?php
   if ( has_post_thumbnail() ) {
-	the_post_thumbnail( array('class' => ' img-responsive') );
-} ?>
+	the_post_thumbnail();
+} ?></div>
             <p><span class="date">
               <?php the_date(); ?>
-              </span> <?php echo get_excerpt(); ?> </p>
-            <span class="read-more" href="<?php the_permalink(); ?>">Read More</span></a> </div>
+              </span><?php the_title(); ?> - <?php echo get_excerpt(); ?> </p>
+            <span class="read-more meiryo">もっと詳しく</span></a> </div>
           <?php endwhile; ?>
           <?php endif; wp_reset_query(); ?>
         </div>
-        <div class="col-md-12 text-center more-news"> <a class="load-news" href="#"><img src="<?php bloginfo('template_url'); ?>/img/more-news.png"> 過去のニュース
+        </div>
+        <div class="col-md-12 text-center more-news"> <a class="load-news meiryo" href="#"><img src="<?php bloginfo('template_url'); ?>/img/more-news.png"> 過去のニュース
           </h3>
           </a> </div>
       </div>
@@ -173,17 +177,17 @@ Template Name: Media JP
       <div class="row grey-stripe video-feed">
         <div class="col-md-12">
           <div class="col-sm-6"> <a href="#video" rel="video_1">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_1_title_jp'); ?></span> </div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title meiryo"><?php the_field('video_1_title_jp'); ?></span> </div>
             <img height="295" class="img-responsive" src="<?php the_field('video_1_thumbnail'); ?>"> </a> </div>
           <div class="col-sm-3"> <a href="#video" rel="video_2">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_2_title_jp'); ?></span></div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title meiryo"><?php the_field('video_2_title_jp'); ?></span></div>
             <img class="img-responsive" src="<?php the_field('video_2_thumbnail'); ?>"></a> <a href="#video" rel="video_3">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_3_title_jp'); ?></span></div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title meiryo"><?php the_field('video_3_title_jp'); ?></span></div>
             <img class="img-responsive" src="<?php the_field('video_3_thumbnail'); ?>"></a> </div>
           <div class="col-sm-3"> <a href="#video" rel="video_4">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_4_title_jp'); ?></span></div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title meiryo"><?php the_field('video_4_title_jp'); ?></span></div>
             <img class="img-responsive" src="<?php the_field('video_4_thumbnail'); ?>"></a> <a href="#video" rel="video_5">
-            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title"><?php the_field('video_5_title_jp'); ?></span></div>
+            <div class="video_thumb_hover"><img src="<?php bloginfo('template_url'); ?>/img/play-blue.png"><span class="thumbnail-title meiryo"><?php the_field('video_5_title_jp'); ?></span></div>
             <img class="img-responsive" src="<?php the_field('video_5_thumbnail'); ?>"></a> </div>
         </div>
       </div>
@@ -196,57 +200,56 @@ Template Name: Media JP
       </div>
       
       <!--Timeline-->
-      <div class="row panel relative" id="slide-press">
+      <div class="row relative" id="slide-press">
+<?php 
+ $current_year = date('Y', current_time('timestamp'));
+ $current_month = date('m', current_time('timestamp'));
+ query_posts("year=$current_year&monthnum=$current_month");
+ if(have_posts()) : 
+?>
         <div id="carousel-press" class="carousel slide" data-ride="carousel"> 
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <li data-target="#carousel-press" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-press" data-slide-to="1"></li>
-            <li data-target="#carousel-press" data-slide-to="2"></li>
-            <li data-target="#carousel-press" data-slide-to="3"></li>
-            <li data-target="#carousel-press" data-slide-to="4"></li>
+          <?php while(have_posts()): the_post(); ?>
+            <li data-target="#carousel-press" data-slide-to="<?php echo $number++; ?>"></li>
+            <?php endwhile; ?>
           </ol>
           
           <!-- Wrapper for slides -->
+          <?php while(have_posts()): the_post(); ?>
+          <?php if ( $background_image = get_field('post_background_image') ): ?>
+          <div class="carousel-inner" role="listbox">
+          <div class="overlay-press-img"></div>
+          <img class="press-slide-background-image" src="<?php the_field('post_background_image'); ?>" />
+          <?php else: ?>
           <div class="carousel-inner" role="listbox" id="november">
-            <div class="item active">
-              <div class="col-md-6 col-md-offset-6">
-                <h2>Yahoo Japan acquires e-commerce portal provider Venture Republic</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">リリース詳細</a> </div>
-            </div>
+          <?php endif ?>
+          
             <div class="item">
               <div class="col-md-6 col-md-offset-6">
-                <h2>Slide 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">リリース詳細</a> </div>
+              <div class="press-slider-content-wrapper">
+                <h2><?php the_title(); ?> </h2>
+                <p><?php echo get_excerpt(); ?></p>
+                </div>
+                <a class="btn btn-lg btn-default light-blue-btn" href="<?php the_permalink(); ?>">Read full article</a> </div>
             </div>
-            <div class="item">
-              <div class="col-md-6 col-md-offset-6">
-                <h2>Slide 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">リリース詳細</a> </div>
-            </div>
-            <div class="item">
-              <div class="col-md-6 col-md-offset-6">
-                <h2>Slide 4</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">リリース詳細</a> </div>
-            </div>
-            <div class="item">
-              <div class="col-md-6 col-md-offset-6">
-                <h2>Slide 5</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
-                <a class="btn btn-lg btn-default light-blue-btn" href="#">リリース詳細</a> </div>
-            </div>
+            
+            
           </div>
+          <?php endwhile; ?>
         </div>
+        <?php endif; wp_reset_query(); ?>
       </div>
       
+      
       <!-- Timeline -->
+      
       <div id="timeline" class="row">
         <div class="col-md-12">
-          <div class="table-responsive text-center">
+        
+        <?php if ( !function_exists('vr_widgets_init') || !dynamic_sidebar(2) ) : endif; ?>
+        
+          <!-- <div class="table-responsive text-center">
             <table class="table">
               <tr>
                 <td class="arrow"><a class="arrow-slide-left" href="#"></a></td>
@@ -267,13 +270,13 @@ Template Name: Media JP
               </tr>
             </table>
           </div>
+          -->
         </div>
-      </div>
-      
+      </div> 
       <!-- Contact -->
       <div id="contact" class="row">
         <div class="col-md-12">
-          <h2>Contact us</h2>
+          <h2><b>お問い合わせ</b></h2>
           <?php echo do_shortcode( '[contact-form-7 id="16" title="無題"]' ); ?>
         </div>
       </div>
@@ -286,7 +289,7 @@ Template Name: Media JP
         Join our social network
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
     
     <!-- Map -->
@@ -297,7 +300,7 @@ Template Name: Media JP
   </div>
 </div>
 <footer class="relative">
-  <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
+  <div class="footer-social-networks"><a href="https://www.facebook.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="https://twitter.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="http://instagram.com/vkanri" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">

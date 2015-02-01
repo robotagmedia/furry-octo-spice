@@ -24,23 +24,23 @@ Template Name: Recruit
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
-        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="<?php echo site_url(); ?>">
+        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="<?php echo esc_url( home_url( '/' ) ); ?>">
           <li>Home</li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
-             <a href="<?php echo site_url(); ?>#services">
+             <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
             <li><span class="menu-icon cog"></span>Services</li>
-            </a> <a href="<?php echo site_url(); ?>#statistics">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
             <li><span class="menu-icon pie-chart"></span>Growth Statistics</li>
-            </a> <a href="<?php echo site_url(); ?>#publicity">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
             <li><span class="menu-icon eye"></span>Publicity</li>
-            </a> <a href="<?php echo site_url(); ?>#ceo">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
             <li><span class="menu-icon speach_bubble"></span>Our Mission & CEO</li>
-            </a> <a href="<?php echo site_url(); ?>#history">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
             <li><span class="menu-icon ribbon"></span>Our History</li>
-            </a> <a href="<?php echo site_url(); ?>#business-alliances">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
             <li><span class="glyphicon glyphicon-globe"></span>Business Alliances</li>
-            </a> <a href="<?php echo site_url(); ?>#contact">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
             <li><span class="menu-icon align"></span>Contact VR</li>
             </a>
           </ul>
@@ -180,10 +180,10 @@ Template Name: Recruit
         Join our social network
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
       <!-- Panel 11 -->
-      <div class="row relative panel" id="work_at_vr">
+      <div class="row relative" id="work_at_vr">
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
             <h1>View Opportunities</h1>
@@ -209,7 +209,7 @@ Template Name: Recruit
         Join our social network
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
       
       <!-- Map -->
@@ -219,17 +219,17 @@ Template Name: Recruit
       </a> </div>
   </div>
 </div>
-  <footer class="relative">
-    <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
+<footer class="relative">
+  <div class="footer-social-networks"><a href="https://www.facebook.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="https://twitter.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="http://instagram.com/vkanri" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
           <ul>
             <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="recruit.html">Recruit</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+            <li><a href="media">Media</a></li>
+            <li><a href="recruit">Recruit</a></li>
+            <li><a href="about">About</a></li>
             <li class="menu-blue"><a href="#">Privacy</a></li>
             <li class="menu-blue"><a href="#">Terms</a></li>
           </ul>

@@ -17,34 +17,34 @@ Template Name: About JP
         <li><?php qtrans_generateLanguageSelectCode(); ?></li>
       </ul>
     </div>
-    <div class="popout-menu" style="display:none;"  >
+    <div class="popout-menu jp-menu" style="display:none;"  >
       <ul>
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
-        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="home">
-          <li>ホーム</li>
+        <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="<?php echo site_url(); ?>">
+          <li><b>ホーム</b></li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
-            <a href="home#services">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#services">
             <li><span class="menu-icon cog"></span>サービス紹介</li>
-            </a> <a href="home#statistics">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#statistics">
             <li><span class="menu-icon pie-chart"></span>サイト訪問数推移</li>
-            </a> <a href="home#publicity">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#publicity">
             <li><span class="menu-icon eye"></span>メディア掲載</li>
-            </a> <a href="home#ceo">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#ceo">
             <li><span class="menu-icon speach_bubble"></span>代表挨拶</li>
-            </a> <a href="home#history">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#history">
             <li><span class="menu-icon ribbon"></span>沿革</li>
-            </a> <a href="home#business-alliances">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#business-alliances">
             <li><span class="glyphicon glyphicon-globe"></span>ビジネスパートナー</li>
-            </a> <a href="home#contact">
+            </a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>#contact">
             <li><span class="menu-icon align"></span>お問い合わせ</li>
             </a>
           </ul>
         </div>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="media">
-          <li>ニュース/メディア関連</li>
+          <li><b>ニュース/メディア関連</b></li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
             <a href="media#news">
@@ -59,7 +59,7 @@ Template Name: About JP
           </ul>
         </div>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="recruit">
-          <li>採用情報</li>
+          <li><b>採用情報</b></li>
           </a>
           <ul class="sub-menu recruit-menu" style="display:none">
             <a href="recruit#values">
@@ -79,7 +79,7 @@ Template Name: About JP
   </nav>
 </header>
 <!-- Content -->
-<div id="skrollr-body">
+<div id="skrollr-body" class="jp">
   <div class="main-content">
     <div class="container-fluid about"> 
       
@@ -145,7 +145,7 @@ Template Name: About JP
       <!-- Grey Stripe 2 -->
       <div class="row grey-stripe">
         <div class="col-md-10 col-md-offset-1">
-          <h1>役員紹介（2014年11月1日現在</h1>
+          <h1><b>役員紹介（2014年11月1日現在）</b></h1>
         </div>
       </div>
       
@@ -155,7 +155,7 @@ Template Name: About JP
           <div class="row">
             <div class="col-md-6">
               <h4>代表取締役社長</h4>
-              <i>柴田　啓</i></div>
+              <div class="names">柴田　啓</div></div>
           </div>
           <div class="row">
             <div class="col-md-4">1988年4月</div>
@@ -167,14 +167,15 @@ Template Name: About JP
           </div>
           <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-8"><b>Twitter:</b> <span class="i_blue">@keishibata</span> https://twitter.com/keishibata</div>
+            <div class="col-md-8"><b>Twitter:</b><a href="https://twitter.com/keishibata" target="_blank"><span class="i_blue">@keishibata</span> https://twitter.com/keishibata</a></div>
           </div>
+          <span class="border-line"></span>
         </div>
         <div class="col-md-10 col-md-offset-1">
           <div class="row">
             <div class="col-md-6">
               <h4>取締役</h4>
-              <i>柴田　健一</i></div>
+              <div class="names">柴田　健一</div></div>
           </div>
           <div class="row">
             <div class="col-md-4">1995年4月</div>
@@ -188,12 +189,13 @@ Template Name: About JP
             <div class="col-md-4">2013年8月</div>
             <div class="col-md-8">当社設立　取締役就任（現任）</div>
           </div>
+          <span class="border-line"></span>
         </div>
         <div class="col-md-10 col-md-offset-1">
           <div class="row">
             <div class="col-md-6">
               <h4>取締役</h4>
-              <i>西村　博行</i></div>
+              <div class="names">西村　博行</div></div>
           </div>
           <div class="row">
             <div class="col-md-4">1984年4月</div>
@@ -211,12 +213,13 @@ Template Name: About JP
             <div class="col-md-4">2013年8月</div>
             <div class="col-md-8">当社設立　取締役就任（現任）</div>
           </div>
+          <span class="border-line"></span>
         </div>
         <div class="col-md-10 col-md-offset-1">
           <div class="row">
             <div class="col-md-6">
               <h4>取締役<span class="i_blue">*</span></h4>
-              <i>石坂　信也</i></div>
+              <div class="names">石坂　信也</div></div>
           </div>
         </div>
       </div>
@@ -234,12 +237,12 @@ Template Name: About JP
           <div class="row">
             <div class="col-md-6">
               <h4>常勤監査役 **</h4>
-              <i>小山　康弘</i></div>
+              <div class="names">小山　康弘</div></div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <h4>監査役 **</h4>
-              <i>加茂　正治</i></div>
+              <div class="names">加茂　正治</div></div>
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -257,7 +260,7 @@ Template Name: About JP
           <h4>Proin gravida nibh vel velit</h4>
           <h3>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</h3>
           <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-          <a href="#" class="i_blue"><i>Read more</i></a> </div>
+          <a href="#" class="i_blue">Read more</a> </div>
       </div>
       
       <!-- Blockquote -->
@@ -268,13 +271,13 @@ Template Name: About JP
               <h1>Blockquote</h1>
               <h4>Proin gravida nibh vel velit </h4>
               <p><i>“Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.”</i></p>
-              <p>-<span class="i_blue">Yasuhiro Koyama</span> <i>Senior Corporate Auditor</i></p>
+              <p>-<span class="i_blue">Yasuhiro Koyama</span> Senior Corporate Auditor</p>
             </div>
             <div class="col-md-6">
               <h1>Blockquote</h1>
               <h4>Proin gravida nibh vel velit </h4>
               <p><b><i>“Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.”</i></b>
-              <p>-<span class="i_blue">Yasuhiro Koyama</span> <i>Senior Corporate Auditor</i></p>
+              <p>-<span class="i_blue">Yasuhiro Koyama</span> Senior Corporate Auditor</p>
               </p>
             </div>
           </div>
@@ -366,7 +369,7 @@ Template Name: About JP
       <!-- Contact -->
       <div id="contact" class="row">
         <div class="col-md-12">
-          <h2>Contact us</h2>
+          <h2><b>お問い合わせ</b></h2>
           <?php echo do_shortcode( '[contact-form-7 id="16" title="無題"]' ); ?>
         </div>
       </div>
@@ -379,7 +382,7 @@ Template Name: About JP
         JOIN OUR SOCIAL NETWORK
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
     
     <!-- Map -->
@@ -390,13 +393,13 @@ Template Name: About JP
   </div>
 </div>
 <footer class="relative">
-  <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
+  <div class="footer-social-networks"><a href="https://www.facebook.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="https://twitter.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="http://instagram.com/vkanri" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <ul>
           <li><img class="logo-footer" src="<?php bloginfo('template_url'); ?>/img/black-logo.jpg" /></li>
-          <li><a href="home">ホーム</a></li>
+          <li><a href="<?php echo site_url(); ?>">ホーム</a></li>
           <li><a href="media">ニュース/メディア関連</a></li>
           <li><a href="recruit">採用情報</a></li>
           <li><a href="about">About</a></li>

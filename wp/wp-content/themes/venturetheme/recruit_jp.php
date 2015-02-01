@@ -16,13 +16,13 @@ Template Name: Recruit JP
         <li><?php qtrans_generateLanguageSelectCode(); ?></li>
       </ul>
     </div>
-    <div class="popout-menu" style="display:none;"  >
+    <div class="popout-menu jp-menu" style="display:none;"  >
       <ul>
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
         </a>
         <div class="popout-menu-wrapper is_about_page"> <a class="popout-menu-title" href="home">
-          <li>ホーム</li>
+          <li><b>ホーム</b></li>
           </a>
           <ul class="sub-menu home-menu" style="display:none">
             <a href="home#services">
@@ -43,7 +43,7 @@ Template Name: Recruit JP
           </ul>
         </div>
         <div class="popout-menu-wrapper"> <a class="popout-menu-title" href="media">
-          <li>ニュース/メディア関連</li>
+          <li><b>ニュース/メディア関連</b></li>
           </a>
           <ul class="sub-menu media-menu" style="display:none">
             <a href="media#news">
@@ -58,7 +58,7 @@ Template Name: Recruit JP
           </ul>
         </div>
         <div class="popout-menu-wrapper is_page_menu"> <a class="popout-menu-title" href="recruit">
-          <li>採用情報</li>
+          <li><b>採用情報</b></li>
           </a>
           <ul class="sub-menu recruit-menu" style="display:none">
             <a href="#values">
@@ -78,7 +78,7 @@ Template Name: Recruit JP
   </nav>
 </header>
 <!-- Content -->
-<div id="skrollr-body">
+<div id="skrollr-body" class="jp">
   <div class="main-content">
     <div class="container-fluid"> 
       
@@ -88,7 +88,7 @@ Template Name: Recruit JP
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
             <h1><?php the_field('title_1'); ?></h1>
-            <h3><?php the_field('text_1_jp'); ?></h3>
+            <h3 class="meiryo"><?php the_field('text_1_jp'); ?></h3>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ Template Name: Recruit JP
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
             <h1><?php the_field('title_2'); ?></h1>
-            <h3><?php the_field('text_2_jp'); ?></h3>
+            <h3 class="meiryo"><?php the_field('text_2_jp'); ?></h3>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ Template Name: Recruit JP
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
             <h1><?php the_field('title_3'); ?></h1>
-            <h3><?php the_field('text_3_jp'); ?></h3>
+            <h3 class="meiryo"><?php the_field('text_3_jp'); ?></h3>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ Template Name: Recruit JP
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
             <h1><?php the_field('title_4'); ?></h1>
-            <h3><?php the_field('text_4_jp'); ?></h3>
+            <h3 class="meiryo"><?php the_field('text_4_jp'); ?></h3>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ Template Name: Recruit JP
       <!-- Stripe 1-->
       <div class="stripe row text-center" id="team">
         <div class="col-md-8 col-md-offset-2">
-          <h2> <?php the_sub_field('team_title_jp'); ?> </h2>
+          <h2> <b><?php the_sub_field('team_title_jp'); ?></b> </h2>
         </div>
       </div>
       
@@ -172,13 +172,13 @@ Template Name: Recruit JP
         Join our social network
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
       <!-- Panel 11 -->
-      <div class="row relative panel" id="work_at_vr">
+      <div class="row relative" id="work_at_vr">
         <div class="absolute-center-parent">
           <div class="absolute-center col-md-8 col-centered">
-            <h1>求人一覧</h1>
+            <h1><b>求人一覧</b></h1>
           </div>
         </div>
       </div>
@@ -186,11 +186,11 @@ Template Name: Recruit JP
       <!-- Apply -->
       <div id="application" class="row text-center">
         <div class="col-sm-6">
-          <p>キャリア採用</p>
-          <a class="btn btn-lg btn-default light-blue-btn">詳細</a> </div>
+          <p><b>キャリア採用</b></p>
+          <a class="btn btn-lg btn-default light-blue-btn meiryo">詳細</a> </div>
         <div class="col-sm-6">
-          <p>在宅ワーク</p>
-          <a class="btn btn-lg btn-default apply-btn">詳細</a> </div>
+          <p><b>在宅ワーク</b></p>
+          <a class="btn btn-lg btn-default apply-btn meiryo">詳細</a> </div>
       </div>
       
      <!-- Social Networks -->
@@ -200,7 +200,7 @@ Template Name: Recruit JP
         Join our social network
         </h1>
       </div>
-      <div class="col-sm-6 text-left center-on-mobile"> <a href="#" class="fb-icon" target="_blank"></a> <a href="#" class="twitter-icon" target="_blank"></a> <a href="#" class="insta-icon" target="_blank"></a> </div>
+      <div class="col-sm-6 text-left center-on-mobile"> <a href="https://www.facebook.com/VentureRepublic" class="fb-icon" target="_blank"></a> <a href="https://twitter.com/VentureRepublic" class="twitter-icon" target="_blank"></a> <a href="http://instagram.com/vkanri" class="insta-icon" target="_blank"></a> </div>
     </div>
       
       <!-- Map -->
@@ -210,8 +210,8 @@ Template Name: Recruit JP
       </a> </div>
   </div>
 </div>
-  <footer class="relative">
-    <div class="footer-social-networks"><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
+<footer class="relative">
+  <div class="footer-social-networks"><a href="https://www.facebook.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-fb.jpg" /></a><a href="https://twitter.com/VentureRepublic" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-twitter.jpg" /></a><a href="http://instagram.com/vkanri" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/black-insta.jpg" /></a></div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
