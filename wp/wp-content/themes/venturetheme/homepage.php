@@ -243,12 +243,12 @@ skrollr.init({ forceHeight: false })
         </div>
       </div>
       <!-- CTA -->
-      <div class="row cta text-center">
+      <div class="row cta text-center scroll-link">
         <div class="col-md-12">
           <h1 class="yellow">Interested in being a Partner</h1>
           <h3 class="white">If you’re interested in advertising your travel content through our online<br />
             network or discussing a business alliance, contact us!</h3>
-          <a class="btn btn-default yellow-btn">Partner Up with Venture Republic</a> </div>
+          <a href="#contact" class="btn btn-default yellow-btn">Partner Up with Venture Republic</a> </div>
       </div>
       <!-- Transition -->
       <div id="plane" class="row relative text-center">
@@ -385,11 +385,11 @@ skrollr.init({ forceHeight: false })
       </div>
       
       <!-- CTA 2 -->
-      <div class="row cta2 text-center">
+      <div class="row cta2 text-center scroll-link">
         <div class="col-md-10 col-md-offset-1">
           <h1 class="blue">JOIN OUR FORCE</h1>
           <h3 class="white">We are eager to meet you who can potentially collaborate and partner with us. Contact us to explore the options.</h3>
-          <a class="btn btn-default blue-btn">Partner Up with Venture Republic</a> </div>
+          <a href="#contact" class="btn btn-default blue-btn">Partner Up with Venture Republic</a> </div>
       </div>
       
       <!-- Contact -->
