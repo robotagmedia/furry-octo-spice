@@ -217,15 +217,18 @@ Template Name: Media JP
           
           <!-- Wrapper for slides -->
           <?php while(have_posts()): the_post(); ?>
-          <?php if ( $background_image = get_field('post_background_image') ): ?>
+
           <div class="carousel-inner" role="listbox">
-          <div class="overlay-press-img"></div>
-          <img class="press-slide-background-image" src="<?php the_field('post_background_image'); ?>" />
-          <?php else: ?>
-          <div class="carousel-inner" role="listbox" id="november">
-          <?php endif ?>
           
             <div class="item">
+            <?php if ( $background_image = get_field('post_background_image') ): ?>
+            <div class="overlay-press-img"></div>
+            <img class="press-slide-background-image" src="<?php the_field('post_background_image'); ?>" />
+            <?php else: ?>
+            <div class="overlay-press-img"></div>
+            <img class="press-slide-background-image" src="<?php bloginfo('template_url'); ?>/img/media_top_image.jpg" />
+            <?php endif ?>
+
               <div class="col-md-6 col-md-offset-6">
               <div class="press-slider-content-wrapper">
                 <h2><?php the_title(); ?> </h2>
