@@ -34,6 +34,8 @@ $(document).ready(function(){
 					$('#carousel-press .carousel-indicators').append('<li data-target="#carousel-press" data-slide-to="' + i + '" class="' + (0 == i ? 'active': '') + '"></li>');
 					$('#carousel-press .carousel-inner').append(
 						'<div class="item ' + (0 == i ? 'active': '') + '">'
+						+ '<div class="overlay-press-img"></div>'
+						+ '<img class="press-slide-background-image" src="' + (p.background_image ? p.background_image : window.wpSiteUrl + '/wp-content/themes/venturetheme/img/media_top_image.jpg') + '">'						
 						+ '<div class="col-md-6 col-md-offset-6">'
 						+ '<div class="press-slider-content-wrapper">'
 						+ '<h2>' + p.title + '</h2>'
@@ -44,7 +46,9 @@ $(document).ready(function(){
 					);
 				});
 				
-				$('#slide-press .item').height($(window).height() - 60);
+				var slideHeight = $(window).height() - 60;
+				slideHeight = slideHeight > 710 ? 710 : slideHeight; // limit to a max height of the slide at 710 px
+				$('#slide-press .item').height(slideHeight);
 				
 				//$('#carousel-press').carousel();
 				$('#carousel-press').carousel(0);
@@ -77,8 +81,12 @@ if ($(".post-content").find('table').length > 0) {
    }
 //  Home Top Image Size
 $('.panel').height($(window).height() - 77);
-$('#slide-press .item').height($(window).height() - 60);
 $('#top-image').height($(window).height() - 88);
+
+var slideHeight = $(window).height() - 60;
+slideHeight = slideHeight > 710 ? 710 : slideHeight;
+$('#slide-press .item').height(slideHeight);
+
 
 //  Video media
 $('#video_1').siblings("div").hide();
