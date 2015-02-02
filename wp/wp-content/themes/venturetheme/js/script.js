@@ -6,6 +6,54 @@ $(document).ready(function(){
 	var element_height = $(this).children('.absolute-center').outerHeight();
 	var half_height = ((element_height)/2);
 	$(this).css('marginTop', -half_height);
+	
+	
+	
+	//$('#carousel-press').carousel();
+	
+	$('#timeline .month a').on('click', function(e) {
+		e.preventDefault();
+		
+		var urlSegments = $(this).attr('href').split('/');
+		var year = urlSegments[urlSegments.length - 3]
+			, month = urlSegments[urlSegments.length - 2]
+		
+		console.log(year + '-' + month);
+		
+		$.ajax ({
+		    type: 'GET',
+		    url: window.wpSiteUrl + '/wp-content/themes/venturetheme/archive-json.php?year=' + year + '&month=' + month,
+		    data: {},
+		    dataType: 'json',
+		    success: function (result) {
+		        console.log(result);
+				$('#carousel-press .carousel-indicators').empty();
+				$('#carousel-press .carousel-inner .item').remove();
+				
+				$.each(result, function(i, p) {
+					$('#carousel-press .carousel-indicators').append('<li data-target="#carousel-press" data-slide-to="' + i + '" class="' + (0 == i ? 'active': '') + '"></li>');
+					$('#carousel-press .carousel-inner').append(
+						'<div class="item ' + (0 == i ? 'active': '') + '">'
+						+ '<div class="col-md-6 col-md-offset-6">'
+						+ '<div class="press-slider-content-wrapper">'
+						+ '<h2>' + p.title + '</h2>'
+						+ '<p>' + p.excerpt + '</p>'
+						+ '</div>'
+						+ '<a class="btn btn-lg btn-default light-blue-btn" href="' + p.url + '">Read full article</a> </div>'
+						+ '</div>'
+					);
+				});
+				
+				$('#slide-press .item').height($(window).height() - 60);
+				
+				//$('#carousel-press').carousel();
+				$('#carousel-press').carousel(0);
+		    }
+		});
+		
+		return false;
+	});
+	
 });
 
 if(window.location.href.indexOf("/en/") > -1) {
@@ -161,7 +209,7 @@ $('.load-news').click(function() {
 
 // $(document).on("scroll", onScroll);
 //SMOOTH SCROLL
-    $('.is_page_menu a[href*=#]:not([href=#]), .video-feed a[href*=#]:not([href=#]), #video a[href*=#]:not([href=#])').on('click', function (e) {
+    $('.scroll-link a[href*=#]:not([href=#]), .is_page_menu a[href*=#]:not([href=#]), .video-feed a[href*=#]:not([href=#]), #video a[href*=#]:not([href=#])').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
         

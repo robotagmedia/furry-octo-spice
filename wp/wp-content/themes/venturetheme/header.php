@@ -39,7 +39,8 @@ Blog Archive -
 <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap-select.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.js'></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/froogaloop.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/script.js?v21"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/script.js?v22"></script>
+<script>window.wpSiteUrl = '<?php echo get_site_url() ?>'</script>
 
 <?php wp_head(); ?>
 </head>
