@@ -211,27 +211,34 @@ Template Name: Media Template
         <div id="carousel-press" class="carousel slide" data-ride="carousel"> 
           <!-- Indicators -->
           <ol class="carousel-indicators">
-          <?php while(have_posts()): the_post(); ?>
+          <?php $number = 0; while(have_posts()): the_post(); ?>
             <li data-target="#carousel-press" data-slide-to="<?php echo $number++; ?>"></li>
             <?php endwhile; ?>
           </ol>
           
+          <div class="carousel-inner" role="listbox">
+		  
           <!-- Wrapper for slides -->
           <?php while(have_posts()): the_post(); ?>
-          <?php if ( $background_image = get_field('post_background_image') ): ?>
-          <div class="carousel-inner" role="listbox">
-          <img class="press-slide-background-image" src="<?php the_field('post_background_image'); ?>" />
-          <?php else: ?>
-          <div class="carousel-inner" role="listbox" id="november">
-          <?php endif ?>
-            <div class="item">
-              <div class="col-md-6 col-md-offset-6">
-              <div class="press-slider-content-wrapper">
-                <h2><?php the_title(); ?> </h2>
-                <p><?php echo get_excerpt(); ?></p>
-                </div>
-                <a class="btn btn-lg btn-default light-blue-btn" href="<?php the_permalink(); ?>">Read full article</a> </div>
-            </div>
+
+          
+			<div class="item">
+				<?php if ( $background_image = get_field('post_background_image') ): ?>
+					<div class="overlay-press-img"></div>
+					<img class="press-slide-background-image" src="<?php the_field('post_background_image'); ?>" />
+				<?php else: ?>
+					<div class="overlay-press-img"></div>
+					<img class="press-slide-background-image" src="<?php bloginfo('template_url'); ?>/img/media_top_image.jpg" />
+				<?php endif ?>
+
+				<div class="col-md-6 col-md-offset-6">
+					<div class="press-slider-content-wrapper">
+						<h2><?php the_title(); ?> </h2>
+						<p><?php echo get_excerpt(); ?></p>
+					</div>
+					<a class="btn btn-lg btn-default light-blue-btn" href="<?php the_permalink(); ?>">Read full article</a>
+				</div>
+			</div>
             
             <?php endwhile; ?>
           </div>
@@ -308,7 +315,7 @@ Template Name: Media Template
           <li><a href="media">Media</a></li>
           <li><a href="recruit">Recruit</a></li>
           <li><a href="about">About</a></li>
-          <li class="menu-blue"><a href="#">Privacy</a></li>
+          <li class="menu-blue"><a href="privacy">Privacy</a></li>
           <li class="menu-blue"><a href="#">Terms</a></li>
         </ul>
       </div>
