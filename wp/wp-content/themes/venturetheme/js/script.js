@@ -38,7 +38,7 @@ $(document).ready(function(){
 						+ '<img class="press-slide-background-image" src="' + (p.background_image ? p.background_image : window.wpSiteUrl + '/wp-content/themes/venturetheme/img/media_top_image.jpg') + '">'						
 						+ '<div class="col-md-6 col-md-offset-6">'
 						+ '<div class="press-slider-content-wrapper">'
-						+ '<h2>' + p.title + '</h2>'
+						+ '<h2>' + p.short_title + '</h2>'
 						+ '<p>' + p.excerpt + '</p>'
 						+ '</div>'
 						+ '<a class="btn btn-lg btn-default light-blue-btn" href="' + p.url + '">Read full article</a> </div>'

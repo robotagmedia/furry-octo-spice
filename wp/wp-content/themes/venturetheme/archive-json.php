@@ -24,6 +24,7 @@ if (have_posts()) {
 		   the_post();
 		   $posts[] = array(
 			   'title' => get_the_title()
+   				, 'short_title' => short_title()				   
    				, 'excerpt' => get_excerpt()
 				, 'url' => get_permalink()
 				, 'background_image' => get_field('post_background_image')
