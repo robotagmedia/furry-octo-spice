@@ -93,9 +93,9 @@ Template Name: Home
       </div>
       <!-- Travel & Hotel -->
       <div id="services" class="row domestic-travel"><a class="active-tab" href="#" rel="travel-jp">
-        <div class="col-md-6 text-center"><img class="pad2" src="<?php bloginfo('template_url'); ?>/img/travel-jp-logo.png" /></div>
+        <div class="col-md-6 text-center"> <span class="wrapper-test"><img class="pad2" src="<?php bloginfo('template_url'); ?>/img/travel-jp-logo.png" /></span></div>
         </a> <a class="tab" href="#" rel="hotel-jp">
-        <div class="col-md-6 text-center"><img class="pad2" src="<?php bloginfo('template_url'); ?>/img/hotel-jp-logo.png" /></div>
+        <div class="col-md-6 text-center"><span class="wrapper-test"><img class="pad2" src="<?php bloginfo('template_url'); ?>/img/hotel-jp-logo.png" /></span></div>
         </a> </div>
       <div class="domestic-travel-wrapper relative"> 
         <!-- Tab  1 -->
@@ -115,7 +115,7 @@ Template Name: Home
               </div>
               <div class="row">
                 <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile visible"> <a href="http://guide.travel.co.jp/" target="_blank" class="btn btn-lg btn-default dark-yellow-btn">Visit Tabiness<span>IN JAPANESE</span></a> </div>
-                <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://trip101.com" target="_blank" class="btn btn-lg btn-default dark-yellow-btn">Visit Tabiness<span>IN ENGLISH</span></a> </div>
+                <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://trip101.com" target="_blank" class="btn btn-lg btn-default dark-yellow-btn">Visit Trip 101<span>IN ENGLISH</span></a> </div>
               </div>
             </div>
           </div>
@@ -126,8 +126,8 @@ Template Name: Home
           <div class="col-md-6 col-md-offset-3 text-center">
             <h3>Japan’s leading search engines for hotels and ryokans</h3>
           </div>
-          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Visit Hotel.jp (Japan)</a> </div>
-          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://hotel.jp" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Visit Hotel.jp (Worldwide)</a> </div>
+          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp/world/" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Visit Hotel.jp (Japan)</a> </div>
+          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href=" http://hotel.jp/world/?language=en" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Visit Hotel.jp (Worldwide)</a> </div>
           <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a href="https://itunes.apple.com/jp/app/hoteru-jepi-hotel.jp-kuchikomide/id445300541?mt=8" target="_blank" class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
           <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a href="https://play.google.com/store/apps/details?id=jp.hotel.android&hl=en" target="_blank" class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
         </div>
@@ -142,13 +142,35 @@ Template Name: Home
       </div>
       <!-- Investments -->
       <div class="row relative investment"> <a class="active-tab" rel="the-list" href="#">
-        <div class="col-lg-4 col-md-4 text-center"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/the-list-logo.png" /></div>
-        </a> <a class="tab" rel="flocations" href="#">
-        <div class="col-lg-4 col-md-4 text-center"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/flocations-logo.png" /></div>
-        </a> <a class="tab" rel="telunjuk" href="#">
-        <div class="col-lg-4 col-md-4 text-center"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/telunjuk-logo.png" /></div>
-        </a> </div>
-      <div class="investment-wrapper"> 
+        <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/the-list-logo.png" /></span></div>
+        </a> 
+        
+        <!-- FOR MOBILE 1 -->
+        <div class="investment-wrapper thelist-mobile"> 
+
+        </div>
+        
+        
+        <a class="tab" rel="flocations" href="#">
+        <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/flocations-logo.png" /></span></div>
+        </a>
+        
+        <!-- FOR MOBILE 2 -->
+        <div class="investment-wrapper flocations-mobile"> 
+        
+        </div>
+        
+        
+        <a class="tab" rel="telunjuk" href="#">
+        <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/telunjuk-logo.png" /></span></div>
+        </a>
+        
+        <!-- FOR MOBILE 3 -->
+        <div class="investment-wrapper telunjuk-mobile">
+        </div>
+        
+        </div>
+      <div class="investment-wrapper hide-on-mobile"> 
         <!-- Tab 1 -->
         <div id="the-list" class="row visible text-center">
           <div class="col-md-12 visible">
@@ -163,7 +185,7 @@ Template Name: Home
             <h3>Our affiliated partner:<br /> one of the leading travel search engines in Southeast AsiaWe became a shareholder of Singapore based</h3>
           </div>
           <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a href="http://www.flocations.com/" target="_blank" class="btn btn-lg btn-default turquoise-btn">Visit Flocations</a> </div>
-          <div class="col-md-3 col-sm-6 text-left visible center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
+          <div class="col-md-3 col-sm-6 text-left visible center-on-mobile"> <a href="https://itunes.apple.com/app/flocations/id687689798?mt=8" target="_blank" class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
         </div>
         <!-- Tab  3 -->
         <div id="telunjuk" class="row text-center" style="display:none">
@@ -171,7 +193,7 @@ Template Name: Home
             <h3>Our affiliated partner:<br /> one of the leading e-commerce search engines in Indonesia</h3>
           </div>
           <div class="col-md-3 col-md-offset-3 col-sm-6 text-right center-on-mobile visible"> <a href="https://www.telunjuk.com/" target="_blank" class="btn btn-lg btn-default turquoise-btn">Visit Telunjuk</a> </div>
-          <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
+          <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a href="https://play.google.com/store/apps/details?id=com.telunjuk" target="_blank" class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
         </div>
       </div>
       <!-- Map 2 / World -->
@@ -429,8 +451,7 @@ skrollr.init({ forceHeight: false })
           <li><a href="media">Media</a></li>
           <li><a href="recruit">Recruit</a></li>
           <li><a href="about">About</a></li>
-          <li class="menu-blue"><a href="#">Privacy</a></li>
-          <li class="menu-blue"><a href="#">Terms</a></li>
+          <li class="menu-blue"><a href="privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

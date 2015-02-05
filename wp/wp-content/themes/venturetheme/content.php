@@ -82,13 +82,14 @@
   <?php while ( have_posts() ) : the_post(); ?>  
   <!-- Top image -->
   
-  <?php if ( $background_image = get_field('post_background_image') ): ?>
+  <?php if ( has_post_thumbnail() ) {  ?>
+  <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
   <div class="row relative">
       <div class="post_background_image"></div>
-      <img class="img-responsive" src="<?php the_field('post_background_image'); ?>" />
-   <?php else: ?>
+      <img class="img-responsive" src="<?php echo $url ?>" />
+   <?php } else { ?>
   <div class="row relative about-top panel" id="top-image">
-  <?php endif ?>
+  <?php } ?>
   
       
         <div class="logo-top"><img src="<?php bloginfo('template_url'); ?>/img/logo-white.png" /></div>
@@ -154,8 +155,7 @@
           <li><a href="media">Media</a></li>
           <li><a href="recruit">Recruit</a></li>
           <li><a href="about">About</a></li>
-          <li class="menu-blue"><a href="#">Privacy</a></li>
-          <li class="menu-blue"><a href="#">Terms</a></li>
+          <li class="menu-blue"><a href="privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

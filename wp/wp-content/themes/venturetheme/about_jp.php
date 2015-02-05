@@ -17,7 +17,7 @@ Template Name: About JP
         <li><?php qtrans_generateLanguageSelectCode(); ?></li>
       </ul>
     </div>
-    <div class="popout-menu jp-menu" style="display:none;"  >
+    <div class="popout-menu" style="display:none;"  >
       <ul>
         <a class="grey-logo" href="#top-image">
         <li><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/logo-venture-grey.jpg" /></li>
@@ -155,7 +155,7 @@ Template Name: About JP
           <div class="row">
             <div class="col-md-6">
               <h4>代表取締役社長</h4>
-              <div class="names">柴田　啓</div></div>
+              <div class="names"><b>柴田 啓</b></div></div>
           </div>
           <div class="row">
             <div class="col-md-4">1988年4月</div>
@@ -175,7 +175,7 @@ Template Name: About JP
           <div class="row">
             <div class="col-md-6">
               <h4>取締役</h4>
-              <div class="names">柴田　健一</div></div>
+              <div class="names"><b>柴田 健一</b></div></div>
           </div>
           <div class="row">
             <div class="col-md-4">1995年4月</div>
@@ -195,7 +195,7 @@ Template Name: About JP
           <div class="row">
             <div class="col-md-6">
               <h4>取締役</h4>
-              <div class="names">西村　博行</div></div>
+              <div class="names"><b>西村 博行</b></div></div>
           </div>
           <div class="row">
             <div class="col-md-4">1984年4月</div>
@@ -219,7 +219,7 @@ Template Name: About JP
           <div class="row">
             <div class="col-md-6">
               <h4>取締役<span class="i_blue">*</span></h4>
-              <div class="names">石坂　信也</div></div>
+              <div class="names"><b>石坂 信也</b></div></div>
           </div>
         </div>
       </div>
@@ -237,12 +237,12 @@ Template Name: About JP
           <div class="row">
             <div class="col-md-6">
               <h4>常勤監査役 **</h4>
-              <div class="names">小山　康弘</div></div>
+              <div class="names"><b>小山 康弘</b></div></div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <h4>監査役 **</h4>
-              <div class="names">加茂　正治</div></div>
+              <div class="names"><b>加茂 正治</b></div></div>
           </div>
           <div class="row">
             <div class="col-md-12">
@@ -403,8 +403,7 @@ Template Name: About JP
           <li><a href="media">ニュース/メディア関連</a></li>
           <li><a href="recruit">採用情報</a></li>
           <li><a href="about">About</a></li>
-          <li class="menu-blue"><a href="#">プライバシーポリシー</a></li>
-          <li class="menu-blue"><a href="#">利用規約</a></li>
+          <li class="menu-blue"><a href="privacy">プライバシーポリシー</a></li>
         </ul>
       </div>
     </div>

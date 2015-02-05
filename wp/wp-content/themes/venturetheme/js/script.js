@@ -7,8 +7,7 @@ $(document).ready(function(){
 	var half_height = ((element_height)/2);
 	$(this).css('marginTop', -half_height);
 	
-	
-	
+
 	//$('#carousel-press').carousel();
 	
 	$('#timeline .month a').on('click', function(e) {
@@ -38,7 +37,7 @@ $(document).ready(function(){
 						+ '<img class="press-slide-background-image" src="' + (p.background_image ? p.background_image : window.wpSiteUrl + '/wp-content/themes/venturetheme/img/media_top_image.jpg') + '">'						
 						+ '<div class="col-md-6 col-md-offset-6">'
 						+ '<div class="press-slider-content-wrapper">'
-						+ '<h2>' + p.title + '</h2>'
+						+ '<h2>' + p.short_title + '</h2>'
 						+ '<p>' + p.excerpt + '</p>'
 						+ '</div>'
 						+ '<a class="btn btn-lg btn-default light-blue-btn" href="' + p.url + '">Read full article</a> </div>'
@@ -79,6 +78,25 @@ $( ".post-content table" ).addClass( "table" );
 if ($(".post-content").find('table').length > 0) {
        $( ".post-content" ).addClass( "table-wrapper" );
    }
+   
+   
+   
+	$('<span class="dropdown-month">▼</span>').appendTo('.calendar-archives.arw-theme1 .year');
+	
+	$('.dropdown-month').on('click', function(){
+	var toggle = $(this).data('toggle');
+	$('.calendar-archives.arw-theme1 .archives-years').css('overflow', toggle ? 'hidden' : 'visible');
+	$(this).data('toggle', !toggle);
+	});
+	$('.calendar-archives.arw-theme1 .archives-years .year .month a').on('click', function(){
+	$('.calendar-archives.arw-theme1 .archives-years').css('overflow', 'hidden');
+	$('html,body').animate({
+        scrollTop: $("#slide-press").offset().top},
+        'slow');
+	});
+	
+	$('.archives-years .current').addClass("selecteed");
+	
 //  Home Top Image Size
 $('.panel').height($(window).height() - 77);
 $('#top-image').height($(window).height() - 88);
@@ -147,7 +165,6 @@ $("#video_5 .video-desc, a[rel='video_5']").click(function(){
 	$f($('#video_4 iframe')[0]).api('unload');
 })
 
-
 //  Tabs
 $('.domestic-travel a, .investment a').on('click', function(){
    var target = $(this).attr('rel');
@@ -168,6 +185,7 @@ $("a[rel='flocations'], a[rel='telunjuk']").click(function(){
   $(".japan-map").hide();
   $(".asia-map").show();
 });
+
 
 //  PopOut Menu
 $('#home-icon').click(function(){
@@ -205,7 +223,49 @@ $('#skrollr-body, .sub-menu a, a.grey-logo').click(function(){
 
 
 	
-});	
+});
+
+var tab_mobile = function () {
+	
+if ($(window).width() > 768) {
+	  
+$(".hide-on-mobile").show();
+$(".thelist-mobile").hide();
+$(".flocations-mobile").hide();
+$(".telunjuk-mobile").hide();
+
+$("#the-list").appendTo(".hide-on-mobile");
+$("#flocations").appendTo(".hide-on-mobile");
+$("#telunjuk").appendTo(".hide-on-mobile");
+$("#flocations").hide();
+$("#telunjuk").hide();
+
+}
+else {
+    $("a[rel='the-list']").click(function(){
+		$(".thelist-mobile").show();
+		$(".flocations-mobile").hide();
+		$(".telunjuk-mobile").hide();
+	});
+	$("a[rel='flocations']").click(function(){
+		$(".thelist-mobile").hide();
+		$(".flocations-mobile").show();
+		$(".telunjuk-mobile").hide();
+	});
+	$("a[rel='telunjuk']").click(function(){
+		$(".thelist-mobile").hide();
+		$(".flocations-mobile").hide();
+		$(".telunjuk-mobile").show();
+	});
+	$(".hide-on-mobile").hide();
+	$("#the-list").appendTo(".thelist-mobile");
+	$("#flocations").appendTo(".flocations-mobile");
+	$("#telunjuk").appendTo(".telunjuk-mobile");
+	
+	}
+};
+$(document).ready(tab_mobile);
+$(window).resize(tab_mobile);
 
 $(document).ready(function(){
 	

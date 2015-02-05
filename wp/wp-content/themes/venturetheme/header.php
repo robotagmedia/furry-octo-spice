@@ -6,9 +6,6 @@
 <?php wp_title(' '); ?>
 &nbsp;-
 <?php } ?>
-<?php if ( is_single() ) { ?>
-Blog Archive -
-<?php } ?>
 <?php bloginfo('name'); ?>
 </title>
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -23,7 +20,7 @@ Blog Archive -
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/archive.css?v12">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap-select.min.css">
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.css' rel='stylesheet' />
-<link href="<?php bloginfo('stylesheet_url'); ?>?v778" rel="stylesheet" />
+<link href="<?php bloginfo('stylesheet_url'); ?>?v94" rel="stylesheet" />
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -39,10 +36,11 @@ Blog Archive -
 <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap-select.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.0/mapbox-gl.js'></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/froogaloop.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/script.js?v22"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/script.js?v71"></script>
 <script>window.wpSiteUrl = '<?php echo get_site_url() ?>'</script>
 
 <?php wp_head(); ?>
+<script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-23165654-20', 'auto'); ga('send', 'pageview'); </script>
 </head>
 
 <body>

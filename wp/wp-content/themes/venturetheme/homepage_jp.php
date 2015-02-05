@@ -90,9 +90,9 @@ Template Name: Home JP
       </div>
       <!-- Travel & Hotel -->
       <div id="services" class="row domestic-travel"><a class="active-tab" href="#" rel="travel-jp">
-        <div class="col-md-6 text-center"><img class="pad2" src="<?php bloginfo('template_url'); ?>/img/travel-jp-logo.png" /></div>
+        <div class="col-md-6 text-center"><span class="wrapper-test"><img class="pad2" src="<?php bloginfo('template_url'); ?>/img/travel-jp-logo.png" /></span></div>
         </a> <a class="tab" href="#" rel="hotel-jp">
-        <div class="col-md-6 text-center"><img class="pad2" src="<?php bloginfo('template_url'); ?>/img/hotel-jp-logo.png" /></div>
+        <div class="col-md-6 text-center"><span class="wrapper-test"><img class="pad2" src="<?php bloginfo('template_url'); ?>/img/hotel-jp-logo.png" /></span></div>
         </a> </div>
       <div class="domestic-travel-wrapper relative"> 
         <!-- Tab  1 -->
@@ -112,7 +112,7 @@ Template Name: Home JP
               </div>
               <div class="row">
                 <div class="col-md-4 col-md-offset-2 col-sm-6 text-right center-on-mobile visible"> <a href="http://guide.travel.co.jp/" target="_blank" class="btn btn-lg btn-default dark-yellow-btn">Visit Tabiness <span class="meiryo">(日本語)</span></a> </div>
-                <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://trip101.com" target="_blank" class="btn btn-lg btn-default dark-yellow-btn">Visit Tabiness <span class="meiryo">(英語) </span></a> </div>
+                <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://trip101.com" target="_blank" class="btn btn-lg btn-default dark-yellow-btn">Visit Trip 101 <span class="meiryo">(英語) </span></a> </div>
               </div>
             </div>
           </div>
@@ -123,8 +123,8 @@ Template Name: Home JP
           <div class="col-md-8 col-md-offset-2 text-center">
             <h3 style="margin-bottom: 50px;">日本最大級のホテル・宿のクチコミ検索サイト</h3>
           </div>
-          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(国内)</span></a> </div>
-          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://hotel.jp" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(グローバル)</span></a> </div>
+          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp/world/" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(国内)</span></a> </div>
+          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href=" http://hotel.jp/world/?language=en" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(グローバル)</span></a> </div>
           <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a href="https://itunes.apple.com/jp/app/hoteru-jepi-hotel.jp-kuchikomide/id445300541?mt=8" target="_blank" class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
           <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a href="https://play.google.com/store/apps/details?id=jp.hotel.android&hl=ja" target="_blank" class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
         </div>
@@ -143,11 +143,11 @@ Template Name: Home JP
       </div>
       <!-- Investments -->
       <div class="row relative investment"> <a class="active-tab" rel="the-list" href="#">
-        <div class="col-lg-4 col-md-4 text-center"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/the-list-logo.png" /></div>
+        <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/the-list-logo.png" /></span></div>
         </a> <a class="tab" rel="flocations" href="#">
-        <div class="col-lg-4 col-md-4 text-center"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/flocations-logo.png" /></div>
+        <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/flocations-logo.png" /></span></div>
         </a> <a class="tab" rel="telunjuk" href="#">
-        <div class="col-lg-4 col-md-4 text-center"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/telunjuk-logo.png" /></div>
+        <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/telunjuk-logo.png" /></span></div>
         </a> </div>
       <div class="investment-wrapper"> 
         <!-- Tab 1 -->
@@ -164,7 +164,7 @@ Template Name: Home JP
             <h3>関連会社：<br />東南アジアを拠点とする旅行検索サイト</h3>
           </div>
           <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a href="http://www.flocations.com/" target="_blank" class="btn btn-lg btn-default turquoise-btn">Visit Flocations</a> </div>
-          <div class="col-md-3 col-sm-6 text-left visible center-on-mobile"> <a class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
+          <div class="col-md-3 col-sm-6 text-left visible center-on-mobile"> <a href="https://itunes.apple.com/jp/app/flocations/id687689798?mt=8" target="_blank" class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
         </div>
         <!-- Tab  3 -->
         <div id="telunjuk" class="row text-center" style="display:none">
@@ -173,7 +173,7 @@ Template Name: Home JP
               インドネシアを拠点とするショッピング検索比較サイト</h3>
           </div>
           <div class="col-md-3 col-md-offset-3 col-sm-6 text-right center-on-mobile visible"> <a href="https://www.telunjuk.com/" target="_blank" class="btn btn-lg btn-default turquoise-btn">Visit Telunjuk</a> </div>
-          <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
+          <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a href="https://play.google.com/store/apps/details?id=com.telunjuk&hl=ja" target="_blank" class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
         </div>
       </div>
       <!-- Map 2 / World -->
@@ -192,7 +192,7 @@ Template Name: Home JP
       <!-- Statistics -->
       <div id="statistics" class="row statistics text-center">
         <div class="col-md-12">
-          <h1 class="yellow">月間利用者数　100万人</h1>
+          <h1 class="yellow">月間利用者数100万人</h1>
           <h3 class="white">全サイト合計約100万（月間）セッションに到達しました</h3>
         </div>
         <div class="col-md-12 graph-wrapper" data-bottom-top="opacity:0;" data-center="opacity:1">
@@ -261,7 +261,7 @@ skrollr.init({ forceHeight: false })
       <!-- CEO -->
       <div id="ceo" class="row transition relative text-center"> <img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/ceo.jpg" />
         <div class="col-md-6 col-sm-6 ceo-mission text-left">
-          <h1>柴田　啓 <span class="ceo-font">CEO</span></h1>
+          <h1>柴田 啓 <span class="ceo-font">CEO</span></h1>
           <h2>Our mission</h2>
           <p>どこへ、どうやって、いくらで、そこで何ができるのか、ユーザーのあらゆる疑問や質問に対し、常にベストな回答を目指します。</p>
         </div>
@@ -426,8 +426,7 @@ skrollr.init({ forceHeight: false })
           <li><a href="media">ニュース/メディア関連</a></li>
           <li><a href="recruit">採用情報</a></li>
           <li><a href="about">About</a></li>
-          <li class="menu-blue"><a href="#">プライバシーポリシー</a></li>
-          <li class="menu-blue"><a href="#">利用規約</a></li>
+          <li class="menu-blue"><a href="privacy">プライバシーポリシー</a></li>
         </ul>
       </div>
     </div>

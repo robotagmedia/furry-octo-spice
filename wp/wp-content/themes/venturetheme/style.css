@@ -315,6 +315,7 @@ span.menu-icon {
 }
 .home-top {
 	background-image: url(img/fuji-home.jpg);
+	background-position-x:center;
 }
 .absolute-center-parent {
 	position: absolute;
@@ -325,15 +326,29 @@ span.menu-icon {
 }
 a.tab:hover div, a.active-tab div {
 	background-image: url(img/light-grey-bg-rectangle.jpg);
-	background-size: cover;
-	border-bottom: solid 5px #0072b5;
+	background-size: cover;	
 	padding-bottom: 0px;
+}
+#services a div, .investment a div {
+	padding:0;
+	border-right: #FFF solid 1px;
+}
+#services a:last-child div , .investment a:last-child div {
+	border-right:none;
+}
+.wrapper-test {
+	width: 100%;
+	display: block;
+	border-bottom: solid 1px #0072b5;
+	padding-bottom: 4px;
+}
+a.active-tab div .wrapper-test, a.tab:hover div .wrapper-test {
+	border-bottom: solid 5px #0072b5;
+	padding-bottom:0px;
 }
 a.tab div {
 	background-image: url(img/grey-bg-rectangle.jpg);
 	background-size: cover;
-	border-bottom: solid 1px #0072b5;
-	padding-bottom: 4px;
 }
 .tabiness {
 	height: 60px;
@@ -368,6 +383,7 @@ a.tab div {
 	padding-top: 30px;
 	padding-bottom: 40px;
 	background-image: url(img/domestic-travel.jpg);
+	background-position-x:center;
 	background-size: cover;
 	min-height: 425px;
 }
@@ -375,6 +391,7 @@ a.tab div {
 	padding-top: 30px;
 	padding-bottom: 40px;
 	background-image: url(img/hotel-jp-bg.jpg);
+	background-position-x:center;
 	background-size: cover;
 	min-height: 425px;
 }
@@ -384,16 +401,19 @@ a.tab div {
 }
 #the-list {
 	background-image: url(img/travel-jp-banner.jpg);
+	background-position-x:center;
 	background-size: cover;
 	min-height: 362px;
 }
 #flocations {
 	background-image: url(img/flocations-banner.jpg);
+	background-position-x:center;
 	background-size: cover;
 	min-height: 362px;
 }
 #telunjuk {
 	background-image: url(img/telunjuk-banner.jpg);
+	background-position-x:center;
 	background-size: cover;
 	min-height: 362px;
 }
@@ -448,6 +468,7 @@ a.tab div {
 }
 .cta {
 	background-image: url(img/tablet-slide.jpg);
+	background-position-x:center;
 	background-size: cover;
 	padding-top: 30px;
 	padding-bottom: 50px;
@@ -633,6 +654,7 @@ a.tab div {
 }
 .cta2 {
 	background-image: url(img/tokyo-banner.jpg);
+	background-position-x:center;
 	background-size: cover;
 	padding-bottom: 50px;
 	border-top: 68px solid #1e80c3;
@@ -884,10 +906,12 @@ iframe {
 }
 .recruit-top {
 	background-image: url(img/recruit_1.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #values {
 	background-image: url(img/recruit_2.jpg);
+	background-position-x:center;
 	color: #012e4f !important;
 }
 #values h1 {
@@ -895,38 +919,47 @@ iframe {
 }
 #panel_recruit_3 {
 	background-image: url(img/recruit_3.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #panel_recruit_4 {
 	background-image: url(img/recruit_4.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #panel_recruit_5 {
 	background-image: url(img/recruit_5.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #panel_recruit_6 {
 	background-image: url(img/recruit_6.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #panel_recruit_7 {
 	background-image: url(img/recruit_7.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #panel_recruit_8 {
 	background-image: url(img/recruit_8.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #panel_recruit_9 {
 	background-image: url(img/recruit_9.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #panel_recruit_10 {
 	background-image: url(img/recruit_10.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 #work_at_vr {
 	background-image: url(img/recruit_11.jpg);
+	background-position-x:center;
 	color: #ffffff;
 	height:600px;
 	background-size:cover;
@@ -946,6 +979,7 @@ iframe {
 	font-family: 'allerbold';
 	margin-top: 20px;
 	margin-bottom: 20px;
+	font-size: 26px;
 }
 .team_member {
 	margin-top: 10px;
@@ -996,6 +1030,7 @@ p, a.i_blue {
 }
 .about-top {
 	background-image: url(img/about_1.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 .grey-red-logo {
@@ -1165,6 +1200,7 @@ p, a.i_blue {
 }
 .media-top {
 	background-image: url(img/media_top_image.jpg);
+	background-position-x:center;
 	color: #ffffff;
 }
 .video-feed img {
@@ -1292,6 +1328,7 @@ max-width: none;}
 }
 #november {
 	background-image: url(img/press_bg.jpg);
+	background-position-x:center;
 	background-size: cover;
 }
 #timeline {
@@ -1607,6 +1644,9 @@ h2 {
 	border: 0px;
 	padding-bottom: 0px;
 }
+#services a div, .investment a div {
+	border-right:none;
+}
 .stats-logo img {
 	width: 50%;
 	margin: 15% 25%;
@@ -1676,6 +1716,39 @@ footer {
 #video iframe {
 	min-height: 300px;
 }
+
+
+.calendar-archives.arw-theme1 .archives-years {
+	overflow:hidden;
+}
+.calendar-archives.arw-theme1 .selecteed {
+	display:block !important;
+}
+.dropdown-month {
+position: absolute;
+right: 0;
+cursor: pointer;
+padding-top: 20px;
+height: 60px;
+width: 30px;
+padding-left: 6px;
+color: #FFF;
+}
+.calendar-archives.arw-theme1 .year {
+	min-width:100%;
+	display:none;
+	margin-left: 0px !important;
+opacity: 1 !important;
+}
+.calendar-archives.arw-theme1 .month {
+	width:100%;
+}
+.archives-years .last {
+margin-left: 0 !important;
+}
+
+
+
 }
 /* Large screens */
 @media (min-width: 992px) {
@@ -1909,3 +1982,4 @@ top: 0;
 width: 100%;
 display: block;
 }
+.size-full { max-width:100%; height:auto;}

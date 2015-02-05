@@ -413,8 +413,7 @@ Template Name: About
           <li><a href="media">Media</a></li>
           <li><a href="recruit">Recruit</a></li>
           <li><a href="about">About</a></li>
-          <li class="menu-blue"><a href="#">Privacy</a></li>
-          <li class="menu-blue"><a href="#">Terms</a></li>
+          <li class="menu-blue"><a href="privacy">Privacy</a></li>
         </ul>
       </div>
     </div>

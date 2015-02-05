@@ -1,5 +1,7 @@
 <?php
 
+
+
 function get_excerpt(){
 $excerpt = get_the_excerpt();
 $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
@@ -10,6 +12,19 @@ $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
 $excerpt = $excerpt.'...';
 return $excerpt;
+}
+
+// Limit Post Title by amount of characters
+function short_title() {
+$mytitleorig = get_the_title();
+$title = html_entity_decode($mytitleorig, ENT_QUOTES, "UTF-8"); 
+
+$limit = "40";
+$pad="...";
+
+if(strlen($title) >= ($limit+3)) {
+$title = mb_substr($title, 0, $limit) . $pad; }
+echo $title;
 }
 
 add_theme_support( 'post-thumbnails' );

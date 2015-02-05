@@ -221,8 +221,7 @@ Template Name: Recruit JP
           <li><a href="media">ニュース/メディア関連</a></li>
           <li><a href="recruit">採用情報</a></li>
           <li><a href="about">About</a></li>
-          <li class="menu-blue"><a href="#">プライバシーポリシー</a></li>
-          <li class="menu-blue"><a href="#">利用規約</a></li>
+          <li class="menu-blue"><a href="privacy">プライバシーポリシー</a></li>
         </ul>
         </div>
       </div>

@@ -9,7 +9,7 @@ $month = (isset($_GET['month'])) ? $_GET['month'] : 0;
 
 
 $args = array(
-//	'cat'      => 22,
+	'cat'      => 3,
 	'post_type' => 'post',
 	'year'     => $year,
 	'monthnum' => $month,
@@ -23,10 +23,10 @@ if (have_posts()) {
        while (have_posts()) {
 		   the_post();
 		   $posts[] = array(
-			   'title' => get_the_title()
+			   'short_title' => short_title()
    				, 'excerpt' => get_excerpt()
 				, 'url' => get_permalink()
-				, 'background_image' => get_field('post_background_image')
+				, 'background_image' => wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') )
 		   );
        }
 }

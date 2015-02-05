@@ -204,7 +204,7 @@ Template Name: Media JP
 <?php 
  $current_year = date('Y', current_time('timestamp'));
  $current_month = date('m', current_time('timestamp'));
- query_posts("year=$current_year&monthnum=$current_month");
+ query_posts("cat=3&year=$current_year&monthnum=$current_month");
  if(have_posts()) : 
 ?>
         <div id="carousel-press" class="carousel slide" data-ride="carousel"> 
@@ -222,17 +222,19 @@ Template Name: Media JP
 
           
             <div class="item">
-				<?php if ( $background_image = get_field('post_background_image') ): ?>
 					<div class="overlay-press-img"></div>
-					<img class="press-slide-background-image" src="<?php the_field('post_background_image'); ?>" />
-				<?php else: ?>
+                    <?php if ( has_post_thumbnail() ) {  ?>
+                    <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
+                    <div class="overlay-press-img"></div>
+					<img class="press-slide-background-image" src="<?php echo $url ?>" />
+                    <?php } else { ?>
 					<div class="overlay-press-img"></div>
 					<img class="press-slide-background-image" src="<?php bloginfo('template_url'); ?>/img/media_top_image.jpg" />
-				<?php endif ?>
+				<?php } ?>
 
 				<div class="col-md-6 col-md-offset-6">
 					<div class="press-slider-content-wrapper">
-						<h2><?php the_title(); ?> </h2>
+						<h2><?php echo short_title(); ?> </h2>
 						<p><?php echo get_excerpt(); ?></p>
 					</div>
 					<a class="btn btn-lg btn-default light-blue-btn" href="<?php the_permalink(); ?>">Read full article</a> 
@@ -317,7 +319,6 @@ Template Name: Media JP
           <li><a href="recruit">採用情報</a></li>
           <li><a href="about">About</a></li>
           <li class="menu-blue"><a href="privacy">プライバシーポリシー</a></li>
-          <li class="menu-blue"><a href="#">利用規約</a></li>
         </ul>
       </div>
     </div>
