@@ -225,6 +225,8 @@ $('#skrollr-body, .sub-menu a, a.grey-logo').click(function(){
 	
 });
 
+/*
+
 var tab_mobile = function () {
 	
 if ($(window).width() > 768) {
@@ -266,6 +268,8 @@ else {
 };
 $(document).ready(tab_mobile);
 $(window).resize(tab_mobile);
+
+*/
 
 $(document).ready(function(){
 	
