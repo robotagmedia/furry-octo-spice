@@ -1,6 +1,21 @@
 <?php
-define('WP_USE_THEMES', false);
+define('WP_USE_THEMES', true);
 require_once('../../../wp-load.php');
+
+
+
+// Limit Post Title by amount of characters
+function get_short_title() {
+	$mytitleorig = get_the_title();
+	$title = html_entity_decode($mytitleorig, ENT_QUOTES, "UTF-8"); 
+
+	$limit = "40";
+	$pad="...";
+
+	if(strlen($title) >= ($limit+3)) {
+	$title = mb_substr($title, 0, $limit) . $pad; }
+	return $title;
+}
 
 
 $posts = array();
@@ -24,10 +39,10 @@ if (have_posts()) {
 		   the_post();
 		   $posts[] = array(
 			   'title' => get_the_title()
-   				, 'short_title' => short_title()				   
+   				, 'short_title' => get_short_title()				   
    				, 'excerpt' => get_excerpt()
 				, 'url' => get_permalink()
-				, 'background_image' => get_field('post_background_image')
+				, 'background_image' => wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ) //get_field('post_background_image')
 		   );
        }
 }
