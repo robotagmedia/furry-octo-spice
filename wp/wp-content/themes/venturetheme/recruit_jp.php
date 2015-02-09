@@ -148,7 +148,7 @@ Template Name: Recruit JP
                 <h3><?php the_sub_field('team_description_jp'); ?></h3>
               </div>
             </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
+            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn" href="#application">Contact Our Department</a></div>
           </div>
       </div>
       <?php endwhile; ?>
@@ -187,10 +187,10 @@ Template Name: Recruit JP
       <div id="application" class="row text-center">
         <div class="col-sm-6">
           <p><b>キャリア採用</b></p>
-          <a href="https://js01.jposting.net/vrg/u/job.phtml" class="btn btn-lg btn-default light-blue-btn meiryo">詳細</a> </div>
+          <a href="https://js01.jposting.net/vrg/u/job.phtml" class="btn btn-lg btn-default light-blue-btn meiryo" target="_blank">詳細</a> </div>
         <div class="col-sm-6">
           <p><b>在宅ワーク</b></p>
-          <a href="http://guide.travel.co.jp/info/recruit/" class="btn btn-lg btn-default apply-btn meiryo">詳細</a> </div>
+          <a href="http://guide.travel.co.jp/info/recruit/" class="btn btn-lg btn-default apply-btn meiryo" target="_blank">詳細</a> </div>
       </div>
       
      <!-- Social Networks -->

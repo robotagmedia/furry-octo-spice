@@ -123,8 +123,8 @@ Template Name: Home JP
           <div class="col-md-8 col-md-offset-2 text-center">
             <h3 style="margin-bottom: 50px;">日本最大級のホテル・宿のクチコミ検索サイト</h3>
           </div>
-          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp/world/" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(国内)</span></a> </div>
-          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href=" http://hotel.jp/world/?language=en" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(グローバル)</span></a> </div>
+          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp/" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(国内)</span></a> </div>
+          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://hotel.jp/world/" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Hotel.jp <span class="meiryo">(グローバル)</span></a> </div>
           <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a href="https://itunes.apple.com/jp/app/hoteru-jepi-hotel.jp-kuchikomide/id445300541?mt=8" target="_blank" class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
           <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a href="https://play.google.com/store/apps/details?id=jp.hotel.android&hl=ja" target="_blank" class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
         </div>
@@ -211,7 +211,7 @@ Template Name: Home JP
             <script>
 document.write("<canvas height=\""+defCanvasHeight+"\" id=\"canvas_StackedBar2\"  width=\""+defCanvasWidth+"\"></canvas>");
 window.onload = function() {
-var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
+//var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
 skrollr.init({ forceHeight: false })
 ;}
 			</script> 

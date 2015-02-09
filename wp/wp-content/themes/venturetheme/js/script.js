@@ -360,6 +360,8 @@ var opt2 = {
       animationStartWithData : startWithData,
       animation : true,
       animationSteps : 45,
+    animationEasing: "easeOutQuart",
+	
 	  barValueSpacing : 45,
 	  responsive:false,
 	  barShowStroke : false,
@@ -372,5 +374,29 @@ var opt2 = {
 	  scaleFontColor: "#9ca7ab"
 }
 
+
+
+var inView = false;
+
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+}
+
+$(window).scroll(function() {
+    if (isScrolledIntoView('#canvas_StackedBar2')) {
+        if (inView) { return; }
+        inView = true;
+        var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
+    } else {
+        inView = false;  
+    }
+});
 
 	

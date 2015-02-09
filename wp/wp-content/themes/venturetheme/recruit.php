@@ -152,7 +152,7 @@ Template Name: Recruit
                 <h3><?php the_sub_field('team_description'); ?></h3>
               </div>
             </div>
-            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn">Contact Our Department</a></div>
+            <div class="col-md-12 text-center"><a class="btn btn-default blue-btn" href="#application">Contact Our Department</a></div>
           </div>
       </div>
       <?php endwhile; ?>
@@ -195,11 +195,11 @@ Template Name: Recruit
       <div id="application" class="row text-center">
         <div class="col-sm-6">
           <p>Join our team and build a career in our growing global travel businesses.</p>
-          <a href="https://js01.jposting.net/vrg/u/job.phtml" class="btn btn-lg btn-default light-blue-btn">Apply to VR</a> </div>
+          <a href="https://js01.jposting.net/vrg/u/job.phtml" class="btn btn-lg btn-default light-blue-btn" target="_blank">Apply to VR</a> </div>
         <div class="col-sm-6">
           <p> Work from home and bring your expertise to VR through curated content
             and travel writing.</p>
-          <a href="http://guide.travel.co.jp/info/recruit/" class="btn btn-lg btn-default apply-btn">Apply to VR</a> </div>
+          <a href="http://guide.travel.co.jp/info/recruit/" class="btn btn-lg btn-default apply-btn" target="_blank">Apply to VR</a> </div>
       </div>
       
      <!-- Social Networks -->

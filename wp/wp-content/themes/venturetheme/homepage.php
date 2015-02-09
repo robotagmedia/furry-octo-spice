@@ -126,8 +126,8 @@ Template Name: Home
           <div class="col-md-6 col-md-offset-3 text-center">
             <h3>Japan’s leading search engines for hotels and ryokans</h3>
           </div>
-          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp/world/" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Visit Hotel.jp (Japan)</a> </div>
-          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href=" http://hotel.jp/world/?language=en" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Visit Hotel.jp (Worldwide)</a> </div>
+          <div class="col-md-4 col-md-offset-2 col-sm-6 text-right visible center-on-mobile"> <a href="http://hotel.jp" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Visit Hotel.jp (Japan)</a> </div>
+          <div class="col-md-4 col-sm-6 text-left center-on-mobile visible"> <a href="http://hotel.jp/world/?language=en" target="_blank" class="btn btn-default turquoise-btn" style="width:275px">Visit Hotel.jp (Worldwide)</a> </div>
           <div class="col-md-3 col-md-offset-3 col-sm-6 text-right visible center-on-mobile"> <a href="https://itunes.apple.com/jp/app/hoteru-jepi-hotel.jp-kuchikomide/id445300541?mt=8" target="_blank" class="btn btn-lg btn-default light-blue-btn">App Store</a> </div>
           <div class="col-md-3 col-sm-6 text-left center-on-mobile visible"> <a href="https://play.google.com/store/apps/details?id=jp.hotel.android&hl=en" target="_blank" class="btn btn-lg btn-default light-blue-btn">Google Play</a> </div>
         </div>
@@ -217,9 +217,12 @@ Template Name: Home
         </div>
         <div class="col-md-12 graph-wrapper" data-bottom-top="opacity:0;" data-center="opacity:1">
           <div class="graph col-centered">
-            <div class="graph-years"> <span class="first-year">2010<span class="year-point"></span>
-              <hr data-bottom-top="height:0px;" data-center="height:360px;" width="0">
-              </span> <span class="second-year">2011<span class="year-point"></span>
+            <div class="graph-years">
+				<span class="first-year">2010
+					<span class="year-point"></span>
+             		 <hr data-bottom-top="height:0px;" data-center="height:360px;" width="0">
+             	 </span>
+				 <span class="second-year">2011<span class="year-point"></span>
               <hr data-bottom-top="height:0px;" data-center="height:320px;" width="0">
               </span> <span class="third-year">2012<span class="year-point"></span>
               <hr data-bottom-top="height:0px;" data-center="height:263px;" width="0">
@@ -231,7 +234,8 @@ Template Name: Home
             <script> 
 			document.write("<canvas height=\""+defCanvasHeight+"\" id=\"canvas_StackedBar2\"  width=\""+defCanvasWidth+"\"></canvas>");
 window.onload = function() {
-var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
+		//var myStackedBar = new Chart(document.getElementById("canvas_StackedBar2").getContext("2d")).StackedBar(mydata1,opt2);
+			
 skrollr.init({ forceHeight: false })
 ;}
 			</script> 
