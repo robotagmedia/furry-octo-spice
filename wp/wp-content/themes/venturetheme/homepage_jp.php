@@ -144,12 +144,34 @@ Template Name: Home JP
       <!-- Investments -->
       <div class="row relative investment"> <a class="active-tab" rel="the-list" href="#">
         <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/the-list-logo.png" /></span></div>
-        </a> <a class="tab" rel="flocations" href="#">
+        </a> 
+        
+        <!-- FOR MOBILE 1 -->
+        <div class="investment-wrapper thelist-mobile"> 
+
+        </div>
+        
+        
+        <a class="tab" rel="flocations" href="#">
         <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/flocations-logo.png" /></span></div>
-        </a> <a class="tab" rel="telunjuk" href="#">
+        </a>
+        
+        <!-- FOR MOBILE 2 -->
+        <div class="investment-wrapper flocations-mobile"> 
+        
+        </div>
+        
+        
+        <a class="tab" rel="telunjuk" href="#">
         <div class="col-lg-4 col-md-4 text-center"><span class="wrapper-test"><img class="pad10" src="<?php bloginfo('template_url'); ?>/img/telunjuk-logo.png" /></span></div>
-        </a> </div>
-      <div class="investment-wrapper"> 
+        </a>
+        
+        <!-- FOR MOBILE 3 -->
+        <div class="investment-wrapper telunjuk-mobile">
+        </div>
+        
+        </div>
+      <div class="investment-wrapper hide-on-mobile"> 
         <!-- Tab 1 -->
         <div id="the-list" class="row visible text-center">
           <div class="col-md-12 visible">
@@ -177,7 +199,8 @@ Template Name: Home JP
         </div>
       </div>
       <!-- Map 2 / World -->
-      <div class="row relative map" data-bottom-top="background-position:0% 0%" data-center="background-position:50% 0%" data-top-bottom="background-position:100% 0%">
+      <div id="map-show"></div>
+      <div class="row relative map map-service" data-bottom-top="background-position:0% 0%" data-center="background-position:50% 0%" data-top-bottom="background-position:100% 0%">
         <div class="maps-wrapper" data-bottom-top="opacity:1" data-bottom="opacity:0.2;">
           <div id="the-list-map"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/collaboration-map-no-japan.png" /></div>
           <div id="other-map" style="display:none"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/collaboration-map-flocations-no-japan.png" /></div>
@@ -197,6 +220,7 @@ Template Name: Home JP
         </div>
         <div class="col-md-12 graph-wrapper" data-bottom-top="opacity:0;" data-center="opacity:1">
           <div class="graph col-centered">
+          <img class="graph_mobile img-responsive" src="<?php bloginfo('template_url'); ?>/img/graph_mobile.png" />
             <div class="graph-years"> <span class="first-year">2010<span class="year-point"></span>
               <hr data-bottom-top="height:0px;" data-center="height:360px;" width="0">
               </span> <span class="second-year">2011<span class="year-point"></span>

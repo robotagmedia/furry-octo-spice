@@ -690,6 +690,7 @@ a.tab div {
 	font-family: 'allerbold';
 	font-size: 25px;
 	margin: 45px 0px 40px 0px;
+	clear:both;
 }
 #contact input {
 	border-radius: 5px;
@@ -1198,6 +1199,9 @@ p, a.i_blue {
 .table-wrapper .table > thead > tr > th {
 	border-bottom: 0px;
 }
+.post-header {
+	min-height:300px;
+}
 .media-top {
 	background-image: url(img/media_top_image.jpg);
 	background-position-x:center;
@@ -1455,6 +1459,12 @@ a.arrow-slide-right:hover {
 	width: 30px;
 	margin-right: 10px;
 }
+.graph_mobile {
+	display:none;
+margin-top: -6.8%;
+padding-left: 5px;
+padding-right: 5px;
+}
 /* End Media Page */
 /* MEDIA QUERIES */
 /* Smartphones */
@@ -1474,6 +1484,11 @@ h1 {
 #history .carousel-indicators {
 	width: 90%;
 	left: 35%;
+}
+.post-header img.img-responsive {
+	height: 300px;
+max-width: none;
+width: auto;
 }
 #history .carousel-bar {
 	width: 170px;
@@ -1537,6 +1552,10 @@ h3 {
 	line-height: 30px !important;
 	font-size: 20px;
 }
+.absolute-center h1
+{font-size: 14px;
+line-height: 20px
+}
 p {
 	line-height: 24px;
 }
@@ -1560,6 +1579,10 @@ p {
 #canvas_StackedBar2 {
 	height: 239.7px !important;
 	width: 360px !important;
+}
+.absolute-center h1
+{font-size: 18px;
+line-height: 28px
 }
 .graph {
 	padding: 0;
@@ -1630,6 +1653,10 @@ footer ul li .logo-footer {
 footer .menu-blue:after {
 	content: "";
 }
+.graph_mobile {
+	display:block;
+}
+.graph-years, #canvas_StackedBar2 {display:none;}
 .team_member {
 	text-align: center;
 }
@@ -1919,6 +1946,9 @@ body:after {
 }
 .post-content a:hover, .post-content a:focus {
 	color: #0b83ad;
+}
+.calendar-archives.arw-theme1 .month.last {
+	margin-bottom:30px;
 }
 .date-post {
 	padding: 30px 0px;

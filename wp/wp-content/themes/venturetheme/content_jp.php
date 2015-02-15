@@ -82,7 +82,7 @@
   
   <?php if ( has_post_thumbnail() ) {  ?>
   <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
-  <div class="row relative">
+  <div class="row relative post-header">
       <div class="post_background_image"></div>
       <img class="img-responsive" src="<?php echo $url ?>" />
    <?php } else { ?>

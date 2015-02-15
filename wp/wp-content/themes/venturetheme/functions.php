@@ -4,15 +4,25 @@
 
 function get_excerpt(){
 $excerpt = get_the_excerpt();
+$excerpt = mb_substr($excerpt, 0, 100);
+$excerpt = $excerpt.'...';
+return $excerpt;
+}
+
+/*
+function get_excerpt(){
+$excerpt = get_the_excerpt();
 $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
 $excerpt = strip_shortcodes($excerpt);
-$excerpt = strip_tags($excerpt);
-$excerpt = substr($excerpt, 0, 100);
+$excerpt = strip_tags($excerpt, '<em><br><p>');
+$excerpt = mb_substr($excerpt, 0, 100);
 $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
 $excerpt = $excerpt.'...';
 return $excerpt;
 }
+*/
+
 
 // Limit Post Title by amount of characters
 function short_title() {

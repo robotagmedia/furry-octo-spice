@@ -197,7 +197,8 @@ Template Name: Home
         </div>
       </div>
       <!-- Map 2 / World -->
-      <div class="row relative map" data-bottom-top="background-position:0% 0%" data-center="background-position:50% 0%" data-top-bottom="background-position:100% 0%">
+      <div id="map-show"></div>
+      <div class="row relative map map-service" data-bottom-top="background-position:0% 0%" data-center="background-position:50% 0%" data-top-bottom="background-position:100% 0%">
         <div class="maps-wrapper" data-bottom-top="opacity:1" data-bottom="opacity:0.2;">
           <div id="the-list-map"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/collaboration-map-no-japan.png" /></div>
           <div id="other-map" style="display:none"><img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/collaboration-map-flocations-no-japan.png" /></div>
@@ -217,6 +218,7 @@ Template Name: Home
         </div>
         <div class="col-md-12 graph-wrapper" data-bottom-top="opacity:0;" data-center="opacity:1">
           <div class="graph col-centered">
+          <img class="graph_mobile img-responsive" src="<?php bloginfo('template_url'); ?>/img/graph_mobile.png" />
             <div class="graph-years">
 				<span class="first-year">2010
 					<span class="year-point"></span>

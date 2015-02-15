@@ -1,13 +1,18 @@
 // JavaScript Document
-
-$(document).ready(function(){
-	
+function center_content() { 
 	$('.absolute-center-parent').each(function(i, obj) {
 	var element_height = $(this).children('.absolute-center').outerHeight();
 	var half_height = ((element_height)/2);
 	$(this).css('marginTop', -half_height);
-	
+	});
+}
+$(document).ready(center_content);
+$(window).on('resize',center_content);
 
+$(document).ready(function(){
+	
+	
+	
 	//$('#carousel-press').carousel();
 	
 	$('#timeline .month a').on('click', function(e) {
@@ -57,7 +62,7 @@ $(document).ready(function(){
 		return false;
 	});
 	
-});
+
 
 if(window.location.href.indexOf("/en/") > -1) {
       $(".lang[title|='EN']").hide();
@@ -178,6 +183,7 @@ $("a[rel='the-list']").click(function(){
   $("#other-map").hide();
   $(".japan-map").show();
   $(".asia-map").hide();
+
 });
 $("a[rel='flocations'], a[rel='telunjuk']").click(function(){
   $("#the-list-map").hide();
@@ -225,7 +231,7 @@ $('#skrollr-body, .sub-menu a, a.grey-logo').click(function(){
 	
 });
 
-/*
+
 
 var tab_mobile = function () {
 	
@@ -239,26 +245,65 @@ $(".telunjuk-mobile").hide();
 $("#the-list").appendTo(".hide-on-mobile");
 $("#flocations").appendTo(".hide-on-mobile");
 $("#telunjuk").appendTo(".hide-on-mobile");
+$("a[rel='the-list']").addClass("active-tab").removeClass("tab");
+$("a[rel='flocations']").removeClass("active-tab").addClass("tab");
+$("a[rel='telunjuk']").removeClass("active-tab").addClass("tab");
+$("#the-list").show();
 $("#flocations").hide();
 $("#telunjuk").hide();
-
+$(".map-service").show().appendTo("#map-show");
+$(".map-service, #the-list, #flocations, #telunjuk").css({
+    'margin-left' : -15,
+    'margin-right'     : -15
+});
+$("a[rel='the-list']").click(function(){
+		$(".thelist-mobile, .thelist-mobile .map-service ").hide();
+		$(".flocations-mobile, .flocations-mobile .map-service").hide();
+		$(".telunjuk-mobile, .telunjuk-mobile .map-service").hide();
+		$(".map-service").appendTo("#map-show");
+		$("#map-show .map-service").show();
+	});
+	$("a[rel='flocations']").click(function(){
+		$(".thelist-mobile, .thelist-mobile .map-service ").hide();
+		$(".flocations-mobile, .flocations-mobile .map-service").hide();
+		$(".telunjuk-mobile, .telunjuk-mobile .map-service").hide();
+		$(".map-service").appendTo("#map-show");
+		$("#map-show .map-service").show();
+	});
+	$("a[rel='telunjuk']").click(function(){
+		$(".thelist-mobile, .thelist-mobile .map-service ").hide();
+		$(".flocations-mobile, .flocations-mobile .map-service").hide();
+		$(".telunjuk-mobile, .telunjuk-mobile .map-service").hide();
+		$(".map-service").appendTo("#map-show");
+		$("#map-show .map-service").show();
+	});
 }
-else {
-    $("a[rel='the-list']").click(function(){
+else if ($(window).width() < 767) {
+	$(".thelist-mobile").show();
+	$(".map-service").show().appendTo(".thelist-mobile");
+	$("a[rel='the-list']").click(function(){
 		$(".thelist-mobile").show();
 		$(".flocations-mobile").hide();
 		$(".telunjuk-mobile").hide();
+		$(".map-service").show().appendTo(".thelist-mobile");
 	});
 	$("a[rel='flocations']").click(function(){
 		$(".thelist-mobile").hide();
 		$(".flocations-mobile").show();
 		$(".telunjuk-mobile").hide();
+		$(".map-service").show().appendTo(".flocations-mobile");
 	});
 	$("a[rel='telunjuk']").click(function(){
 		$(".thelist-mobile").hide();
 		$(".flocations-mobile").hide();
 		$(".telunjuk-mobile").show();
+		$(".map-service").show().appendTo(".telunjuk-mobile");
 	});
+$(".map-service").hide();
+$(".map-service, #the-list, #flocations, #telunjuk").css({
+    'margin-left' : 0,
+    'margin-right'     : 0
+});
 	$(".hide-on-mobile").hide();
 	$("#the-list").appendTo(".thelist-mobile");
 	$("#flocations").appendTo(".flocations-mobile");
@@ -269,7 +314,7 @@ else {
 $(document).ready(tab_mobile);
 $(window).resize(tab_mobile);
 
-*/
+
 
 $(document).ready(function(){
 	
