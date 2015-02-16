@@ -103,7 +103,7 @@ if ($(".post-content").find('table').length > 0) {
 	$('.archives-years .current').addClass("selecteed");
 	
 //  Home Top Image Size
-$('.panel').height($(window).height() - 77);
+// $('.panel').height($(window).height() - 77);
 $('#top-image').height($(window).height() - 88);
 
 var slideHeight = $(window).height() - 60;

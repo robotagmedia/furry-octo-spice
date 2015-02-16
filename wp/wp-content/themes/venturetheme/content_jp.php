@@ -73,7 +73,7 @@
 <!-- Content -->
 <div id="skrollr-body" class="jp">
 <div class="main-content">
-  <div class="container-fluid">
+  <div class="container-fluid post-content-wrapper">
   
    <?php if ( have_posts() ) : ?>
   

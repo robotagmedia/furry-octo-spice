@@ -542,7 +542,7 @@ function archivesCalendar_shortcode( $atts )
 
 	$post_count = ($post_count == "true") ? true : false;
 	$month_view = ($month_view == "true") ? true : false;
-
+	
 	if($categories !== null)
 	{
 		$cats = str_replace(' ', '', $cats);

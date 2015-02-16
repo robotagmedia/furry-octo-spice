@@ -1,0 +1,15 @@
+[01-Feb-2015 19:50:16 America/Chicago] PHP Parse error:  syntax error, unexpected '[' in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 7
+[01-Feb-2015 19:50:27 America/Chicago] PHP Parse error:  syntax error, unexpected '[' in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 7
+[01-Feb-2015 19:50:47 America/Chicago] PHP Parse error:  syntax error, unexpected '[' in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 7
+[01-Feb-2015 19:50:48 America/Chicago] PHP Parse error:  syntax error, unexpected '[' in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 7
+[01-Feb-2015 19:52:13 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 28
+[01-Feb-2015 19:52:14 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 28
+[01-Feb-2015 19:52:23 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 28
+[02-Feb-2015 02:06:04 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 71 bytes) in /home/humblebu/public_html/venture-republic/wp-content/plugins/advanced-custom-fields/api/api-helpers.php on line 223
+[02-Feb-2015 02:07:42 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 84 bytes) in /home/humblebu/public_html/venture-republic/wp-includes/functions.php on line 3051
+[01-Feb-2015 20:10:53 America/Chicago] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 17
+[02-Feb-2015 02:11:35 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 84 bytes) in /home/humblebu/public_html/venture-republic/wp-includes/functions.php on line 3051
+[02-Feb-2015 02:12:40 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 84 bytes) in /home/humblebu/public_html/venture-republic/wp-includes/functions.php on line 3051
+[04-Feb-2015 11:09:35 UTC] PHP Fatal error:  Call to undefined function get_title() in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 26
+[04-Feb-2015 11:09:47 UTC] PHP Fatal error:  Call to undefined function get_title() in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 26
+[04-Feb-2015 11:09:48 UTC] PHP Fatal error:  Call to undefined function get_title() in /home/humblebu/public_html/venture-republic/wp-content/themes/venturetheme/archive-json.php on line 26
